@@ -1,0 +1,21 @@
+delivery_controller:
+  ros__parameters:
+    drone_namespace: "simple_drone"
+    search_altitude: 3.0
+    drop_altitude: 2.0
+    approach_speed: 0.5
+    hover_time: 2.0
+    detection_confidence_min: 0.6
+
+yolo_detector:
+  ros__parameters:
+    camera_topic: "/simple_drone/bottom/image_raw"
+    model_path: "yolov8n.pt"
+    confidence_threshold: 0.5
+    target_class: "person"
+    publish_annotated: true
+
+payload_manager:
+  ros__parameters:
+    drone_name: "sjtu_drone"
+    payload_name: "delivery_box"
