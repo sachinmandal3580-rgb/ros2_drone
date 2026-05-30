@@ -27,9 +27,8 @@ setup(
         'console_scripts': [
             'dual_camera_yolo_detector = drone_delivery_system.dual_camera_yolo_detector:main',
             'enhanced_delivery_controller = drone_delivery_system.enhanced_delivery_controller:main',
-            # 'payload_manager = drone_delivery_system.payload_manager:main',
+            'payload_manager = drone_delivery_system.payload_manager:main',
             'mission_planner = drone_delivery_system.mission_planner:main',
-            # 'obstacle_avoider = drone_delivery_system.obstacle_avoider:main',
         ],
     },
 )

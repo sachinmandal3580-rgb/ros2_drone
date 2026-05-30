@@ -1,0 +1,967 @@
+[0.000000] (-) TimerEvent: {}
+[0.000456] (drone_delivery_system) JobQueued: {'identifier': 'drone_delivery_system', 'dependencies': OrderedDict()}
+[0.000634] (sjtu_drone_bringup) JobQueued: {'identifier': 'sjtu_drone_bringup', 'dependencies': OrderedDict()}
+[0.000669] (sjtu_drone_control) JobQueued: {'identifier': 'sjtu_drone_control', 'dependencies': OrderedDict()}
+[0.000679] (sjtu_drone_description) JobQueued: {'identifier': 'sjtu_drone_description', 'dependencies': OrderedDict()}
+[0.000688] (drone_delivery_system) JobStarted: {'identifier': 'drone_delivery_system'}
+[0.008513] (sjtu_drone_bringup) JobStarted: {'identifier': 'sjtu_drone_bringup'}
+[0.011933] (sjtu_drone_control) JobStarted: {'identifier': 'sjtu_drone_control'}
+[0.015038] (sjtu_drone_description) JobStarted: {'identifier': 'sjtu_drone_description'}
+[0.099966] (-) TimerEvent: {}
+[0.200257] (-) TimerEvent: {}
+[0.300549] (-) TimerEvent: {}
+[0.400757] (-) TimerEvent: {}
+[0.453778] (sjtu_drone_description) JobProgress: {'identifier': 'sjtu_drone_description', 'progress': 'cmake'}
+[0.453999] (sjtu_drone_description) Command: {'cmd': ['/usr/bin/cmake', '/home/sachin/ros2_drone/src/sjtu_drone_description', '-DCMAKE_INSTALL_PREFIX=/home/sachin/ros2_drone/install/sjtu_drone_description'], 'cwd': '/home/sachin/ros2_drone/build/sjtu_drone_description', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'GZ_SIM_RESOURCE_PATH': '/opt/ros/jazzy/share:/home/sachin/gazebo_models', 'USER': 'sachin', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/share/gz:/opt/ros/jazzy/opt/sdformat_vendor/share/gz:/opt/ros/jazzy/opt/gz_gui_vendor/share/gz:/opt/ros/jazzy/opt/gz_transport_vendor/share/gz:/opt/ros/jazzy/opt/gz_rendering_vendor/share/gz:/opt/ros/jazzy/opt/gz_plugin_vendor/share/gz:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/share/gz:/opt/ros/jazzy/opt/gz_msgs_vendor/share/gz:/opt/ros/jazzy/opt/gz_common_vendor/share/gz', 'XDG_SESSION_TYPE': 'x11', 'CLUTTER_DISABLE_MIPMAPPED_TEXT': '1', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/sachin', 'OLDPWD': '/home/sachin/sjtu_drone', 'DESKTOP_SESSION': 'ubuntu', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'PS1': '(.ros2_venv) \\[\\e]0;\\u@\\h: \\w\\a\\]${debian_chroot:+($debian_chroot)}\\[\\033[01;32m\\]\\u@\\h\\[\\033[00m\\]:\\[\\033[01;34m\\]\\w\\[\\033[00m\\]\\$', 'SYSTEMD_EXEC_PID': '2585', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'COLCON_PREFIX_PATH': '/home/sachin/sjtu_drone/install', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'sachin', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'PIP_BREAK_SYSTEM_PACKAGES': '1', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/session.slice/org.gnome.Shell@x11.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'sachin', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'WINDOWPATH': '2', 'PATH': '/home/sachin/.ros2_venv/bin:/opt/ros/jazzy/opt/gz_msgs_vendor/bin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin:/opt/ros/jazzy/bin:/home/sachin/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/SK:@/tmp/.ICE-unix/2553,unix/SK:/tmp/.ICE-unix/2553', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/b8a349ca_84d5_4d35_852e_3ce059eba319', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':1', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'VIRTUAL_ENV_PROMPT': '(.ros2_venv)', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/gdm/Xauthority', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'GNOME_TERMINAL_SERVICE': ':1.151', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'ROS_DOMAIN_ID': '100', 'AMENT_PREFIX_PATH': '/home/sachin/sjtu_drone/install/sjtu_drone_description:/home/sachin/sjtu_drone/install/sjtu_drone_control:/home/sachin/sjtu_drone/install/sjtu_drone_bringup:/home/sachin/sjtu_drone/install/drone_delivery_system:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'GPG_AGENT_INFO': '/run/user/1000/gnupg/S.gpg-agent:0:1', 'VIRTUAL_ENV': '/home/sachin/.ros2_venv', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/sachin/ros2_drone/build/sjtu_drone_description', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/sachin/sjtu_drone/install/sjtu_drone_control/lib/python3.12/site-packages:/home/sachin/sjtu_drone/install/sjtu_drone_bringup/lib/python3.12/site-packages:/home/sachin/sjtu_drone/install/drone_delivery_system/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'VTE_VERSION': '7600', 'CMAKE_PREFIX_PATH': '/home/sachin/sjtu_drone/install/sjtu_drone_description:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/home/sachin/sjtu_drone/install/sjtu_drone_control:/home/sachin/sjtu_drone/install/sjtu_drone_bringup:/home/sachin/sjtu_drone/install/drone_delivery_system:/opt/ros/jazzy'}), 'shell': False}
+[0.500874] (-) TimerEvent: {}
+[0.594856] (sjtu_drone_description) StdoutLine: {'line': b'-- The C compiler identification is GNU 13.3.0\n'}
+[0.600959] (-) TimerEvent: {}
+[0.698171] (sjtu_drone_description) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 13.3.0\n'}
+[0.701039] (-) TimerEvent: {}
+[0.715282] (sjtu_drone_description) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.801132] (-) TimerEvent: {}
+[0.801457] (sjtu_drone_description) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[0.808124] (sjtu_drone_description) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[0.808392] (sjtu_drone_description) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[0.808790] (sjtu_drone_description) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[0.817956] (sjtu_drone_description) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[0.901227] (-) TimerEvent: {}
+[0.906042] (sjtu_drone_description) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[0.916125] (sjtu_drone_description) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[0.916322] (sjtu_drone_description) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[0.916634] (sjtu_drone_description) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[0.924433] (sjtu_drone_description) StdoutLine: {'line': b'-- Found ament_cmake: 2.5.6 (/opt/ros/jazzy/share/ament_cmake/cmake)\n'}
+[1.001410] (-) TimerEvent: {}
+[1.013840] (sjtu_drone_control) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'egg_info', '--egg-base', '../../build/sjtu_drone_control', 'build', '--build-base', '/home/sachin/ros2_drone/build/sjtu_drone_control/build', 'install', '--record', '/home/sachin/ros2_drone/build/sjtu_drone_control/install.log', '--single-version-externally-managed', 'install_data'], 'cwd': '/home/sachin/ros2_drone/src/sjtu_drone_control', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'GZ_SIM_RESOURCE_PATH': '/opt/ros/jazzy/share:/home/sachin/gazebo_models', 'USER': 'sachin', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/share/gz:/opt/ros/jazzy/opt/sdformat_vendor/share/gz:/opt/ros/jazzy/opt/gz_gui_vendor/share/gz:/opt/ros/jazzy/opt/gz_transport_vendor/share/gz:/opt/ros/jazzy/opt/gz_rendering_vendor/share/gz:/opt/ros/jazzy/opt/gz_plugin_vendor/share/gz:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/share/gz:/opt/ros/jazzy/opt/gz_msgs_vendor/share/gz:/opt/ros/jazzy/opt/gz_common_vendor/share/gz', 'XDG_SESSION_TYPE': 'x11', 'CLUTTER_DISABLE_MIPMAPPED_TEXT': '1', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/sachin', 'OLDPWD': '/home/sachin/sjtu_drone', 'DESKTOP_SESSION': 'ubuntu', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'PS1': '(.ros2_venv) \\[\\e]0;\\u@\\h: \\w\\a\\]${debian_chroot:+($debian_chroot)}\\[\\033[01;32m\\]\\u@\\h\\[\\033[00m\\]:\\[\\033[01;34m\\]\\w\\[\\033[00m\\]\\$', 'SYSTEMD_EXEC_PID': '2585', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'COLCON_PREFIX_PATH': '/home/sachin/sjtu_drone/install', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'sachin', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'PIP_BREAK_SYSTEM_PACKAGES': '1', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/session.slice/org.gnome.Shell@x11.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'sachin', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'WINDOWPATH': '2', 'PATH': '/home/sachin/.ros2_venv/bin:/opt/ros/jazzy/opt/gz_msgs_vendor/bin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin:/opt/ros/jazzy/bin:/home/sachin/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/SK:@/tmp/.ICE-unix/2553,unix/SK:/tmp/.ICE-unix/2553', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/b8a349ca_84d5_4d35_852e_3ce059eba319', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':1', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'VIRTUAL_ENV_PROMPT': '(.ros2_venv)', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/gdm/Xauthority', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'GNOME_TERMINAL_SERVICE': ':1.151', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'ROS_DOMAIN_ID': '100', 'AMENT_PREFIX_PATH': '/home/sachin/sjtu_drone/install/sjtu_drone_description:/home/sachin/sjtu_drone/install/sjtu_drone_control:/home/sachin/sjtu_drone/install/sjtu_drone_bringup:/home/sachin/sjtu_drone/install/drone_delivery_system:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'GPG_AGENT_INFO': '/run/user/1000/gnupg/S.gpg-agent:0:1', 'VIRTUAL_ENV': '/home/sachin/.ros2_venv', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/sachin/ros2_drone/build/sjtu_drone_control', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/sachin/ros2_drone/build/sjtu_drone_control/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/sachin/ros2_drone/install/sjtu_drone_control/lib/python3.12/site-packages:/home/sachin/sjtu_drone/install/sjtu_drone_control/lib/python3.12/site-packages:/home/sachin/sjtu_drone/install/sjtu_drone_bringup/lib/python3.12/site-packages:/home/sachin/sjtu_drone/install/drone_delivery_system/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'VTE_VERSION': '7600', 'CMAKE_PREFIX_PATH': '/home/sachin/sjtu_drone/install/sjtu_drone_description:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor'}, 'shell': False}
+[1.016239] (sjtu_drone_bringup) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'egg_info', '--egg-base', '../../build/sjtu_drone_bringup', 'build', '--build-base', '/home/sachin/ros2_drone/build/sjtu_drone_bringup/build', 'install', '--record', '/home/sachin/ros2_drone/build/sjtu_drone_bringup/install.log', '--single-version-externally-managed', 'install_data'], 'cwd': '/home/sachin/ros2_drone/src/sjtu_drone_bringup', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'GZ_SIM_RESOURCE_PATH': '/opt/ros/jazzy/share:/home/sachin/gazebo_models', 'USER': 'sachin', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/share/gz:/opt/ros/jazzy/opt/sdformat_vendor/share/gz:/opt/ros/jazzy/opt/gz_gui_vendor/share/gz:/opt/ros/jazzy/opt/gz_transport_vendor/share/gz:/opt/ros/jazzy/opt/gz_rendering_vendor/share/gz:/opt/ros/jazzy/opt/gz_plugin_vendor/share/gz:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/share/gz:/opt/ros/jazzy/opt/gz_msgs_vendor/share/gz:/opt/ros/jazzy/opt/gz_common_vendor/share/gz', 'XDG_SESSION_TYPE': 'x11', 'CLUTTER_DISABLE_MIPMAPPED_TEXT': '1', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/sachin', 'OLDPWD': '/home/sachin/sjtu_drone', 'DESKTOP_SESSION': 'ubuntu', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'PS1': '(.ros2_venv) \\[\\e]0;\\u@\\h: \\w\\a\\]${debian_chroot:+($debian_chroot)}\\[\\033[01;32m\\]\\u@\\h\\[\\033[00m\\]:\\[\\033[01;34m\\]\\w\\[\\033[00m\\]\\$', 'SYSTEMD_EXEC_PID': '2585', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'COLCON_PREFIX_PATH': '/home/sachin/sjtu_drone/install', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'sachin', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'PIP_BREAK_SYSTEM_PACKAGES': '1', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/session.slice/org.gnome.Shell@x11.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'sachin', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'WINDOWPATH': '2', 'PATH': '/home/sachin/.ros2_venv/bin:/opt/ros/jazzy/opt/gz_msgs_vendor/bin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin:/opt/ros/jazzy/bin:/home/sachin/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/SK:@/tmp/.ICE-unix/2553,unix/SK:/tmp/.ICE-unix/2553', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/b8a349ca_84d5_4d35_852e_3ce059eba319', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':1', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'VIRTUAL_ENV_PROMPT': '(.ros2_venv)', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/gdm/Xauthority', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'GNOME_TERMINAL_SERVICE': ':1.151', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'ROS_DOMAIN_ID': '100', 'AMENT_PREFIX_PATH': '/home/sachin/sjtu_drone/install/sjtu_drone_description:/home/sachin/sjtu_drone/install/sjtu_drone_control:/home/sachin/sjtu_drone/install/sjtu_drone_bringup:/home/sachin/sjtu_drone/install/drone_delivery_system:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'GPG_AGENT_INFO': '/run/user/1000/gnupg/S.gpg-agent:0:1', 'VIRTUAL_ENV': '/home/sachin/.ros2_venv', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/sachin/ros2_drone/build/sjtu_drone_bringup', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/sachin/ros2_drone/build/sjtu_drone_bringup/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/sachin/ros2_drone/install/sjtu_drone_bringup/lib/python3.12/site-packages:/home/sachin/sjtu_drone/install/sjtu_drone_control/lib/python3.12/site-packages:/home/sachin/sjtu_drone/install/sjtu_drone_bringup/lib/python3.12/site-packages:/home/sachin/sjtu_drone/install/drone_delivery_system/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'VTE_VERSION': '7600', 'CMAKE_PREFIX_PATH': '/home/sachin/sjtu_drone/install/sjtu_drone_description:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor'}, 'shell': False}
+[1.019512] (drone_delivery_system) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'egg_info', '--egg-base', '../../build/drone_delivery_system', 'build', '--build-base', '/home/sachin/ros2_drone/build/drone_delivery_system/build', 'install', '--record', '/home/sachin/ros2_drone/build/drone_delivery_system/install.log', '--single-version-externally-managed', 'install_data'], 'cwd': '/home/sachin/ros2_drone/src/drone_delivery_system', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'GZ_SIM_RESOURCE_PATH': '/opt/ros/jazzy/share:/home/sachin/gazebo_models', 'USER': 'sachin', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/share/gz:/opt/ros/jazzy/opt/sdformat_vendor/share/gz:/opt/ros/jazzy/opt/gz_gui_vendor/share/gz:/opt/ros/jazzy/opt/gz_transport_vendor/share/gz:/opt/ros/jazzy/opt/gz_rendering_vendor/share/gz:/opt/ros/jazzy/opt/gz_plugin_vendor/share/gz:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/share/gz:/opt/ros/jazzy/opt/gz_msgs_vendor/share/gz:/opt/ros/jazzy/opt/gz_common_vendor/share/gz', 'XDG_SESSION_TYPE': 'x11', 'CLUTTER_DISABLE_MIPMAPPED_TEXT': '1', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/sachin', 'OLDPWD': '/home/sachin/sjtu_drone', 'DESKTOP_SESSION': 'ubuntu', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'PS1': '(.ros2_venv) \\[\\e]0;\\u@\\h: \\w\\a\\]${debian_chroot:+($debian_chroot)}\\[\\033[01;32m\\]\\u@\\h\\[\\033[00m\\]:\\[\\033[01;34m\\]\\w\\[\\033[00m\\]\\$', 'SYSTEMD_EXEC_PID': '2585', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'COLCON_PREFIX_PATH': '/home/sachin/sjtu_drone/install', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'sachin', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'PIP_BREAK_SYSTEM_PACKAGES': '1', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/session.slice/org.gnome.Shell@x11.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'sachin', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'WINDOWPATH': '2', 'PATH': '/home/sachin/.ros2_venv/bin:/opt/ros/jazzy/opt/gz_msgs_vendor/bin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin:/opt/ros/jazzy/bin:/home/sachin/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/SK:@/tmp/.ICE-unix/2553,unix/SK:/tmp/.ICE-unix/2553', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/b8a349ca_84d5_4d35_852e_3ce059eba319', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':1', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'VIRTUAL_ENV_PROMPT': '(.ros2_venv)', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/gdm/Xauthority', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'GNOME_TERMINAL_SERVICE': ':1.151', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'ROS_DOMAIN_ID': '100', 'AMENT_PREFIX_PATH': '/home/sachin/sjtu_drone/install/sjtu_drone_description:/home/sachin/sjtu_drone/install/sjtu_drone_control:/home/sachin/sjtu_drone/install/sjtu_drone_bringup:/home/sachin/sjtu_drone/install/drone_delivery_system:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'GPG_AGENT_INFO': '/run/user/1000/gnupg/S.gpg-agent:0:1', 'VIRTUAL_ENV': '/home/sachin/.ros2_venv', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/sachin/ros2_drone/build/drone_delivery_system', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/sachin/ros2_drone/build/drone_delivery_system/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/sachin/ros2_drone/install/drone_delivery_system/lib/python3.12/site-packages:/home/sachin/sjtu_drone/install/sjtu_drone_control/lib/python3.12/site-packages:/home/sachin/sjtu_drone/install/sjtu_drone_bringup/lib/python3.12/site-packages:/home/sachin/sjtu_drone/install/drone_delivery_system/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'VTE_VERSION': '7600', 'CMAKE_PREFIX_PATH': '/home/sachin/sjtu_drone/install/sjtu_drone_description:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor'}, 'shell': False}
+[1.040881] (sjtu_drone_description) StdoutLine: {'line': b'-- Found Python3: /home/sachin/.ros2_venv/bin/python3 (found version "3.12.3") found components: Interpreter \n'}
+[1.101501] (-) TimerEvent: {}
+[1.154915] (sjtu_drone_description) StdoutLine: {'line': b'-- Found rclcpp: 28.1.18 (/opt/ros/jazzy/share/rclcpp/cmake)\n'}
+[1.197242] (sjtu_drone_control) StdoutLine: {'line': b'running egg_info\n'}
+[1.197539] (sjtu_drone_control) StdoutLine: {'line': b'creating ../../build/sjtu_drone_control/sjtu_drone_control.egg-info\n'}
+[1.197629] (sjtu_drone_bringup) StdoutLine: {'line': b'running egg_info\n'}
+[1.197718] (sjtu_drone_bringup) StdoutLine: {'line': b'creating ../../build/sjtu_drone_bringup/sjtu_drone_bringup.egg-info\n'}
+[1.201583] (-) TimerEvent: {}
+[1.209031] (drone_delivery_system) StdoutLine: {'line': b'running egg_info\n'}
+[1.209306] (drone_delivery_system) StdoutLine: {'line': b'creating ../../build/drone_delivery_system/drone_delivery_system.egg-info\n'}
+[1.210420] (sjtu_drone_bringup) StdoutLine: {'line': b'writing ../../build/sjtu_drone_bringup/sjtu_drone_bringup.egg-info/PKG-INFO\n'}
+[1.210834] (sjtu_drone_control) StdoutLine: {'line': b'writing ../../build/sjtu_drone_control/sjtu_drone_control.egg-info/PKG-INFO\n'}
+[1.210932] (sjtu_drone_control) StdoutLine: {'line': b'writing dependency_links to ../../build/sjtu_drone_control/sjtu_drone_control.egg-info/dependency_links.txt\n'}
+[1.211007] (sjtu_drone_bringup) StdoutLine: {'line': b'writing dependency_links to ../../build/sjtu_drone_bringup/sjtu_drone_bringup.egg-info/dependency_links.txt\n'}
+[1.211078] (sjtu_drone_control) StdoutLine: {'line': b'writing entry points to ../../build/sjtu_drone_control/sjtu_drone_control.egg-info/entry_points.txt\n'}
+[1.211146] (sjtu_drone_control) StdoutLine: {'line': b'writing requirements to ../../build/sjtu_drone_control/sjtu_drone_control.egg-info/requires.txt\n'}
+[1.211213] (sjtu_drone_control) StdoutLine: {'line': b'writing top-level names to ../../build/sjtu_drone_control/sjtu_drone_control.egg-info/top_level.txt\n'}
+[1.211280] (sjtu_drone_bringup) StdoutLine: {'line': b'writing entry points to ../../build/sjtu_drone_bringup/sjtu_drone_bringup.egg-info/entry_points.txt\n'}
+[1.211346] (sjtu_drone_bringup) StdoutLine: {'line': b'writing requirements to ../../build/sjtu_drone_bringup/sjtu_drone_bringup.egg-info/requires.txt\n'}
+[1.211429] (sjtu_drone_bringup) StdoutLine: {'line': b'writing top-level names to ../../build/sjtu_drone_bringup/sjtu_drone_bringup.egg-info/top_level.txt\n'}
+[1.211501] (sjtu_drone_control) StdoutLine: {'line': b"writing manifest file '../../build/sjtu_drone_control/sjtu_drone_control.egg-info/SOURCES.txt'\n"}
+[1.211578] (sjtu_drone_bringup) StdoutLine: {'line': b"writing manifest file '../../build/sjtu_drone_bringup/sjtu_drone_bringup.egg-info/SOURCES.txt'\n"}
+[1.211732] (sjtu_drone_description) StdoutLine: {'line': b'-- Found rosidl_generator_c: 4.6.7 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)\n'}
+[1.222144] (drone_delivery_system) StdoutLine: {'line': b'writing ../../build/drone_delivery_system/drone_delivery_system.egg-info/PKG-INFO\n'}
+[1.222324] (drone_delivery_system) StdoutLine: {'line': b'writing dependency_links to ../../build/drone_delivery_system/drone_delivery_system.egg-info/dependency_links.txt\n'}
+[1.222451] (drone_delivery_system) StdoutLine: {'line': b'writing entry points to ../../build/drone_delivery_system/drone_delivery_system.egg-info/entry_points.txt\n'}
+[1.222526] (drone_delivery_system) StdoutLine: {'line': b'writing requirements to ../../build/drone_delivery_system/drone_delivery_system.egg-info/requires.txt\n'}
+[1.222701] (drone_delivery_system) StdoutLine: {'line': b'writing top-level names to ../../build/drone_delivery_system/drone_delivery_system.egg-info/top_level.txt\n'}
+[1.222804] (drone_delivery_system) StdoutLine: {'line': b"writing manifest file '../../build/drone_delivery_system/drone_delivery_system.egg-info/SOURCES.txt'\n"}
+[1.226086] (sjtu_drone_description) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 4.6.7 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)\n'}
+[1.237313] (sjtu_drone_bringup) StdoutLine: {'line': b"reading manifest file '../../build/sjtu_drone_bringup/sjtu_drone_bringup.egg-info/SOURCES.txt'\n"}
+[1.237505] (sjtu_drone_control) StdoutLine: {'line': b"reading manifest file '../../build/sjtu_drone_control/sjtu_drone_control.egg-info/SOURCES.txt'\n"}
+[1.237697] (sjtu_drone_control) StdoutLine: {'line': b"writing manifest file '../../build/sjtu_drone_control/sjtu_drone_control.egg-info/SOURCES.txt'\n"}
+[1.237816] (sjtu_drone_bringup) StdoutLine: {'line': b"writing manifest file '../../build/sjtu_drone_bringup/sjtu_drone_bringup.egg-info/SOURCES.txt'\n"}
+[1.238064] (sjtu_drone_bringup) StdoutLine: {'line': b'running build\n'}
+[1.238172] (sjtu_drone_bringup) StdoutLine: {'line': b'running build_py\n'}
+[1.238250] (sjtu_drone_bringup) StdoutLine: {'line': b'creating /home/sachin/ros2_drone/build/sjtu_drone_bringup/build\n'}
+[1.238438] (sjtu_drone_bringup) StdoutLine: {'line': b'creating /home/sachin/ros2_drone/build/sjtu_drone_bringup/build/lib\n'}
+[1.238552] (sjtu_drone_control) StdoutLine: {'line': b'running build\n'}
+[1.238642] (sjtu_drone_control) StdoutLine: {'line': b'running build_py\n'}
+[1.238853] (sjtu_drone_control) StdoutLine: {'line': b'creating /home/sachin/ros2_drone/build/sjtu_drone_control/build\n'}
+[1.238946] (sjtu_drone_control) StdoutLine: {'line': b'creating /home/sachin/ros2_drone/build/sjtu_drone_control/build/lib\n'}
+[1.239020] (sjtu_drone_control) StdoutLine: {'line': b'creating /home/sachin/ros2_drone/build/sjtu_drone_control/build/lib/sjtu_drone_control\n'}
+[1.239092] (sjtu_drone_control) StdoutLine: {'line': b'copying sjtu_drone_control/__init__.py -> /home/sachin/ros2_drone/build/sjtu_drone_control/build/lib/sjtu_drone_control\n'}
+[1.239162] (sjtu_drone_bringup) StdoutLine: {'line': b'creating /home/sachin/ros2_drone/build/sjtu_drone_bringup/build/lib/sjtu_drone_bringup\n'}
+[1.239234] (sjtu_drone_bringup) StdoutLine: {'line': b'copying sjtu_drone_bringup/__init__.py -> /home/sachin/ros2_drone/build/sjtu_drone_bringup/build/lib/sjtu_drone_bringup\n'}
+[1.239303] (sjtu_drone_bringup) StdoutLine: {'line': b'copying sjtu_drone_bringup/spawn_drone.py -> /home/sachin/ros2_drone/build/sjtu_drone_bringup/build/lib/sjtu_drone_bringup\n'}
+[1.239376] (sjtu_drone_control) StdoutLine: {'line': b'copying sjtu_drone_control/teleop.py -> /home/sachin/ros2_drone/build/sjtu_drone_control/build/lib/sjtu_drone_control\n'}
+[1.239451] (sjtu_drone_bringup) StdoutLine: {'line': b'running install\n'}
+[1.239523] (sjtu_drone_control) StdoutLine: {'line': b'copying sjtu_drone_control/teleop_joystick.py -> /home/sachin/ros2_drone/build/sjtu_drone_control/build/lib/sjtu_drone_control\n'}
+[1.239590] (sjtu_drone_control) StdoutLine: {'line': b'copying sjtu_drone_control/drone_position_control.py -> /home/sachin/ros2_drone/build/sjtu_drone_control/build/lib/sjtu_drone_control\n'}
+[1.239660] (sjtu_drone_control) StdoutLine: {'line': b'copying sjtu_drone_control/open_loop_control.py -> /home/sachin/ros2_drone/build/sjtu_drone_control/build/lib/sjtu_drone_control\n'}
+[1.239732] (sjtu_drone_control) StdoutLine: {'line': b'running install\n'}
+[1.242647] (sjtu_drone_bringup) StdoutLine: {'line': b'running install_lib\n'}
+[1.242946] (sjtu_drone_control) StdoutLine: {'line': b'running install_lib\n'}
+[1.246659] (sjtu_drone_description) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[1.249182] (drone_delivery_system) StdoutLine: {'line': b"reading manifest file '../../build/drone_delivery_system/drone_delivery_system.egg-info/SOURCES.txt'\n"}
+[1.249593] (drone_delivery_system) StdoutLine: {'line': b"writing manifest file '../../build/drone_delivery_system/drone_delivery_system.egg-info/SOURCES.txt'\n"}
+[1.249907] (drone_delivery_system) StdoutLine: {'line': b'running build\n'}
+[1.250013] (drone_delivery_system) StdoutLine: {'line': b'running build_py\n'}
+[1.250095] (drone_delivery_system) StdoutLine: {'line': b'creating /home/sachin/ros2_drone/build/drone_delivery_system/build\n'}
+[1.250170] (drone_delivery_system) StdoutLine: {'line': b'creating /home/sachin/ros2_drone/build/drone_delivery_system/build/lib\n'}
+[1.250379] (drone_delivery_system) StdoutLine: {'line': b'creating /home/sachin/ros2_drone/build/drone_delivery_system/build/lib/drone_delivery_system\n'}
+[1.250463] (drone_delivery_system) StdoutLine: {'line': b'copying drone_delivery_system/__init__.py -> /home/sachin/ros2_drone/build/drone_delivery_system/build/lib/drone_delivery_system\n'}
+[1.250539] (drone_delivery_system) StdoutLine: {'line': b'copying drone_delivery_system/payload_manager.py -> /home/sachin/ros2_drone/build/drone_delivery_system/build/lib/drone_delivery_system\n'}
+[1.250612] (drone_delivery_system) StdoutLine: {'line': b'copying drone_delivery_system/enhanced_delivery_controller.py -> /home/sachin/ros2_drone/build/drone_delivery_system/build/lib/drone_delivery_system\n'}
+[1.250702] (drone_delivery_system) StdoutLine: {'line': b'copying drone_delivery_system/dual_camera_yolo_detector.py -> /home/sachin/ros2_drone/build/drone_delivery_system/build/lib/drone_delivery_system\n'}
+[1.250799] (drone_delivery_system) StdoutLine: {'line': b'copying drone_delivery_system/mission_planner.py -> /home/sachin/ros2_drone/build/drone_delivery_system/build/lib/drone_delivery_system\n'}
+[1.251003] (drone_delivery_system) StdoutLine: {'line': b'copying drone_delivery_system/obstacle_avoider.py -> /home/sachin/ros2_drone/build/drone_delivery_system/build/lib/drone_delivery_system\n'}
+[1.251206] (drone_delivery_system) StdoutLine: {'line': b'running install\n'}
+[1.255350] (drone_delivery_system) StdoutLine: {'line': b'running install_lib\n'}
+[1.255886] (sjtu_drone_bringup) StdoutLine: {'line': b'creating /home/sachin/ros2_drone/install/sjtu_drone_bringup/lib/python3.12/site-packages/sjtu_drone_bringup\n'}
+[1.256168] (sjtu_drone_bringup) StdoutLine: {'line': b'copying /home/sachin/ros2_drone/build/sjtu_drone_bringup/build/lib/sjtu_drone_bringup/__init__.py -> /home/sachin/ros2_drone/install/sjtu_drone_bringup/lib/python3.12/site-packages/sjtu_drone_bringup\n'}
+[1.256383] (sjtu_drone_bringup) StdoutLine: {'line': b'copying /home/sachin/ros2_drone/build/sjtu_drone_bringup/build/lib/sjtu_drone_bringup/spawn_drone.py -> /home/sachin/ros2_drone/install/sjtu_drone_bringup/lib/python3.12/site-packages/sjtu_drone_bringup\n'}
+[1.256569] (sjtu_drone_control) StdoutLine: {'line': b'creating /home/sachin/ros2_drone/install/sjtu_drone_control/lib/python3.12/site-packages/sjtu_drone_control\n'}
+[1.256702] (sjtu_drone_control) StdoutLine: {'line': b'copying /home/sachin/ros2_drone/build/sjtu_drone_control/build/lib/sjtu_drone_control/__init__.py -> /home/sachin/ros2_drone/install/sjtu_drone_control/lib/python3.12/site-packages/sjtu_drone_control\n'}
+[1.256791] (sjtu_drone_control) StdoutLine: {'line': b'copying /home/sachin/ros2_drone/build/sjtu_drone_control/build/lib/sjtu_drone_control/teleop.py -> /home/sachin/ros2_drone/install/sjtu_drone_control/lib/python3.12/site-packages/sjtu_drone_control\n'}
+[1.256870] (sjtu_drone_control) StdoutLine: {'line': b'copying /home/sachin/ros2_drone/build/sjtu_drone_control/build/lib/sjtu_drone_control/teleop_joystick.py -> /home/sachin/ros2_drone/install/sjtu_drone_control/lib/python3.12/site-packages/sjtu_drone_control\n'}
+[1.257010] (sjtu_drone_control) StdoutLine: {'line': b'copying /home/sachin/ros2_drone/build/sjtu_drone_control/build/lib/sjtu_drone_control/drone_position_control.py -> /home/sachin/ros2_drone/install/sjtu_drone_control/lib/python3.12/site-packages/sjtu_drone_control\n'}
+[1.257090] (sjtu_drone_bringup) StdoutLine: {'line': b'byte-compiling /home/sachin/ros2_drone/install/sjtu_drone_bringup/lib/python3.12/site-packages/sjtu_drone_bringup/__init__.py to __init__.cpython-312.pyc\n'}
+[1.257185] (sjtu_drone_control) StdoutLine: {'line': b'copying /home/sachin/ros2_drone/build/sjtu_drone_control/build/lib/sjtu_drone_control/open_loop_control.py -> /home/sachin/ros2_drone/install/sjtu_drone_control/lib/python3.12/site-packages/sjtu_drone_control\n'}
+[1.257273] (sjtu_drone_bringup) StdoutLine: {'line': b'byte-compiling /home/sachin/ros2_drone/install/sjtu_drone_bringup/lib/python3.12/site-packages/sjtu_drone_bringup/spawn_drone.py to spawn_drone.cpython-312.pyc\n'}
+[1.257347] (sjtu_drone_control) StdoutLine: {'line': b'byte-compiling /home/sachin/ros2_drone/install/sjtu_drone_control/lib/python3.12/site-packages/sjtu_drone_control/__init__.py to __init__.cpython-312.pyc\n'}
+[1.257443] (sjtu_drone_bringup) StdoutLine: {'line': b'running install_data\n'}
+[1.257519] (sjtu_drone_bringup) StdoutLine: {'line': b'creating /home/sachin/ros2_drone/install/sjtu_drone_bringup/share/ament_index\n'}
+[1.257610] (sjtu_drone_bringup) StdoutLine: {'line': b'creating /home/sachin/ros2_drone/install/sjtu_drone_bringup/share/ament_index/resource_index\n'}
+[1.257706] (sjtu_drone_bringup) StdoutLine: {'line': b'creating /home/sachin/ros2_drone/install/sjtu_drone_bringup/share/ament_index/resource_index/packages\n'}
+[1.257774] (sjtu_drone_control) StdoutLine: {'line': b'byte-compiling /home/sachin/ros2_drone/install/sjtu_drone_control/lib/python3.12/site-packages/sjtu_drone_control/teleop.py to teleop.cpython-312.pyc\n'}
+[1.257845] (sjtu_drone_bringup) StdoutLine: {'line': b'copying resource/sjtu_drone_bringup -> /home/sachin/ros2_drone/install/sjtu_drone_bringup/share/ament_index/resource_index/packages\n'}
+[1.257912] (sjtu_drone_bringup) StdoutLine: {'line': b'copying package.xml -> /home/sachin/ros2_drone/install/sjtu_drone_bringup/share/sjtu_drone_bringup\n'}
+[1.257983] (sjtu_drone_bringup) StdoutLine: {'line': b'creating /home/sachin/ros2_drone/install/sjtu_drone_bringup/share/sjtu_drone_bringup/launch\n'}
+[1.258055] (sjtu_drone_bringup) StdoutLine: {'line': b'copying launch/sjtu_drone_bringup.launch.py -> /home/sachin/ros2_drone/install/sjtu_drone_bringup/share/sjtu_drone_bringup/launch\n'}
+[1.258139] (sjtu_drone_bringup) StdoutLine: {'line': b'copying launch/sjtu_drone_gazebo.launch.py -> /home/sachin/ros2_drone/install/sjtu_drone_bringup/share/sjtu_drone_bringup/launch\n'}
+[1.258210] (sjtu_drone_bringup) StdoutLine: {'line': b'creating /home/sachin/ros2_drone/install/sjtu_drone_bringup/share/sjtu_drone_bringup/rviz\n'}
+[1.258285] (sjtu_drone_bringup) StdoutLine: {'line': b'copying rviz/rviz.rviz -> /home/sachin/ros2_drone/install/sjtu_drone_bringup/share/sjtu_drone_bringup/rviz\n'}
+[1.258357] (sjtu_drone_bringup) StdoutLine: {'line': b'creating /home/sachin/ros2_drone/install/sjtu_drone_bringup/share/sjtu_drone_bringup/config\n'}
+[1.258437] (sjtu_drone_bringup) StdoutLine: {'line': b'copying config/drone.yaml -> /home/sachin/ros2_drone/install/sjtu_drone_bringup/share/sjtu_drone_bringup/config\n'}
+[1.258509] (sjtu_drone_control) StdoutLine: {'line': b'byte-compiling /home/sachin/ros2_drone/install/sjtu_drone_control/lib/python3.12/site-packages/sjtu_drone_control/teleop_joystick.py to teleop_joystick.cpython-312.pyc\n'}
+[1.258595] (sjtu_drone_bringup) StdoutLine: {'line': b'running install_egg_info\n'}
+[1.258664] (sjtu_drone_control) StdoutLine: {'line': b'byte-compiling /home/sachin/ros2_drone/install/sjtu_drone_control/lib/python3.12/site-packages/sjtu_drone_control/drone_position_control.py to drone_position_control.cpython-312.pyc\n'}
+[1.258733] (sjtu_drone_control) StdoutLine: {'line': b'byte-compiling /home/sachin/ros2_drone/install/sjtu_drone_control/lib/python3.12/site-packages/sjtu_drone_control/open_loop_control.py to open_loop_control.cpython-312.pyc\n'}
+[1.259728] (sjtu_drone_control) StdoutLine: {'line': b'running install_data\n'}
+[1.259839] (sjtu_drone_control) StdoutLine: {'line': b'creating /home/sachin/ros2_drone/install/sjtu_drone_control/share/ament_index\n'}
+[1.259929] (sjtu_drone_control) StdoutLine: {'line': b'creating /home/sachin/ros2_drone/install/sjtu_drone_control/share/ament_index/resource_index\n'}
+[1.260027] (sjtu_drone_control) StdoutLine: {'line': b'creating /home/sachin/ros2_drone/install/sjtu_drone_control/share/ament_index/resource_index/packages\n'}
+[1.260096] (sjtu_drone_control) StdoutLine: {'line': b'copying resource/sjtu_drone_control -> /home/sachin/ros2_drone/install/sjtu_drone_control/share/ament_index/resource_index/packages\n'}
+[1.260173] (sjtu_drone_control) StdoutLine: {'line': b'copying package.xml -> /home/sachin/ros2_drone/install/sjtu_drone_control/share/sjtu_drone_control\n'}
+[1.260241] (sjtu_drone_control) StdoutLine: {'line': b'running install_egg_info\n'}
+[1.265774] (sjtu_drone_description) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[1.268781] (drone_delivery_system) StdoutLine: {'line': b'creating /home/sachin/ros2_drone/install/drone_delivery_system/lib/python3.12/site-packages/drone_delivery_system\n'}
+[1.268898] (drone_delivery_system) StdoutLine: {'line': b'copying /home/sachin/ros2_drone/build/drone_delivery_system/build/lib/drone_delivery_system/__init__.py -> /home/sachin/ros2_drone/install/drone_delivery_system/lib/python3.12/site-packages/drone_delivery_system\n'}
+[1.269033] (drone_delivery_system) StdoutLine: {'line': b'copying /home/sachin/ros2_drone/build/drone_delivery_system/build/lib/drone_delivery_system/payload_manager.py -> /home/sachin/ros2_drone/install/drone_delivery_system/lib/python3.12/site-packages/drone_delivery_system\n'}
+[1.269110] (drone_delivery_system) StdoutLine: {'line': b'copying /home/sachin/ros2_drone/build/drone_delivery_system/build/lib/drone_delivery_system/enhanced_delivery_controller.py -> /home/sachin/ros2_drone/install/drone_delivery_system/lib/python3.12/site-packages/drone_delivery_system\n'}
+[1.269181] (drone_delivery_system) StdoutLine: {'line': b'copying /home/sachin/ros2_drone/build/drone_delivery_system/build/lib/drone_delivery_system/dual_camera_yolo_detector.py -> /home/sachin/ros2_drone/install/drone_delivery_system/lib/python3.12/site-packages/drone_delivery_system\n'}
+[1.269258] (drone_delivery_system) StdoutLine: {'line': b'copying /home/sachin/ros2_drone/build/drone_delivery_system/build/lib/drone_delivery_system/mission_planner.py -> /home/sachin/ros2_drone/install/drone_delivery_system/lib/python3.12/site-packages/drone_delivery_system\n'}
+[1.269332] (drone_delivery_system) StdoutLine: {'line': b'copying /home/sachin/ros2_drone/build/drone_delivery_system/build/lib/drone_delivery_system/obstacle_avoider.py -> /home/sachin/ros2_drone/install/drone_delivery_system/lib/python3.12/site-packages/drone_delivery_system\n'}
+[1.269437] (drone_delivery_system) StdoutLine: {'line': b'byte-compiling /home/sachin/ros2_drone/install/drone_delivery_system/lib/python3.12/site-packages/drone_delivery_system/__init__.py to __init__.cpython-312.pyc\n'}
+[1.269542] (drone_delivery_system) StdoutLine: {'line': b'byte-compiling /home/sachin/ros2_drone/install/drone_delivery_system/lib/python3.12/site-packages/drone_delivery_system/payload_manager.py to payload_manager.cpython-312.pyc\n'}
+[1.270278] (drone_delivery_system) StdoutLine: {'line': b'byte-compiling /home/sachin/ros2_drone/install/drone_delivery_system/lib/python3.12/site-packages/drone_delivery_system/enhanced_delivery_controller.py to enhanced_delivery_controller.cpython-312.pyc\n'}
+[1.271843] (drone_delivery_system) StdoutLine: {'line': b'byte-compiling /home/sachin/ros2_drone/install/drone_delivery_system/lib/python3.12/site-packages/drone_delivery_system/dual_camera_yolo_detector.py to dual_camera_yolo_detector.cpython-312.pyc\n'}
+[1.271994] (sjtu_drone_bringup) StdoutLine: {'line': b'Copying ../../build/sjtu_drone_bringup/sjtu_drone_bringup.egg-info to /home/sachin/ros2_drone/install/sjtu_drone_bringup/lib/python3.12/site-packages/sjtu_drone_bringup-0.0.0-py3.12.egg-info\n'}
+[1.272304] (sjtu_drone_bringup) StdoutLine: {'line': b'running install_scripts\n'}
+[1.273334] (drone_delivery_system) StdoutLine: {'line': b'byte-compiling /home/sachin/ros2_drone/install/drone_delivery_system/lib/python3.12/site-packages/drone_delivery_system/mission_planner.py to mission_planner.cpython-312.pyc\n'}
+[1.273717] (drone_delivery_system) StdoutLine: {'line': b'byte-compiling /home/sachin/ros2_drone/install/drone_delivery_system/lib/python3.12/site-packages/drone_delivery_system/obstacle_avoider.py to obstacle_avoider.cpython-312.pyc\n'}
+[1.274321] (sjtu_drone_control) StdoutLine: {'line': b'Copying ../../build/sjtu_drone_control/sjtu_drone_control.egg-info to /home/sachin/ros2_drone/install/sjtu_drone_control/lib/python3.12/site-packages/sjtu_drone_control-0.0.0-py3.12.egg-info\n'}
+[1.274632] (drone_delivery_system) StdoutLine: {'line': b'running install_data\n'}
+[1.274744] (sjtu_drone_control) StdoutLine: {'line': b'running install_scripts\n'}
+[1.274912] (drone_delivery_system) StdoutLine: {'line': b'creating /home/sachin/ros2_drone/install/drone_delivery_system/share/ament_index\n'}
+[1.275021] (drone_delivery_system) StdoutLine: {'line': b'creating /home/sachin/ros2_drone/install/drone_delivery_system/share/ament_index/resource_index\n'}
+[1.275107] (drone_delivery_system) StdoutLine: {'line': b'creating /home/sachin/ros2_drone/install/drone_delivery_system/share/ament_index/resource_index/packages\n'}
+[1.275185] (drone_delivery_system) StdoutLine: {'line': b'copying resource/drone_delivery_system -> /home/sachin/ros2_drone/install/drone_delivery_system/share/ament_index/resource_index/packages\n'}
+[1.275261] (drone_delivery_system) StdoutLine: {'line': b'copying package.xml -> /home/sachin/ros2_drone/install/drone_delivery_system/share/drone_delivery_system\n'}
+[1.275334] (drone_delivery_system) StdoutLine: {'line': b'creating /home/sachin/ros2_drone/install/drone_delivery_system/share/drone_delivery_system/launch\n'}
+[1.275415] (drone_delivery_system) StdoutLine: {'line': b'copying launch/delivery_system.launch.py -> /home/sachin/ros2_drone/install/drone_delivery_system/share/drone_delivery_system/launch\n'}
+[1.275561] (drone_delivery_system) StdoutLine: {'line': b'creating /home/sachin/ros2_drone/install/drone_delivery_system/share/drone_delivery_system/config\n'}
+[1.275664] (drone_delivery_system) StdoutLine: {'line': b'copying config/delivery_params.yaml -> /home/sachin/ros2_drone/install/drone_delivery_system/share/drone_delivery_system/config\n'}
+[1.275741] (drone_delivery_system) StdoutLine: {'line': b'creating /home/sachin/ros2_drone/install/drone_delivery_system/share/drone_delivery_system/models\n'}
+[1.275813] (drone_delivery_system) StdoutLine: {'line': b'copying models/delivery_box.sdf -> /home/sachin/ros2_drone/install/drone_delivery_system/share/drone_delivery_system/models\n'}
+[1.275882] (drone_delivery_system) StdoutLine: {'line': b'running install_egg_info\n'}
+[1.289484] (drone_delivery_system) StdoutLine: {'line': b'Copying ../../build/drone_delivery_system/drone_delivery_system.egg-info to /home/sachin/ros2_drone/install/drone_delivery_system/lib/python3.12/site-packages/drone_delivery_system-1.0.0-py3.12.egg-info\n'}
+[1.289778] (drone_delivery_system) StdoutLine: {'line': b'running install_scripts\n'}
+[1.301787] (-) TimerEvent: {}
+[1.345586] (sjtu_drone_description) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 7.3.3 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)\n'}
+[1.349594] (sjtu_drone_description) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 8.4.3 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)\n'}
+[1.360364] (sjtu_drone_bringup) StdoutLine: {'line': b'Installing spawn_drone script to /home/sachin/ros2_drone/install/sjtu_drone_bringup/lib/sjtu_drone_bringup\n'}
+[1.360574] (sjtu_drone_bringup) StdoutLine: {'line': b"writing list of installed files to '/home/sachin/ros2_drone/build/sjtu_drone_bringup/install.log'\n"}
+[1.361560] (sjtu_drone_control) StdoutLine: {'line': b'Installing drone_position_control script to /home/sachin/ros2_drone/install/sjtu_drone_control/lib/sjtu_drone_control\n'}
+[1.361775] (sjtu_drone_control) StdoutLine: {'line': b'Installing open_loop_control script to /home/sachin/ros2_drone/install/sjtu_drone_control/lib/sjtu_drone_control\n'}
+[1.361854] (sjtu_drone_control) StdoutLine: {'line': b'Installing teleop script to /home/sachin/ros2_drone/install/sjtu_drone_control/lib/sjtu_drone_control\n'}
+[1.361936] (sjtu_drone_control) StdoutLine: {'line': b'Installing teleop_joystick script to /home/sachin/ros2_drone/install/sjtu_drone_control/lib/sjtu_drone_control\n'}
+[1.362095] (sjtu_drone_control) StdoutLine: {'line': b"writing list of installed files to '/home/sachin/ros2_drone/build/sjtu_drone_control/install.log'\n"}
+[1.380033] (drone_delivery_system) StdoutLine: {'line': b'Installing dual_camera_yolo_detector script to /home/sachin/ros2_drone/install/drone_delivery_system/lib/drone_delivery_system\n'}
+[1.380304] (drone_delivery_system) StdoutLine: {'line': b'Installing enhanced_delivery_controller script to /home/sachin/ros2_drone/install/drone_delivery_system/lib/drone_delivery_system\n'}
+[1.380451] (drone_delivery_system) StdoutLine: {'line': b'Installing mission_planner script to /home/sachin/ros2_drone/install/drone_delivery_system/lib/drone_delivery_system\n'}
+[1.380632] (drone_delivery_system) StdoutLine: {'line': b'Installing payload_manager script to /home/sachin/ros2_drone/install/drone_delivery_system/lib/drone_delivery_system\n'}
+[1.380770] (drone_delivery_system) StdoutLine: {'line': b"writing list of installed files to '/home/sachin/ros2_drone/build/drone_delivery_system/install.log'\n"}
+[1.393300] (sjtu_drone_bringup) CommandEnded: {'returncode': 0}
+[1.401920] (-) TimerEvent: {}
+[1.402174] (sjtu_drone_bringup) JobEnded: {'identifier': 'sjtu_drone_bringup', 'rc': 0}
+[1.403220] (sjtu_drone_control) CommandEnded: {'returncode': 0}
+[1.408406] (sjtu_drone_control) JobEnded: {'identifier': 'sjtu_drone_control', 'rc': 0}
+[1.414584] (drone_delivery_system) CommandEnded: {'returncode': 0}
+[1.418216] (drone_delivery_system) JobEnded: {'identifier': 'drone_delivery_system', 'rc': 0}
+[1.457333] (sjtu_drone_description) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.13")  \n'}
+[1.474480] (sjtu_drone_description) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/jazzy/include (Required is at least version "2.13") \n'}
+[1.492507] (sjtu_drone_description) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[1.502028] (-) TimerEvent: {}
+[1.563828] (sjtu_drone_description) StdoutLine: {'line': b'-- Found std_msgs: 5.3.7 (/opt/ros/jazzy/share/std_msgs/cmake)\n'}
+[1.576999] (sjtu_drone_description) StdoutLine: {'line': b'-- Found geometry_msgs: 5.3.7 (/opt/ros/jazzy/share/geometry_msgs/cmake)\n'}
+[1.591635] (sjtu_drone_description) StdoutLine: {'line': b'-- Found sensor_msgs: 5.3.7 (/opt/ros/jazzy/share/sensor_msgs/cmake)\n'}
+[1.602198] (-) TimerEvent: {}
+[1.611921] (sjtu_drone_description) StdoutLine: {'line': b'-- Found nav_msgs: 5.3.7 (/opt/ros/jazzy/share/nav_msgs/cmake)\n'}
+[1.633481] (sjtu_drone_description) StdoutLine: {'line': b'-- Found tf2_ros: 0.36.20 (/opt/ros/jazzy/share/tf2_ros/cmake)\n'}
+[1.702401] (-) TimerEvent: {}
+[1.751624] (sjtu_drone_description) StdoutLine: {'line': b'-- Found tf2_geometry_msgs: 0.36.20 (/opt/ros/jazzy/share/tf2_geometry_msgs/cmake)\n'}
+[1.768383] (sjtu_drone_description) StdoutLine: {'line': b'-- Found eigen3_cmake_module: 0.3.0 (/opt/ros/jazzy/share/eigen3_cmake_module/cmake)\n'}
+[1.769470] (sjtu_drone_description) StdoutLine: {'line': b'-- Found Eigen3: TRUE (found version "3.4.0") \n'}
+[1.769552] (sjtu_drone_description) StdoutLine: {'line': b'-- Ensuring Eigen3 include directory is part of orocos-kdl CMake target\n'}
+[1.802503] (-) TimerEvent: {}
+[1.832479] (sjtu_drone_description) StdoutLine: {'line': b'-- Looking for gz-sim8 -- found version 8.11.0\n'}
+[1.840310] (sjtu_drone_description) StdoutLine: {'line': b'-- Searching for dependencies of gz-sim8\n'}
+[1.841760] (sjtu_drone_description) StdoutLine: {'line': b'-- Looking for sdformat14 -- found version 14.9.0\n'}
+[1.841839] (sjtu_drone_description) StdoutLine: {'line': b'-- Searching for dependencies of sdformat14\n'}
+[1.846651] (sjtu_drone_description) StdoutLine: {'line': b"-- Checking for module 'tinyxml2'\n"}
+[1.862831] (sjtu_drone_description) StdoutLine: {'line': b'--   Found tinyxml2, version 10.0.0\n'}
+[1.902698] (-) TimerEvent: {}
+[1.906248] (sjtu_drone_description) StdoutLine: {'line': b'-- Looking for gz-math7 -- found version 7.5.2\n'}
+[1.906464] (sjtu_drone_description) StdoutLine: {'line': b'-- Searching for dependencies of gz-math7\n'}
+[1.909666] (sjtu_drone_description) StdoutLine: {'line': b'-- Looking for gz-utils2 -- found version 2.2.1\n'}
+[1.909783] (sjtu_drone_description) StdoutLine: {'line': b'-- Searching for dependencies of gz-utils2\n'}
+[1.911261] (sjtu_drone_description) StdoutLine: {'line': b'-- Looking for gz-utils2 -- found version 2.2.1\n'}
+[1.911357] (sjtu_drone_description) StdoutLine: {'line': b'-- Searching for dependencies of gz-utils2\n'}
+[1.911403] (sjtu_drone_description) StdoutLine: {'line': b'-- Searching for <gz-utils2> component [cli]\n'}
+[1.913190] (sjtu_drone_description) StdoutLine: {'line': b'-- Looking for gz-utils2-cli -- found version 2.2.1\n'}
+[1.913266] (sjtu_drone_description) StdoutLine: {'line': b'-- Searching for dependencies of gz-utils2-cli\n'}
+[1.915658] (sjtu_drone_description) StdoutLine: {'line': b'-- Looking for gz-plugin2 -- found version 2.0.4\n'}
+[1.915824] (sjtu_drone_description) StdoutLine: {'line': b'-- Searching for dependencies of gz-plugin2\n'}
+[1.915890] (sjtu_drone_description) StdoutLine: {'line': b'-- Looking for gz-utils2 -- found version 2.2.1\n'}
+[1.916402] (sjtu_drone_description) StdoutLine: {'line': b'-- Searching for <gz-plugin2> component [loader]\n'}
+[1.918228] (sjtu_drone_description) StdoutLine: {'line': b'-- Looking for gz-plugin2-loader -- found version 2.0.4\n'}
+[1.918318] (sjtu_drone_description) StdoutLine: {'line': b'-- Searching for dependencies of gz-plugin2-loader\n'}
+[1.919098] (sjtu_drone_description) StdoutLine: {'line': b'-- Searching for <gz-plugin2> component [register]\n'}
+[1.920661] (sjtu_drone_description) StdoutLine: {'line': b'-- Looking for gz-plugin2-register -- found version 2.0.4\n'}
+[1.920737] (sjtu_drone_description) StdoutLine: {'line': b'-- Searching for dependencies of gz-plugin2-register\n'}
+[1.922642] (sjtu_drone_description) StdoutLine: {'line': b'-- Looking for gz-transport13 -- found version 13.5.0\n'}
+[1.922718] (sjtu_drone_description) StdoutLine: {'line': b'-- Searching for dependencies of gz-transport13\n'}
+[2.002801] (-) TimerEvent: {}
+[2.043692] (sjtu_drone_description) StdoutLine: {'line': b'-- Found Protobuf: /usr/lib/x86_64-linux-gnu/libprotobuf.so (found version "3.21.12") \n'}
+[2.052614] (sjtu_drone_description) StdoutLine: {'line': b'-- Config-file not installed for ZeroMQ -- checking for pkg-config\n'}
+[2.057149] (sjtu_drone_description) StdoutLine: {'line': b"-- Checking for module 'libzmq >= 4'\n"}
+[2.073710] (sjtu_drone_description) StdoutLine: {'line': b'--   Found libzmq, version 4.3.5\n'}
+[2.102961] (-) TimerEvent: {}
+[2.133662] (sjtu_drone_description) StdoutLine: {'line': b'-- Found ZeroMQ: TRUE (Required is at least version "4") \n'}
+[2.143849] (sjtu_drone_description) StdoutLine: {'line': b"-- Checking for module 'uuid'\n"}
+[2.169459] (sjtu_drone_description) StdoutLine: {'line': b'--   Found uuid, version 2.39.3\n'}
+[2.203135] (-) TimerEvent: {}
+[2.226539] (sjtu_drone_description) StdoutLine: {'line': b'-- Found UUID: TRUE  \n'}
+[2.227037] (sjtu_drone_description) StdoutLine: {'line': b'-- Looking for gz-utils2 -- found version 2.2.1\n'}
+[2.231833] (sjtu_drone_description) StdoutLine: {'line': b'-- Looking for gz-msgs10 -- found version 10.3.2\n'}
+[2.232124] (sjtu_drone_description) StdoutLine: {'line': b'-- Searching for dependencies of gz-msgs10\n'}
+[2.246724] (sjtu_drone_description) StdoutLine: {'line': b'-- Looking for gz-utils2 -- found version 2.2.1\n'}
+[2.247001] (sjtu_drone_description) StdoutLine: {'line': b'-- Looking for gz-math7 -- found version 7.5.2\n'}
+[2.254853] (sjtu_drone_description) StdoutLine: {'line': b'-- Searching for <gz-transport13> component [log]\n'}
+[2.256489] (sjtu_drone_description) StdoutLine: {'line': b'-- Looking for gz-transport13-log -- found version 13.5.0\n'}
+[2.256600] (sjtu_drone_description) StdoutLine: {'line': b'-- Searching for dependencies of gz-transport13-log\n'}
+[2.257107] (sjtu_drone_description) StdoutLine: {'line': b'-- Searching for <gz-transport13> component [parameters]\n'}
+[2.258642] (sjtu_drone_description) StdoutLine: {'line': b'-- Looking for gz-transport13-parameters -- found version 13.5.0\n'}
+[2.258802] (sjtu_drone_description) StdoutLine: {'line': b'-- Searching for dependencies of gz-transport13-parameters\n'}
+[2.259509] (sjtu_drone_description) StdoutLine: {'line': b'-- Looking for gz-msgs10 -- found version 10.3.2\n'}
+[2.261586] (sjtu_drone_description) StdoutLine: {'line': b'-- Looking for gz-common5 -- found version 5.8.0\n'}
+[2.261771] (sjtu_drone_description) StdoutLine: {'line': b'-- Searching for dependencies of gz-common5\n'}
+[2.261849] (sjtu_drone_description) StdoutLine: {'line': b'-- Looking for gz-utils2 -- found version 2.2.1\n'}
+[2.262363] (sjtu_drone_description) StdoutLine: {'line': b'-- Looking for dlfcn.h - found\n'}
+[2.263487] (sjtu_drone_description) StdoutLine: {'line': b'-- Looking for libdl - found\n'}
+[2.264364] (sjtu_drone_description) StdoutLine: {'line': b'-- Found DL: TRUE  \n'}
+[2.269637] (sjtu_drone_description) StdoutLine: {'line': b'-- Searching for <gz-common5> component [av]\n'}
+[2.271554] (sjtu_drone_description) StdoutLine: {'line': b'-- Looking for gz-common5-av -- found version 5.8.0\n'}
+[2.271721] (sjtu_drone_description) StdoutLine: {'line': b'-- Searching for dependencies of gz-common5-av\n'}
+[2.276209] (sjtu_drone_description) StdoutLine: {'line': b"-- Checking for module 'libswscale'\n"}
+[2.294083] (sjtu_drone_description) StdoutLine: {'line': b'--   Found libswscale, version 7.5.100\n'}
+[2.303295] (-) TimerEvent: {}
+[2.329745] (sjtu_drone_description) StdoutLine: {'line': b'-- Found SWSCALE: TRUE  \n'}
+[2.334623] (sjtu_drone_description) StdoutLine: {'line': b"-- Checking for module 'libavdevice >= 56.4.100'\n"}
+[2.350155] (sjtu_drone_description) StdoutLine: {'line': b'--   Found libavdevice, version 60.3.100\n'}
+[2.402021] (sjtu_drone_description) StdoutLine: {'line': b'-- Found AVDEVICE: TRUE (Required is at least version "56.4.100") \n'}
+[2.403534] (-) TimerEvent: {}
+[2.411321] (sjtu_drone_description) StdoutLine: {'line': b"-- Checking for module 'libavformat'\n"}
+[2.431011] (sjtu_drone_description) StdoutLine: {'line': b'--   Found libavformat, version 60.16.100\n'}
+[2.480808] (sjtu_drone_description) StdoutLine: {'line': b'-- Found AVFORMAT: TRUE  \n'}
+[2.488690] (sjtu_drone_description) StdoutLine: {'line': b"-- Checking for module 'libavcodec'\n"}
+[2.503657] (-) TimerEvent: {}
+[2.508897] (sjtu_drone_description) StdoutLine: {'line': b'--   Found libavcodec, version 60.31.102\n'}
+[2.562310] (sjtu_drone_description) StdoutLine: {'line': b'-- Found AVCODEC: TRUE  \n'}
+[2.571142] (sjtu_drone_description) StdoutLine: {'line': b"-- Checking for module 'libavutil'\n"}
+[2.594681] (sjtu_drone_description) StdoutLine: {'line': b'--   Found libavutil, version 58.29.100\n'}
+[2.603765] (-) TimerEvent: {}
+[2.648976] (sjtu_drone_description) StdoutLine: {'line': b'-- Found AVUTIL: TRUE  \n'}
+[2.651565] (sjtu_drone_description) StdoutLine: {'line': b'-- Searching for <gz-common5> component [events]\n'}
+[2.654562] (sjtu_drone_description) StdoutLine: {'line': b'-- Looking for gz-common5-events -- found version 5.8.0\n'}
+[2.654810] (sjtu_drone_description) StdoutLine: {'line': b'-- Searching for dependencies of gz-common5-events\n'}
+[2.654942] (sjtu_drone_description) StdoutLine: {'line': b'-- Looking for gz-math7 -- found version 7.5.2\n'}
+[2.655648] (sjtu_drone_description) StdoutLine: {'line': b'-- Searching for <gz-common5> component [graphics]\n'}
+[2.657576] (sjtu_drone_description) StdoutLine: {'line': b'-- Looking for gz-common5-graphics -- found version 5.8.0\n'}
+[2.657739] (sjtu_drone_description) StdoutLine: {'line': b'-- Searching for dependencies of gz-common5-graphics\n'}
+[2.657850] (sjtu_drone_description) StdoutLine: {'line': b'-- Looking for gz-math7 -- found version 7.5.2\n'}
+[2.662703] (sjtu_drone_description) StdoutLine: {'line': b'-- Found GzAssimp: TRUE (found version "5.3.0") \n'}
+[2.663288] (sjtu_drone_description) StdoutLine: {'line': b'-- Searching for <gz-common5> component [io]\n'}
+[2.664738] (sjtu_drone_description) StdoutLine: {'line': b'-- Looking for gz-common5-io -- found version 5.8.0\n'}
+[2.664900] (sjtu_drone_description) StdoutLine: {'line': b'-- Searching for dependencies of gz-common5-io\n'}
+[2.665268] (sjtu_drone_description) StdoutLine: {'line': b'-- Searching for <gz-common5> component [profiler]\n'}
+[2.667104] (sjtu_drone_description) StdoutLine: {'line': b'-- Looking for gz-common5-profiler -- found version 5.8.0\n'}
+[2.667214] (sjtu_drone_description) StdoutLine: {'line': b'-- Searching for dependencies of gz-common5-profiler\n'}
+[2.669297] (sjtu_drone_description) StdoutLine: {'line': b'-- Looking for gz-fuel_tools9 -- found version 9.1.1\n'}
+[2.669413] (sjtu_drone_description) StdoutLine: {'line': b'-- Searching for dependencies of gz-fuel_tools9\n'}
+[2.703911] (-) TimerEvent: {}
+[2.773408] (sjtu_drone_description) StdoutLine: {'line': b'-- Found CURL: /usr/lib/x86_64-linux-gnu/libcurl.so (found version "8.5.0")  \n'}
+[2.783342] (sjtu_drone_description) StdoutLine: {'line': b"-- Checking for module 'jsoncpp'\n"}
+[2.802527] (sjtu_drone_description) StdoutLine: {'line': b'--   Found jsoncpp, version 1.9.5\n'}
+[2.804000] (-) TimerEvent: {}
+[2.859866] (sjtu_drone_description) StdoutLine: {'line': b'-- Found JSONCPP: TRUE  \n'}
+[2.880553] (sjtu_drone_description) StdoutLine: {'line': b"-- Checking for module 'yaml-0.1'\n"}
+[2.897646] (sjtu_drone_description) StdoutLine: {'line': b'--   Found yaml-0.1, version 0.2.5\n'}
+[2.904156] (-) TimerEvent: {}
+[2.950409] (sjtu_drone_description) StdoutLine: {'line': b'-- Found YAML: TRUE  \n'}
+[2.959914] (sjtu_drone_description) StdoutLine: {'line': b"-- Checking for module 'libzip'\n"}
+[2.983427] (sjtu_drone_description) StdoutLine: {'line': b'--   Found libzip, version 1.7.3\n'}
+[3.004320] (-) TimerEvent: {}
+[3.042128] (sjtu_drone_description) StdoutLine: {'line': b'-- Found ZIP: TRUE  \n'}
+[3.042920] (sjtu_drone_description) StdoutLine: {'line': b'-- Looking for gz-utils2 -- found version 2.2.1\n'}
+[3.043251] (sjtu_drone_description) StdoutLine: {'line': b'-- Looking for gz-common5 -- found version 5.8.0\n'}
+[3.043628] (sjtu_drone_description) StdoutLine: {'line': b'-- Searching for dependencies of gz-common5\n'}
+[3.044054] (sjtu_drone_description) StdoutLine: {'line': b'-- Looking for gz-utils2 -- found version 2.2.1\n'}
+[3.044249] (sjtu_drone_description) StdoutLine: {'line': b'-- Looking for dlfcn.h - found\n'}
+[3.044403] (sjtu_drone_description) StdoutLine: {'line': b'-- Looking for libdl - found\n'}
+[3.051171] (sjtu_drone_description) StdoutLine: {'line': b'-- Searching for <gz-common5> component [testing]\n'}
+[3.054555] (sjtu_drone_description) StdoutLine: {'line': b'-- Looking for gz-common5-testing -- found version 5.8.0\n'}
+[3.054877] (sjtu_drone_description) StdoutLine: {'line': b'-- Searching for dependencies of gz-common5-testing\n'}
+[3.056051] (sjtu_drone_description) StdoutLine: {'line': b'-- Looking for gz-math7 -- found version 7.5.2\n'}
+[3.056337] (sjtu_drone_description) StdoutLine: {'line': b'-- Looking for gz-msgs10 -- found version 10.3.2\n'}
+[3.058972] (sjtu_drone_description) StdoutLine: {'line': b'-- Looking for gz-gui8 -- found version 8.4.0\n'}
+[3.059066] (sjtu_drone_description) StdoutLine: {'line': b'-- Searching for dependencies of gz-gui8\n'}
+[3.077703] (sjtu_drone_description) StdoutLine: {'line': b'-- Looking for gz-utils2 -- found version 2.2.1\n'}
+[3.077984] (sjtu_drone_description) StdoutLine: {'line': b'-- Looking for gz-math7 -- found version 7.5.2\n'}
+[3.078420] (sjtu_drone_description) StdoutLine: {'line': b'-- Looking for gz-common5 -- found version 5.8.0\n'}
+[3.078802] (sjtu_drone_description) StdoutLine: {'line': b'-- Looking for gz-plugin2 -- found version 2.0.4\n'}
+[3.079246] (sjtu_drone_description) StdoutLine: {'line': b'-- Looking for gz-transport13 -- found version 13.5.0\n'}
+[3.082188] (sjtu_drone_description) StdoutLine: {'line': b'-- Looking for gz-rendering8 -- found version 8.2.3\n'}
+[3.082269] (sjtu_drone_description) StdoutLine: {'line': b'-- Searching for dependencies of gz-rendering8\n'}
+[3.082675] (sjtu_drone_description) StdoutLine: {'line': b'-- Looking for gz-math7 -- found version 7.5.2\n'}
+[3.082778] (sjtu_drone_description) StdoutLine: {'line': b'-- Searching for dependencies of gz-math7\n'}
+[3.083193] (sjtu_drone_description) StdoutLine: {'line': b'-- Looking for gz-utils2 -- found version 2.2.1\n'}
+[3.083227] (sjtu_drone_description) StdoutLine: {'line': b'-- Searching for <gz-math7> component [eigen3]\n'}
+[3.085215] (sjtu_drone_description) StdoutLine: {'line': b'-- Looking for gz-math7-eigen3 -- found version 7.5.2\n'}
+[3.085292] (sjtu_drone_description) StdoutLine: {'line': b'-- Searching for dependencies of gz-math7-eigen3\n'}
+[3.087420] (sjtu_drone_description) StdoutLine: {'line': b'-- Looking for gz-common5 -- found version 5.8.0\n'}
+[3.087512] (sjtu_drone_description) StdoutLine: {'line': b'-- Searching for dependencies of gz-common5\n'}
+[3.088050] (sjtu_drone_description) StdoutLine: {'line': b'-- Looking for gz-utils2 -- found version 2.2.1\n'}
+[3.088131] (sjtu_drone_description) StdoutLine: {'line': b'-- Looking for dlfcn.h - found\n'}
+[3.088172] (sjtu_drone_description) StdoutLine: {'line': b'-- Looking for libdl - found\n'}
+[3.097432] (sjtu_drone_description) StdoutLine: {'line': b'-- Searching for <gz-common5> component [graphics]\n'}
+[3.097556] (sjtu_drone_description) StdoutLine: {'line': b'-- Searching for <gz-common5> component [events]\n'}
+[3.097608] (sjtu_drone_description) StdoutLine: {'line': b'-- Searching for <gz-common5> component [geospatial]\n'}
+[3.099704] (sjtu_drone_description) StdoutLine: {'line': b'-- Looking for gz-common5-geospatial -- found version 5.8.0\n'}
+[3.099789] (sjtu_drone_description) StdoutLine: {'line': b'-- Searching for dependencies of gz-common5-geospatial\n'}
+[3.099927] (sjtu_drone_description) StdoutLine: {'line': b'-- Looking for gz-math7 -- found version 7.5.2\n'}
+[3.100086] (sjtu_drone_description) StdoutLine: {'line': b'-- Looking for gz-common5 -- found version 5.8.0\n'}
+[3.101259] (sjtu_drone_description) StdoutLine: {'line': b'-- Looking for gz-plugin2 -- found version 2.0.4\n'}
+[3.101339] (sjtu_drone_description) StdoutLine: {'line': b'-- Searching for dependencies of gz-plugin2\n'}
+[3.101391] (sjtu_drone_description) StdoutLine: {'line': b'-- Looking for gz-utils2 -- found version 2.2.1\n'}
+[3.101594] (sjtu_drone_description) StdoutLine: {'line': b'-- Searching for <gz-plugin2> component [all]\n'}
+[3.103182] (sjtu_drone_description) StdoutLine: {'line': b'-- Looking for all libraries of gz-plugin2 -- found version 2.0.4\n'}
+[3.103312] (sjtu_drone_description) StdoutLine: {'line': b'-- Looking for gz-plugin2 -- found version 2.0.4\n'}
+[3.104255] (sjtu_drone_description) StdoutLine: {'line': b'-- Looking for gz-utils2 -- found version 2.2.1\n'}
+[3.104328] (-) TimerEvent: {}
+[3.115480] (sjtu_drone_description) StdoutLine: {'line': b'-- Found OpenGL: /usr/lib/x86_64-linux-gnu/libOpenGL.so  found components: OpenGL \n'}
+[3.116610] (sjtu_drone_description) StdoutLine: {'line': b'-- Looking for gz-msgs10 -- found version 10.3.2\n'}
+[3.143428] (sjtu_drone_description) StdoutLine: {'line': b'-- Looking for gz-physics7 -- found version 7.6.0\n'}
+[3.143530] (sjtu_drone_description) StdoutLine: {'line': b'-- Searching for dependencies of gz-physics7\n'}
+[3.143674] (sjtu_drone_description) StdoutLine: {'line': b'-- Looking for gz-common5 -- found version 5.8.0\n'}
+[3.143887] (sjtu_drone_description) StdoutLine: {'line': b'-- Looking for gz-math7 -- found version 7.5.2\n'}
+[3.144117] (sjtu_drone_description) StdoutLine: {'line': b'-- Looking for gz-plugin2 -- found version 2.0.4\n'}
+[3.144364] (sjtu_drone_description) StdoutLine: {'line': b'-- Looking for gz-utils2 -- found version 2.2.1\n'}
+[3.145574] (sjtu_drone_description) StdoutLine: {'line': b'-- Searching for <gz-physics7> component [heightmap]\n'}
+[3.146916] (sjtu_drone_description) StdoutLine: {'line': b'-- Looking for gz-physics7-heightmap -- found version 7.6.0\n'}
+[3.146994] (sjtu_drone_description) StdoutLine: {'line': b'-- Searching for dependencies of gz-physics7-heightmap\n'}
+[3.147121] (sjtu_drone_description) StdoutLine: {'line': b'-- Looking for gz-common5 -- found version 5.8.0\n'}
+[3.147645] (sjtu_drone_description) StdoutLine: {'line': b'-- Searching for <gz-physics7> component [mesh]\n'}
+[3.148852] (sjtu_drone_description) StdoutLine: {'line': b'-- Looking for gz-physics7-mesh -- found version 7.6.0\n'}
+[3.148930] (sjtu_drone_description) StdoutLine: {'line': b'-- Searching for dependencies of gz-physics7-mesh\n'}
+[3.149073] (sjtu_drone_description) StdoutLine: {'line': b'-- Looking for gz-common5 -- found version 5.8.0\n'}
+[3.149591] (sjtu_drone_description) StdoutLine: {'line': b'-- Searching for <gz-physics7> component [sdf]\n'}
+[3.151464] (sjtu_drone_description) StdoutLine: {'line': b'-- Looking for gz-physics7-sdf -- found version 7.6.0\n'}
+[3.151542] (sjtu_drone_description) StdoutLine: {'line': b'-- Searching for dependencies of gz-physics7-sdf\n'}
+[3.151687] (sjtu_drone_description) StdoutLine: {'line': b'-- Looking for sdformat14 -- found version 14.9.0\n'}
+[3.154954] (sjtu_drone_description) StdoutLine: {'line': b'-- Looking for gz-sensors8 -- found version 8.2.2\n'}
+[3.155030] (sjtu_drone_description) StdoutLine: {'line': b'-- Searching for dependencies of gz-sensors8\n'}
+[3.169112] (sjtu_drone_description) StdoutLine: {'line': b'-- Looking for gz-math7 -- found version 7.5.2\n'}
+[3.169228] (sjtu_drone_description) StdoutLine: {'line': b'-- Looking for gz-common5 -- found version 5.8.0\n'}
+[3.169598] (sjtu_drone_description) StdoutLine: {'line': b'-- Looking for gz-transport13 -- found version 13.5.0\n'}
+[3.169703] (sjtu_drone_description) StdoutLine: {'line': b'-- Looking for gz-rendering8 -- found version 8.2.3\n'}
+[3.169990] (sjtu_drone_description) StdoutLine: {'line': b'-- Looking for gz-msgs10 -- found version 10.3.2\n'}
+[3.170243] (sjtu_drone_description) StdoutLine: {'line': b'-- Looking for sdformat14 -- found version 14.9.0\n'}
+[3.171140] (sjtu_drone_description) StdoutLine: {'line': b'-- Searching for <gz-sensors8> component [air_pressure]\n'}
+[3.172435] (sjtu_drone_description) StdoutLine: {'line': b'-- Looking for gz-sensors8-air_pressure -- found version 8.2.2\n'}
+[3.172510] (sjtu_drone_description) StdoutLine: {'line': b'-- Searching for dependencies of gz-sensors8-air_pressure\n'}
+[3.173082] (sjtu_drone_description) StdoutLine: {'line': b'-- Searching for <gz-sensors8> component [air_speed]\n'}
+[3.174327] (sjtu_drone_description) StdoutLine: {'line': b'-- Looking for gz-sensors8-air_speed -- found version 8.2.2\n'}
+[3.174416] (sjtu_drone_description) StdoutLine: {'line': b'-- Searching for dependencies of gz-sensors8-air_speed\n'}
+[3.174675] (sjtu_drone_description) StdoutLine: {'line': b'-- Searching for <gz-sensors8> component [altimeter]\n'}
+[3.175977] (sjtu_drone_description) StdoutLine: {'line': b'-- Looking for gz-sensors8-altimeter -- found version 8.2.2\n'}
+[3.176058] (sjtu_drone_description) StdoutLine: {'line': b'-- Searching for dependencies of gz-sensors8-altimeter\n'}
+[3.176661] (sjtu_drone_description) StdoutLine: {'line': b'-- Searching for <gz-sensors8> component [imu]\n'}
+[3.177857] (sjtu_drone_description) StdoutLine: {'line': b'-- Looking for gz-sensors8-imu -- found version 8.2.2\n'}
+[3.177994] (sjtu_drone_description) StdoutLine: {'line': b'-- Searching for dependencies of gz-sensors8-imu\n'}
+[3.178440] (sjtu_drone_description) StdoutLine: {'line': b'-- Searching for <gz-sensors8> component [force_torque]\n'}
+[3.179573] (sjtu_drone_description) StdoutLine: {'line': b'-- Looking for gz-sensors8-force_torque -- found version 8.2.2\n'}
+[3.179713] (sjtu_drone_description) StdoutLine: {'line': b'-- Searching for dependencies of gz-sensors8-force_torque\n'}
+[3.180030] (sjtu_drone_description) StdoutLine: {'line': b'-- Searching for <gz-sensors8> component [logical_camera]\n'}
+[3.181262] (sjtu_drone_description) StdoutLine: {'line': b'-- Looking for gz-sensors8-logical_camera -- found version 8.2.2\n'}
+[3.181415] (sjtu_drone_description) StdoutLine: {'line': b'-- Searching for dependencies of gz-sensors8-logical_camera\n'}
+[3.181769] (sjtu_drone_description) StdoutLine: {'line': b'-- Searching for <gz-sensors8> component [magnetometer]\n'}
+[3.182860] (sjtu_drone_description) StdoutLine: {'line': b'-- Looking for gz-sensors8-magnetometer -- found version 8.2.2\n'}
+[3.182938] (sjtu_drone_description) StdoutLine: {'line': b'-- Searching for dependencies of gz-sensors8-magnetometer\n'}
+[3.183525] (sjtu_drone_description) StdoutLine: {'line': b'-- Searching for <gz-sensors8> component [navsat]\n'}
+[3.184649] (sjtu_drone_description) StdoutLine: {'line': b'-- Looking for gz-sensors8-navsat -- found version 8.2.2\n'}
+[3.184729] (sjtu_drone_description) StdoutLine: {'line': b'-- Searching for dependencies of gz-sensors8-navsat\n'}
+[3.185244] (sjtu_drone_description) StdoutLine: {'line': b'-- Searching for <gz-sensors8> component [dvl]\n'}
+[3.186422] (sjtu_drone_description) StdoutLine: {'line': b'-- Looking for gz-sensors8-dvl -- found version 8.2.2\n'}
+[3.186502] (sjtu_drone_description) StdoutLine: {'line': b'-- Searching for dependencies of gz-sensors8-dvl\n'}
+[3.186710] (sjtu_drone_description) StdoutLine: {'line': b'-- Looking for gz-sensors8 -- found version 8.2.2\n'}
+[3.186912] (sjtu_drone_description) StdoutLine: {'line': b'-- Searching for dependencies of gz-sensors8\n'}
+[3.201034] (sjtu_drone_description) StdoutLine: {'line': b'-- Looking for gz-math7 -- found version 7.5.2\n'}
+[3.201136] (sjtu_drone_description) StdoutLine: {'line': b'-- Looking for gz-common5 -- found version 5.8.0\n'}
+[3.201284] (sjtu_drone_description) StdoutLine: {'line': b'-- Looking for gz-transport13 -- found version 13.5.0\n'}
+[3.201664] (sjtu_drone_description) StdoutLine: {'line': b'-- Looking for gz-rendering8 -- found version 8.2.3\n'}
+[3.201847] (sjtu_drone_description) StdoutLine: {'line': b'-- Looking for gz-msgs10 -- found version 10.3.2\n'}
+[3.202096] (sjtu_drone_description) StdoutLine: {'line': b'-- Looking for sdformat14 -- found version 14.9.0\n'}
+[3.202237] (sjtu_drone_description) StdoutLine: {'line': b'-- Searching for <gz-sensors8> component [rendering]\n'}
+[3.203534] (sjtu_drone_description) StdoutLine: {'line': b'-- Looking for gz-sensors8-rendering -- found version 8.2.2\n'}
+[3.203634] (sjtu_drone_description) StdoutLine: {'line': b'-- Searching for dependencies of gz-sensors8-rendering\n'}
+[3.204414] (-) TimerEvent: {}
+[3.204808] (sjtu_drone_description) StdoutLine: {'line': b'-- Searching for <gz-sensors8> component [rendering]\n'}
+[3.204937] (sjtu_drone_description) StdoutLine: {'line': b'-- Searching for <gz-sensors8> component [lidar]\n'}
+[3.205976] (sjtu_drone_description) StdoutLine: {'line': b'-- Looking for gz-sensors8-lidar -- found version 8.2.2\n'}
+[3.206249] (sjtu_drone_description) StdoutLine: {'line': b'-- Searching for dependencies of gz-sensors8-lidar\n'}
+[3.206552] (sjtu_drone_description) StdoutLine: {'line': b'-- Looking for gz-sensors8 -- found version 8.2.2\n'}
+[3.207094] (sjtu_drone_description) StdoutLine: {'line': b'-- Searching for <gz-sensors8> component [gpu_lidar]\n'}
+[3.208394] (sjtu_drone_description) StdoutLine: {'line': b'-- Looking for gz-sensors8-gpu_lidar -- found version 8.2.2\n'}
+[3.208525] (sjtu_drone_description) StdoutLine: {'line': b'-- Searching for dependencies of gz-sensors8-gpu_lidar\n'}
+[3.208629] (sjtu_drone_description) StdoutLine: {'line': b'-- Looking for gz-sensors8 -- found version 8.2.2\n'}
+[3.209289] (sjtu_drone_description) StdoutLine: {'line': b'-- Searching for <gz-sensors8> component [camera]\n'}
+[3.210732] (sjtu_drone_description) StdoutLine: {'line': b'-- Looking for gz-sensors8-camera -- found version 8.2.2\n'}
+[3.210861] (sjtu_drone_description) StdoutLine: {'line': b'-- Searching for dependencies of gz-sensors8-camera\n'}
+[3.211027] (sjtu_drone_description) StdoutLine: {'line': b'-- Looking for gz-sensors8 -- found version 8.2.2\n'}
+[3.211603] (sjtu_drone_description) StdoutLine: {'line': b'-- Searching for <gz-sensors8> component [boundingbox_camera]\n'}
+[3.212856] (sjtu_drone_description) StdoutLine: {'line': b'-- Looking for gz-sensors8-boundingbox_camera -- found version 8.2.2\n'}
+[3.212987] (sjtu_drone_description) StdoutLine: {'line': b'-- Searching for dependencies of gz-sensors8-boundingbox_camera\n'}
+[3.213466] (sjtu_drone_description) StdoutLine: {'line': b'-- Searching for <gz-sensors8> component [segmentation_camera]\n'}
+[3.214982] (sjtu_drone_description) StdoutLine: {'line': b'-- Looking for gz-sensors8-segmentation_camera -- found version 8.2.2\n'}
+[3.215112] (sjtu_drone_description) StdoutLine: {'line': b'-- Searching for dependencies of gz-sensors8-segmentation_camera\n'}
+[3.215452] (sjtu_drone_description) StdoutLine: {'line': b'-- Searching for <gz-sensors8> component [depth_camera]\n'}
+[3.216784] (sjtu_drone_description) StdoutLine: {'line': b'-- Looking for gz-sensors8-depth_camera -- found version 8.2.2\n'}
+[3.216893] (sjtu_drone_description) StdoutLine: {'line': b'-- Searching for dependencies of gz-sensors8-depth_camera\n'}
+[3.217007] (sjtu_drone_description) StdoutLine: {'line': b'-- Looking for gz-sensors8 -- found version 8.2.2\n'}
+[3.217671] (sjtu_drone_description) StdoutLine: {'line': b'-- Searching for <gz-sensors8> component [rgbd_camera]\n'}
+[3.218906] (sjtu_drone_description) StdoutLine: {'line': b'-- Looking for gz-sensors8-rgbd_camera -- found version 8.2.2\n'}
+[3.219016] (sjtu_drone_description) StdoutLine: {'line': b'-- Searching for dependencies of gz-sensors8-rgbd_camera\n'}
+[3.219182] (sjtu_drone_description) StdoutLine: {'line': b'-- Looking for gz-sensors8 -- found version 8.2.2\n'}
+[3.219822] (sjtu_drone_description) StdoutLine: {'line': b'-- Searching for <gz-sensors8> component [thermal_camera]\n'}
+[3.221086] (sjtu_drone_description) StdoutLine: {'line': b'-- Looking for gz-sensors8-thermal_camera -- found version 8.2.2\n'}
+[3.221195] (sjtu_drone_description) StdoutLine: {'line': b'-- Searching for dependencies of gz-sensors8-thermal_camera\n'}
+[3.221355] (sjtu_drone_description) StdoutLine: {'line': b'-- Looking for gz-sensors8 -- found version 8.2.2\n'}
+[3.221877] (sjtu_drone_description) StdoutLine: {'line': b'-- Searching for <gz-sensors8> component [wide_angle_camera]\n'}
+[3.223162] (sjtu_drone_description) StdoutLine: {'line': b'-- Looking for gz-sensors8-wide_angle_camera -- found version 8.2.2\n'}
+[3.223268] (sjtu_drone_description) StdoutLine: {'line': b'-- Searching for dependencies of gz-sensors8-wide_angle_camera\n'}
+[3.224179] (sjtu_drone_description) StdoutLine: {'line': b'-- Looking for gz-rendering8 -- found version 8.2.3\n'}
+[3.224411] (sjtu_drone_description) StdoutLine: {'line': b'-- Looking for gz-math7 -- found version 7.5.2\n'}
+[3.224674] (sjtu_drone_description) StdoutLine: {'line': b'-- Looking for gz-utils2 -- found version 2.2.1\n'}
+[3.242073] (sjtu_drone_description) StdoutLine: {'line': b'-- Looking for gz-plugin2 -- found version 2.0.4\n'}
+[3.250549] (sjtu_drone_description) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.17.5 (/opt/ros/jazzy/share/ament_lint_auto/cmake)\n'}
+[3.304607] (-) TimerEvent: {}
+[3.350232] (sjtu_drone_description) StdoutLine: {'line': b"-- Found gtest sources under '/opt/ros/jazzy/src/gtest_vendor': C++ tests using 'Google Test' will be built\n"}
+[3.354235] (sjtu_drone_description) StdoutLine: {'line': b'-- Found Threads: TRUE  \n'}
+[3.370609] (sjtu_drone_description) StdoutLine: {'line': b"-- Added test 'cppcheck' to perform static code analysis on C / C++ code\n"}
+[3.370790] (sjtu_drone_description) StdoutLine: {'line': b'-- Configured cppcheck include dirs: /home/sachin/ros2_drone/src/sjtu_drone_description/include\n'}
+[3.370870] (sjtu_drone_description) StdoutLine: {'line': b'-- Configured cppcheck exclude dirs and/or files: \n'}
+[3.372191] (sjtu_drone_description) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[3.373637] (sjtu_drone_description) StdoutLine: {'line': b"-- Added test 'uncrustify' to check C / C++ code style\n"}
+[3.373713] (sjtu_drone_description) StdoutLine: {'line': b'-- Configured uncrustify additional arguments: \n'}
+[3.374435] (sjtu_drone_description) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[3.375699] (sjtu_drone_description) StdoutLine: {'line': b'-- Configuring done (2.9s)\n'}
+[3.404716] (-) TimerEvent: {}
+[3.422073] (sjtu_drone_description) StdoutLine: {'line': b'-- Generating done (0.0s)\n'}
+[3.432191] (sjtu_drone_description) StdoutLine: {'line': b'-- Build files have been written to: /home/sachin/ros2_drone/build/sjtu_drone_description\n'}
+[3.445147] (sjtu_drone_description) CommandEnded: {'returncode': 0}
+[3.445404] (sjtu_drone_description) JobProgress: {'identifier': 'sjtu_drone_description', 'progress': 'build'}
+[3.445420] (sjtu_drone_description) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/sachin/ros2_drone/build/sjtu_drone_description', '--', '-j12', '-l12'], 'cwd': '/home/sachin/ros2_drone/build/sjtu_drone_description', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'GZ_SIM_RESOURCE_PATH': '/opt/ros/jazzy/share:/home/sachin/gazebo_models', 'USER': 'sachin', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/share/gz:/opt/ros/jazzy/opt/sdformat_vendor/share/gz:/opt/ros/jazzy/opt/gz_gui_vendor/share/gz:/opt/ros/jazzy/opt/gz_transport_vendor/share/gz:/opt/ros/jazzy/opt/gz_rendering_vendor/share/gz:/opt/ros/jazzy/opt/gz_plugin_vendor/share/gz:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/share/gz:/opt/ros/jazzy/opt/gz_msgs_vendor/share/gz:/opt/ros/jazzy/opt/gz_common_vendor/share/gz', 'XDG_SESSION_TYPE': 'x11', 'CLUTTER_DISABLE_MIPMAPPED_TEXT': '1', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/sachin', 'OLDPWD': '/home/sachin/sjtu_drone', 'DESKTOP_SESSION': 'ubuntu', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'PS1': '(.ros2_venv) \\[\\e]0;\\u@\\h: \\w\\a\\]${debian_chroot:+($debian_chroot)}\\[\\033[01;32m\\]\\u@\\h\\[\\033[00m\\]:\\[\\033[01;34m\\]\\w\\[\\033[00m\\]\\$', 'SYSTEMD_EXEC_PID': '2585', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'COLCON_PREFIX_PATH': '/home/sachin/sjtu_drone/install', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'sachin', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'PIP_BREAK_SYSTEM_PACKAGES': '1', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/session.slice/org.gnome.Shell@x11.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'sachin', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'WINDOWPATH': '2', 'PATH': '/home/sachin/.ros2_venv/bin:/opt/ros/jazzy/opt/gz_msgs_vendor/bin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin:/opt/ros/jazzy/bin:/home/sachin/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/SK:@/tmp/.ICE-unix/2553,unix/SK:/tmp/.ICE-unix/2553', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/b8a349ca_84d5_4d35_852e_3ce059eba319', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':1', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'VIRTUAL_ENV_PROMPT': '(.ros2_venv)', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/gdm/Xauthority', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'GNOME_TERMINAL_SERVICE': ':1.151', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'ROS_DOMAIN_ID': '100', 'AMENT_PREFIX_PATH': '/home/sachin/sjtu_drone/install/sjtu_drone_description:/home/sachin/sjtu_drone/install/sjtu_drone_control:/home/sachin/sjtu_drone/install/sjtu_drone_bringup:/home/sachin/sjtu_drone/install/drone_delivery_system:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'GPG_AGENT_INFO': '/run/user/1000/gnupg/S.gpg-agent:0:1', 'VIRTUAL_ENV': '/home/sachin/.ros2_venv', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/sachin/ros2_drone/build/sjtu_drone_description', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/sachin/sjtu_drone/install/sjtu_drone_control/lib/python3.12/site-packages:/home/sachin/sjtu_drone/install/sjtu_drone_bringup/lib/python3.12/site-packages:/home/sachin/sjtu_drone/install/drone_delivery_system/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'VTE_VERSION': '7600', 'CMAKE_PREFIX_PATH': '/home/sachin/sjtu_drone/install/sjtu_drone_description:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/home/sachin/sjtu_drone/install/sjtu_drone_control:/home/sachin/sjtu_drone/install/sjtu_drone_bringup:/home/sachin/sjtu_drone/install/drone_delivery_system:/opt/ros/jazzy'}), 'shell': False}
+[3.488097] (sjtu_drone_description) StdoutLine: {'line': b'[ 11%] \x1b[32mBuilding CXX object CMakeFiles/plugin_drone.dir/src/pid_controller.cpp.o\x1b[0m\n'}
+[3.488296] (sjtu_drone_description) StdoutLine: {'line': b'[ 11%] \x1b[32mBuilding CXX object CMakeFiles/plugin_drone.dir/src/plugin_drone_gz.cpp.o\x1b[0m\n'}
+[3.488378] (sjtu_drone_description) StdoutLine: {'line': b'[ 11%] \x1b[32mBuilding CXX object CMakeFiles/plugin_drone.dir/src/plugin_drone_private.cpp.o\x1b[0m\n'}
+[3.493604] (sjtu_drone_description) StdoutLine: {'line': b'[ 14%] \x1b[32mBuilding CXX object gtest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o\x1b[0m\n'}
+[3.493800] (sjtu_drone_description) StdoutLine: {'line': b'[ 18%] \x1b[32mBuilding CXX object gtest/CMakeFiles/gtest.dir/src/gtest-all.cc.o\x1b[0m\n'}
+[3.504808] (-) TimerEvent: {}
+[3.605067] (-) TimerEvent: {}
+[3.705391] (-) TimerEvent: {}
+[3.805705] (-) TimerEvent: {}
+[3.906026] (-) TimerEvent: {}
+[4.006393] (-) TimerEvent: {}
+[4.106799] (-) TimerEvent: {}
+[4.170910] (sjtu_drone_description) StdoutLine: {'line': b'[ 22%] \x1b[32m\x1b[1mLinking CXX static library libgtest_main.a\x1b[0m\n'}
+[4.206941] (-) TimerEvent: {}
+[4.212873] (sjtu_drone_description) StdoutLine: {'line': b'[ 22%] Built target gtest_main\n'}
+[4.307165] (-) TimerEvent: {}
+[4.407566] (-) TimerEvent: {}
+[4.507969] (-) TimerEvent: {}
+[4.608325] (-) TimerEvent: {}
+[4.708637] (-) TimerEvent: {}
+[4.809043] (-) TimerEvent: {}
+[4.909425] (-) TimerEvent: {}
+[5.009786] (-) TimerEvent: {}
+[5.110165] (-) TimerEvent: {}
+[5.210452] (-) TimerEvent: {}
+[5.310883] (-) TimerEvent: {}
+[5.411261] (-) TimerEvent: {}
+[5.511779] (-) TimerEvent: {}
+[5.612159] (-) TimerEvent: {}
+[5.712570] (-) TimerEvent: {}
+[5.812839] (-) TimerEvent: {}
+[5.913165] (-) TimerEvent: {}
+[6.013540] (-) TimerEvent: {}
+[6.113960] (-) TimerEvent: {}
+[6.180384] (sjtu_drone_description) StdoutLine: {'line': b'[ 25%] \x1b[32m\x1b[1mLinking CXX static library libgtest.a\x1b[0m\n'}
+[6.214094] (-) TimerEvent: {}
+[6.236548] (sjtu_drone_description) StdoutLine: {'line': b'[ 25%] Built target gtest\n'}
+[6.257137] (sjtu_drone_description) StdoutLine: {'line': b'[ 29%] \x1b[32mBuilding CXX object CMakeFiles/test_world_loads.dir/test/test_world_loads.cpp.o\x1b[0m\n'}
+[6.260575] (sjtu_drone_description) StdoutLine: {'line': b'[ 33%] \x1b[32mBuilding CXX object CMakeFiles/test_integration.dir/test/test_integration.cpp.o\x1b[0m\n'}
+[6.261129] (sjtu_drone_description) StdoutLine: {'line': b'[ 44%] \x1b[32mBuilding CXX object CMakeFiles/test_model_sdf.dir/test/test_model_sdf.cpp.o\x1b[0m\n'}
+[6.261315] (sjtu_drone_description) StdoutLine: {'line': b'[ 44%] \x1b[32mBuilding CXX object CMakeFiles/test_pid_controller.dir/src/pid_controller.cpp.o\x1b[0m\n'}
+[6.261400] (sjtu_drone_description) StdoutLine: {'line': b'[ 44%] \x1b[32mBuilding CXX object CMakeFiles/test_plugin_drone_dynamics.dir/test/test_plugin_drone_dynamics.cpp.o\x1b[0m\n'}
+[6.261931] (sjtu_drone_description) StdoutLine: {'line': b'[ 48%] \x1b[32mBuilding CXX object CMakeFiles/test_pid_controller.dir/test/test_pid_controller.cpp.o\x1b[0m\n'}
+[6.262126] (sjtu_drone_description) StdoutLine: {'line': b'[ 51%] \x1b[32mBuilding CXX object CMakeFiles/test_plugin_drone_configure.dir/test/test_plugin_drone_configure.cpp.o\x1b[0m\n'}
+[6.262789] (sjtu_drone_description) StdoutLine: {'line': b'[ 55%] \x1b[32mBuilding CXX object CMakeFiles/test_plugin_drone_dynamics.dir/src/plugin_drone_private.cpp.o\x1b[0m\n'}
+[6.266703] (sjtu_drone_description) StdoutLine: {'line': b'[ 59%] \x1b[32mBuilding CXX object CMakeFiles/test_plugin_drone_configure.dir/src/pid_controller.cpp.o\x1b[0m\n'}
+[6.267051] (sjtu_drone_description) StdoutLine: {'line': b'[ 62%] \x1b[32mBuilding CXX object CMakeFiles/test_plugin_drone_dynamics.dir/src/pid_controller.cpp.o\x1b[0m\n'}
+[6.314226] (-) TimerEvent: {}
+[6.414591] (-) TimerEvent: {}
+[6.515493] (-) TimerEvent: {}
+[6.615933] (-) TimerEvent: {}
+[6.718629] (-) TimerEvent: {}
+[6.819243] (-) TimerEvent: {}
+[6.919759] (-) TimerEvent: {}
+[7.020528] (-) TimerEvent: {}
+[7.122739] (-) TimerEvent: {}
+[7.223249] (-) TimerEvent: {}
+[7.323751] (-) TimerEvent: {}
+[7.425729] (-) TimerEvent: {}
+[7.526259] (-) TimerEvent: {}
+[7.626785] (-) TimerEvent: {}
+[7.729749] (-) TimerEvent: {}
+[7.830258] (-) TimerEvent: {}
+[7.933202] (-) TimerEvent: {}
+[8.033727] (-) TimerEvent: {}
+[8.052622] (sjtu_drone_description) StdoutLine: {'line': b'[ 66%] \x1b[32m\x1b[1mLinking CXX executable test_integration\x1b[0m\n'}
+[8.133893] (-) TimerEvent: {}
+[8.234484] (-) TimerEvent: {}
+[8.334948] (-) TimerEvent: {}
+[8.340970] (sjtu_drone_description) StdoutLine: {'line': b'[ 66%] Built target test_integration\n'}
+[8.377515] (sjtu_drone_description) StdoutLine: {'line': b'[ 70%] \x1b[32mBuilding CXX object CMakeFiles/test_plugin_drone_configure.dir/src/plugin_drone_private.cpp.o\x1b[0m\n'}
+[8.435087] (-) TimerEvent: {}
+[8.535564] (-) TimerEvent: {}
+[8.586303] (sjtu_drone_description) StdoutLine: {'line': b'[ 74%] \x1b[32mBuilding CXX object CMakeFiles/test_plugin_drone_dynamics.dir/src/plugin_drone_gz.cpp.o\x1b[0m\n'}
+[8.621208] (sjtu_drone_description) StdoutLine: {'line': b'[ 77%] \x1b[32mBuilding CXX object CMakeFiles/test_plugin_drone_configure.dir/src/plugin_drone_gz.cpp.o\x1b[0m\n'}
+[8.635721] (-) TimerEvent: {}
+[8.737654] (-) TimerEvent: {}
+[8.838017] (-) TimerEvent: {}
+[8.938455] (-) TimerEvent: {}
+[9.039491] (-) TimerEvent: {}
+[9.141987] (-) TimerEvent: {}
+[9.213196] (sjtu_drone_description) StdoutLine: {'line': b'[ 81%] \x1b[32m\x1b[1mLinking CXX executable test_pid_controller\x1b[0m\n'}
+[9.242533] (-) TimerEvent: {}
+[9.343541] (-) TimerEvent: {}
+[9.446541] (-) TimerEvent: {}
+[9.518614] (sjtu_drone_description) StdoutLine: {'line': b'[ 85%] \x1b[32m\x1b[1mLinking CXX executable test_world_loads\x1b[0m\n'}
+[9.547487] (-) TimerEvent: {}
+[9.592627] (sjtu_drone_description) StdoutLine: {'line': b'[ 85%] Built target test_pid_controller\n'}
+[9.647690] (-) TimerEvent: {}
+[9.748679] (-) TimerEvent: {}
+[9.840232] (sjtu_drone_description) StdoutLine: {'line': b'[ 85%] Built target test_world_loads\n'}
+[9.848813] (-) TimerEvent: {}
+[9.928293] (sjtu_drone_description) StdoutLine: {'line': b'[ 88%] \x1b[32m\x1b[1mLinking CXX executable test_model_sdf\x1b[0m\n'}
+[9.948989] (-) TimerEvent: {}
+[10.049478] (-) TimerEvent: {}
+[10.149853] (-) TimerEvent: {}
+[10.192499] (sjtu_drone_description) StdoutLine: {'line': b'[ 88%] Built target test_model_sdf\n'}
+[10.250012] (-) TimerEvent: {}
+[10.350395] (-) TimerEvent: {}
+[10.450742] (-) TimerEvent: {}
+[10.551102] (-) TimerEvent: {}
+[10.651500] (-) TimerEvent: {}
+[10.751909] (-) TimerEvent: {}
+[10.852472] (-) TimerEvent: {}
+[10.952976] (-) TimerEvent: {}
+[11.053401] (-) TimerEvent: {}
+[11.154078] (-) TimerEvent: {}
+[11.254543] (-) TimerEvent: {}
+[11.354969] (-) TimerEvent: {}
+[11.455398] (-) TimerEvent: {}
+[11.555789] (-) TimerEvent: {}
+[11.656220] (-) TimerEvent: {}
+[11.756726] (-) TimerEvent: {}
+[11.857119] (-) TimerEvent: {}
+[11.957558] (-) TimerEvent: {}
+[12.058070] (-) TimerEvent: {}
+[12.158451] (-) TimerEvent: {}
+[12.258767] (-) TimerEvent: {}
+[12.359132] (-) TimerEvent: {}
+[12.459566] (-) TimerEvent: {}
+[12.560030] (-) TimerEvent: {}
+[12.660418] (-) TimerEvent: {}
+[12.760773] (-) TimerEvent: {}
+[12.861165] (-) TimerEvent: {}
+[12.961564] (-) TimerEvent: {}
+[13.061951] (-) TimerEvent: {}
+[13.162385] (-) TimerEvent: {}
+[13.262786] (-) TimerEvent: {}
+[13.363132] (-) TimerEvent: {}
+[13.463512] (-) TimerEvent: {}
+[13.564032] (-) TimerEvent: {}
+[13.664366] (-) TimerEvent: {}
+[13.764837] (-) TimerEvent: {}
+[13.865232] (-) TimerEvent: {}
+[13.965703] (-) TimerEvent: {}
+[14.066068] (-) TimerEvent: {}
+[14.166449] (-) TimerEvent: {}
+[14.266868] (-) TimerEvent: {}
+[14.367219] (-) TimerEvent: {}
+[14.467556] (-) TimerEvent: {}
+[14.567862] (-) TimerEvent: {}
+[14.668163] (-) TimerEvent: {}
+[14.776675] (-) TimerEvent: {}
+[14.877039] (-) TimerEvent: {}
+[14.977464] (-) TimerEvent: {}
+[15.077721] (-) TimerEvent: {}
+[15.177999] (-) TimerEvent: {}
+[15.278287] (-) TimerEvent: {}
+[15.378590] (-) TimerEvent: {}
+[15.478895] (-) TimerEvent: {}
+[15.579211] (-) TimerEvent: {}
+[15.679516] (-) TimerEvent: {}
+[15.779828] (-) TimerEvent: {}
+[15.880154] (-) TimerEvent: {}
+[15.980634] (-) TimerEvent: {}
+[16.080928] (-) TimerEvent: {}
+[16.181187] (-) TimerEvent: {}
+[16.281429] (-) TimerEvent: {}
+[16.381726] (-) TimerEvent: {}
+[16.481997] (-) TimerEvent: {}
+[16.582278] (-) TimerEvent: {}
+[16.682534] (-) TimerEvent: {}
+[16.782807] (-) TimerEvent: {}
+[16.883079] (-) TimerEvent: {}
+[16.983386] (-) TimerEvent: {}
+[17.083658] (-) TimerEvent: {}
+[17.184040] (-) TimerEvent: {}
+[17.284332] (-) TimerEvent: {}
+[17.384596] (-) TimerEvent: {}
+[17.505983] (-) TimerEvent: {}
+[17.606227] (-) TimerEvent: {}
+[17.706450] (-) TimerEvent: {}
+[17.806768] (-) TimerEvent: {}
+[17.907067] (-) TimerEvent: {}
+[18.007378] (-) TimerEvent: {}
+[18.107661] (-) TimerEvent: {}
+[18.207965] (-) TimerEvent: {}
+[18.308304] (-) TimerEvent: {}
+[18.408597] (-) TimerEvent: {}
+[18.508873] (-) TimerEvent: {}
+[18.609127] (-) TimerEvent: {}
+[18.709396] (-) TimerEvent: {}
+[18.809641] (-) TimerEvent: {}
+[18.909900] (-) TimerEvent: {}
+[19.010190] (-) TimerEvent: {}
+[19.110458] (-) TimerEvent: {}
+[19.210774] (-) TimerEvent: {}
+[19.316042] (-) TimerEvent: {}
+[19.416327] (-) TimerEvent: {}
+[19.516631] (-) TimerEvent: {}
+[19.616896] (-) TimerEvent: {}
+[19.717175] (-) TimerEvent: {}
+[19.817434] (-) TimerEvent: {}
+[19.917673] (-) TimerEvent: {}
+[20.017975] (-) TimerEvent: {}
+[20.118240] (-) TimerEvent: {}
+[20.218543] (-) TimerEvent: {}
+[20.318765] (-) TimerEvent: {}
+[20.419024] (-) TimerEvent: {}
+[20.519277] (-) TimerEvent: {}
+[20.619509] (-) TimerEvent: {}
+[20.719752] (-) TimerEvent: {}
+[20.820031] (-) TimerEvent: {}
+[20.920295] (-) TimerEvent: {}
+[21.020526] (-) TimerEvent: {}
+[21.120752] (-) TimerEvent: {}
+[21.220998] (-) TimerEvent: {}
+[21.321233] (-) TimerEvent: {}
+[21.421458] (-) TimerEvent: {}
+[21.521680] (-) TimerEvent: {}
+[21.621929] (-) TimerEvent: {}
+[21.722182] (-) TimerEvent: {}
+[21.822414] (-) TimerEvent: {}
+[21.922644] (-) TimerEvent: {}
+[22.022869] (-) TimerEvent: {}
+[22.123098] (-) TimerEvent: {}
+[22.223327] (-) TimerEvent: {}
+[22.323553] (-) TimerEvent: {}
+[22.423836] (-) TimerEvent: {}
+[22.524074] (-) TimerEvent: {}
+[22.624299] (-) TimerEvent: {}
+[22.724528] (-) TimerEvent: {}
+[22.824779] (-) TimerEvent: {}
+[22.925018] (-) TimerEvent: {}
+[23.025267] (-) TimerEvent: {}
+[23.125517] (-) TimerEvent: {}
+[23.225872] (-) TimerEvent: {}
+[23.326209] (-) TimerEvent: {}
+[23.426475] (-) TimerEvent: {}
+[23.526717] (-) TimerEvent: {}
+[23.626964] (-) TimerEvent: {}
+[23.727288] (-) TimerEvent: {}
+[23.827615] (-) TimerEvent: {}
+[23.927881] (-) TimerEvent: {}
+[24.028269] (-) TimerEvent: {}
+[24.128610] (-) TimerEvent: {}
+[24.228885] (-) TimerEvent: {}
+[24.329248] (-) TimerEvent: {}
+[24.429506] (-) TimerEvent: {}
+[24.529805] (-) TimerEvent: {}
+[24.630088] (-) TimerEvent: {}
+[24.730364] (-) TimerEvent: {}
+[24.830675] (-) TimerEvent: {}
+[24.930930] (-) TimerEvent: {}
+[25.031268] (-) TimerEvent: {}
+[25.131570] (-) TimerEvent: {}
+[25.231844] (-) TimerEvent: {}
+[25.332118] (-) TimerEvent: {}
+[25.432456] (-) TimerEvent: {}
+[25.532771] (-) TimerEvent: {}
+[25.633084] (-) TimerEvent: {}
+[25.733460] (-) TimerEvent: {}
+[25.833733] (-) TimerEvent: {}
+[25.933980] (-) TimerEvent: {}
+[26.034282] (-) TimerEvent: {}
+[26.134575] (-) TimerEvent: {}
+[26.234778] (-) TimerEvent: {}
+[26.335010] (-) TimerEvent: {}
+[26.435255] (-) TimerEvent: {}
+[26.535483] (-) TimerEvent: {}
+[26.635762] (-) TimerEvent: {}
+[26.736017] (-) TimerEvent: {}
+[26.836294] (-) TimerEvent: {}
+[26.936539] (-) TimerEvent: {}
+[27.036783] (-) TimerEvent: {}
+[27.137057] (-) TimerEvent: {}
+[27.237290] (-) TimerEvent: {}
+[27.337576] (-) TimerEvent: {}
+[27.437915] (-) TimerEvent: {}
+[27.538160] (-) TimerEvent: {}
+[27.638483] (-) TimerEvent: {}
+[27.738817] (-) TimerEvent: {}
+[27.839147] (-) TimerEvent: {}
+[27.939495] (-) TimerEvent: {}
+[28.039778] (-) TimerEvent: {}
+[28.140057] (-) TimerEvent: {}
+[28.240353] (-) TimerEvent: {}
+[28.340663] (-) TimerEvent: {}
+[28.440975] (-) TimerEvent: {}
+[28.541294] (-) TimerEvent: {}
+[28.641705] (-) TimerEvent: {}
+[28.742074] (-) TimerEvent: {}
+[28.842429] (-) TimerEvent: {}
+[28.942656] (-) TimerEvent: {}
+[29.042941] (-) TimerEvent: {}
+[29.143240] (-) TimerEvent: {}
+[29.243494] (-) TimerEvent: {}
+[29.343777] (-) TimerEvent: {}
+[29.444223] (-) TimerEvent: {}
+[29.544837] (-) TimerEvent: {}
+[29.645293] (-) TimerEvent: {}
+[29.745681] (-) TimerEvent: {}
+[29.846129] (-) TimerEvent: {}
+[29.946435] (-) TimerEvent: {}
+[30.046759] (-) TimerEvent: {}
+[30.147043] (-) TimerEvent: {}
+[30.247354] (-) TimerEvent: {}
+[30.347759] (-) TimerEvent: {}
+[30.447996] (-) TimerEvent: {}
+[30.548243] (-) TimerEvent: {}
+[30.648480] (-) TimerEvent: {}
+[30.748746] (-) TimerEvent: {}
+[30.849031] (-) TimerEvent: {}
+[30.949358] (-) TimerEvent: {}
+[31.049669] (-) TimerEvent: {}
+[31.149971] (-) TimerEvent: {}
+[31.250310] (-) TimerEvent: {}
+[31.350551] (-) TimerEvent: {}
+[31.457244] (-) TimerEvent: {}
+[31.571930] (-) TimerEvent: {}
+[31.672182] (-) TimerEvent: {}
+[31.772423] (-) TimerEvent: {}
+[31.872654] (-) TimerEvent: {}
+[31.972951] (-) TimerEvent: {}
+[32.073225] (-) TimerEvent: {}
+[32.173556] (-) TimerEvent: {}
+[32.273798] (-) TimerEvent: {}
+[32.374140] (-) TimerEvent: {}
+[32.474423] (-) TimerEvent: {}
+[32.574706] (-) TimerEvent: {}
+[32.675004] (-) TimerEvent: {}
+[32.775323] (-) TimerEvent: {}
+[32.875619] (-) TimerEvent: {}
+[32.975857] (-) TimerEvent: {}
+[33.076107] (-) TimerEvent: {}
+[33.176359] (-) TimerEvent: {}
+[33.276609] (-) TimerEvent: {}
+[33.376882] (-) TimerEvent: {}
+[33.477129] (-) TimerEvent: {}
+[33.577408] (-) TimerEvent: {}
+[33.677646] (-) TimerEvent: {}
+[33.777890] (-) TimerEvent: {}
+[33.878133] (-) TimerEvent: {}
+[33.978466] (-) TimerEvent: {}
+[34.078702] (-) TimerEvent: {}
+[34.179034] (-) TimerEvent: {}
+[34.279421] (-) TimerEvent: {}
+[34.379674] (-) TimerEvent: {}
+[34.480079] (-) TimerEvent: {}
+[34.580455] (-) TimerEvent: {}
+[34.680721] (-) TimerEvent: {}
+[34.781047] (-) TimerEvent: {}
+[34.881330] (-) TimerEvent: {}
+[34.981643] (-) TimerEvent: {}
+[35.081909] (-) TimerEvent: {}
+[35.182177] (-) TimerEvent: {}
+[35.282436] (-) TimerEvent: {}
+[35.382695] (-) TimerEvent: {}
+[35.482962] (-) TimerEvent: {}
+[35.583321] (-) TimerEvent: {}
+[35.683694] (-) TimerEvent: {}
+[35.783924] (-) TimerEvent: {}
+[35.884190] (-) TimerEvent: {}
+[35.984469] (-) TimerEvent: {}
+[36.084691] (-) TimerEvent: {}
+[36.184949] (-) TimerEvent: {}
+[36.285305] (-) TimerEvent: {}
+[36.385579] (-) TimerEvent: {}
+[36.485814] (-) TimerEvent: {}
+[36.586096] (-) TimerEvent: {}
+[36.686383] (-) TimerEvent: {}
+[36.786625] (-) TimerEvent: {}
+[36.886866] (-) TimerEvent: {}
+[36.987236] (-) TimerEvent: {}
+[37.087549] (-) TimerEvent: {}
+[37.187829] (-) TimerEvent: {}
+[37.288130] (-) TimerEvent: {}
+[37.388594] (-) TimerEvent: {}
+[37.488852] (-) TimerEvent: {}
+[37.589126] (-) TimerEvent: {}
+[37.689447] (-) TimerEvent: {}
+[37.721706] (sjtu_drone_description) StdoutLine: {'line': b'[ 92%] \x1b[32m\x1b[1mLinking CXX executable test_plugin_drone_dynamics\x1b[0m\n'}
+[37.789676] (-) TimerEvent: {}
+[37.889982] (-) TimerEvent: {}
+[37.990409] (-) TimerEvent: {}
+[38.090795] (-) TimerEvent: {}
+[38.191227] (-) TimerEvent: {}
+[38.291691] (-) TimerEvent: {}
+[38.392197] (-) TimerEvent: {}
+[38.492602] (-) TimerEvent: {}
+[38.592987] (-) TimerEvent: {}
+[38.693351] (-) TimerEvent: {}
+[38.793763] (-) TimerEvent: {}
+[38.894120] (-) TimerEvent: {}
+[38.994531] (-) TimerEvent: {}
+[39.094890] (-) TimerEvent: {}
+[39.195164] (-) TimerEvent: {}
+[39.295471] (-) TimerEvent: {}
+[39.395785] (-) TimerEvent: {}
+[39.496076] (-) TimerEvent: {}
+[39.499571] (sjtu_drone_description) StdoutLine: {'line': b'[ 92%] Built target test_plugin_drone_dynamics\n'}
+[39.596202] (-) TimerEvent: {}
+[39.696460] (-) TimerEvent: {}
+[39.796718] (-) TimerEvent: {}
+[39.896948] (-) TimerEvent: {}
+[39.997265] (-) TimerEvent: {}
+[40.097553] (-) TimerEvent: {}
+[40.197912] (-) TimerEvent: {}
+[40.298208] (-) TimerEvent: {}
+[40.398558] (-) TimerEvent: {}
+[40.498916] (-) TimerEvent: {}
+[40.599307] (-) TimerEvent: {}
+[40.699743] (-) TimerEvent: {}
+[40.800024] (-) TimerEvent: {}
+[40.900430] (-) TimerEvent: {}
+[41.000825] (-) TimerEvent: {}
+[41.037735] (sjtu_drone_description) StdoutLine: {'line': b'[ 96%] \x1b[32m\x1b[1mLinking CXX executable test_plugin_drone_configure\x1b[0m\n'}
+[41.100968] (-) TimerEvent: {}
+[41.201388] (-) TimerEvent: {}
+[41.301821] (-) TimerEvent: {}
+[41.402249] (-) TimerEvent: {}
+[41.502700] (-) TimerEvent: {}
+[41.603144] (-) TimerEvent: {}
+[41.703617] (-) TimerEvent: {}
+[41.757171] (sjtu_drone_description) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX shared library libplugin_drone.so\x1b[0m\n'}
+[41.803888] (-) TimerEvent: {}
+[41.904417] (-) TimerEvent: {}
+[42.004937] (-) TimerEvent: {}
+[42.105495] (-) TimerEvent: {}
+[42.206047] (-) TimerEvent: {}
+[42.306469] (-) TimerEvent: {}
+[42.406979] (-) TimerEvent: {}
+[42.507534] (-) TimerEvent: {}
+[42.585669] (sjtu_drone_description) StdoutLine: {'line': b'[100%] Built target test_plugin_drone_configure\n'}
+[42.607657] (-) TimerEvent: {}
+[42.708099] (-) TimerEvent: {}
+[42.808645] (-) TimerEvent: {}
+[42.909009] (-) TimerEvent: {}
+[42.969356] (sjtu_drone_description) StdoutLine: {'line': b'[100%] Built target plugin_drone\n'}
+[43.009196] (-) TimerEvent: {}
+[43.079426] (sjtu_drone_description) CommandEnded: {'returncode': 0}
+[43.110733] (sjtu_drone_description) JobProgress: {'identifier': 'sjtu_drone_description', 'progress': 'install'}
+[43.110806] (-) TimerEvent: {}
+[43.144621] (sjtu_drone_description) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/sachin/ros2_drone/build/sjtu_drone_description'], 'cwd': '/home/sachin/ros2_drone/build/sjtu_drone_description', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'GZ_SIM_RESOURCE_PATH': '/opt/ros/jazzy/share:/home/sachin/gazebo_models', 'USER': 'sachin', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/share/gz:/opt/ros/jazzy/opt/sdformat_vendor/share/gz:/opt/ros/jazzy/opt/gz_gui_vendor/share/gz:/opt/ros/jazzy/opt/gz_transport_vendor/share/gz:/opt/ros/jazzy/opt/gz_rendering_vendor/share/gz:/opt/ros/jazzy/opt/gz_plugin_vendor/share/gz:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/share/gz:/opt/ros/jazzy/opt/gz_msgs_vendor/share/gz:/opt/ros/jazzy/opt/gz_common_vendor/share/gz', 'XDG_SESSION_TYPE': 'x11', 'CLUTTER_DISABLE_MIPMAPPED_TEXT': '1', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'HOME': '/home/sachin', 'OLDPWD': '/home/sachin/sjtu_drone', 'DESKTOP_SESSION': 'ubuntu', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'PS1': '(.ros2_venv) \\[\\e]0;\\u@\\h: \\w\\a\\]${debian_chroot:+($debian_chroot)}\\[\\033[01;32m\\]\\u@\\h\\[\\033[00m\\]:\\[\\033[01;34m\\]\\w\\[\\033[00m\\]\\$', 'SYSTEMD_EXEC_PID': '2585', 'GSM_SKIP_SSH_AGENT_WORKAROUND': 'true', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'DEBUGINFOD_URLS': 'https://debuginfod.ubuntu.com', 'COLCON_PREFIX_PATH': '/home/sachin/sjtu_drone/install', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'sachin', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'PIP_BREAK_SYSTEM_PACKAGES': '1', 'MEMORY_PRESSURE_WATCH': '/sys/fs/cgroup/user.slice/user-1000.slice/user@1000.service/session.slice/org.gnome.Shell@x11.service/memory.pressure', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'sachin', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'WINDOWPATH': '2', 'PATH': '/home/sachin/.ros2_venv/bin:/opt/ros/jazzy/opt/gz_msgs_vendor/bin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin:/opt/ros/jazzy/bin:/home/sachin/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/SK:@/tmp/.ICE-unix/2553,unix/SK:/tmp/.ICE-unix/2553', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/b8a349ca_84d5_4d35_852e_3ce059eba319', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':1', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'VIRTUAL_ENV_PROMPT': '(.ros2_venv)', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/gdm/Xauthority', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'GNOME_TERMINAL_SERVICE': ':1.151', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'ROS_DOMAIN_ID': '100', 'AMENT_PREFIX_PATH': '/home/sachin/sjtu_drone/install/sjtu_drone_description:/home/sachin/sjtu_drone/install/sjtu_drone_control:/home/sachin/sjtu_drone/install/sjtu_drone_bringup:/home/sachin/sjtu_drone/install/drone_delivery_system:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'GPG_AGENT_INFO': '/run/user/1000/gnupg/S.gpg-agent:0:1', 'VIRTUAL_ENV': '/home/sachin/.ros2_venv', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/sachin/ros2_drone/build/sjtu_drone_description', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/sachin/sjtu_drone/install/sjtu_drone_control/lib/python3.12/site-packages:/home/sachin/sjtu_drone/install/sjtu_drone_bringup/lib/python3.12/site-packages:/home/sachin/sjtu_drone/install/drone_delivery_system/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'MEMORY_PRESSURE_WRITE': 'c29tZSAyMDAwMDAgMjAwMDAwMAA=', 'VTE_VERSION': '7600', 'CMAKE_PREFIX_PATH': '/home/sachin/sjtu_drone/install/sjtu_drone_description:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/home/sachin/sjtu_drone/install/sjtu_drone_control:/home/sachin/sjtu_drone/install/sjtu_drone_bringup:/home/sachin/sjtu_drone/install/drone_delivery_system:/opt/ros/jazzy'}), 'shell': False}
+[43.160536] (sjtu_drone_description) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[43.161099] (sjtu_drone_description) StdoutLine: {'line': b'-- Installing: /home/sachin/ros2_drone/install/sjtu_drone_description/lib/sjtu_drone_description/libplugin_drone.so\n'}
+[43.172671] (sjtu_drone_description) StdoutLine: {'line': b'-- Set non-toolchain portion of runtime path of "/home/sachin/ros2_drone/install/sjtu_drone_description/lib/sjtu_drone_description/libplugin_drone.so" to ""\n'}
+[43.172763] (sjtu_drone_description) StdoutLine: {'line': b'-- Installing: /home/sachin/ros2_drone/install/sjtu_drone_description/include\n'}
+[43.172806] (sjtu_drone_description) StdoutLine: {'line': b'-- Installing: /home/sachin/ros2_drone/install/sjtu_drone_description/include/sjtu_drone_description\n'}
+[43.172862] (sjtu_drone_description) StdoutLine: {'line': b'-- Installing: /home/sachin/ros2_drone/install/sjtu_drone_description/include/sjtu_drone_description/plugin_drone_private.h\n'}
+[43.172935] (sjtu_drone_description) StdoutLine: {'line': b'-- Installing: /home/sachin/ros2_drone/install/sjtu_drone_description/include/sjtu_drone_description/pid_controller.h\n'}
+[43.173041] (sjtu_drone_description) StdoutLine: {'line': b'-- Installing: /home/sachin/ros2_drone/install/sjtu_drone_description/include/sjtu_drone_description/plugin_drone.h\n'}
+[43.173085] (sjtu_drone_description) StdoutLine: {'line': b'-- Installing: /home/sachin/ros2_drone/install/sjtu_drone_description/share/sjtu_drone_description/models\n'}
+[43.173472] (sjtu_drone_description) StdoutLine: {'line': b'-- Installing: /home/sachin/ros2_drone/install/sjtu_drone_description/share/sjtu_drone_description/models/database.config\n'}
+[43.173508] (sjtu_drone_description) StdoutLine: {'line': b'-- Installing: /home/sachin/ros2_drone/install/sjtu_drone_description/share/sjtu_drone_description/models/sjtu_drone\n'}
+[43.173543] (sjtu_drone_description) StdoutLine: {'line': b'-- Installing: /home/sachin/ros2_drone/install/sjtu_drone_description/share/sjtu_drone_description/models/sjtu_drone/model.config\n'}
+[43.173600] (sjtu_drone_description) StdoutLine: {'line': b'-- Installing: /home/sachin/ros2_drone/install/sjtu_drone_description/share/sjtu_drone_description/models/sjtu_drone/sjtu_drone.sdf\n'}
+[43.173654] (sjtu_drone_description) StdoutLine: {'line': b'-- Installing: /home/sachin/ros2_drone/install/sjtu_drone_description/share/sjtu_drone_description/models/sjtu_drone/quadrotor_4.stl\n'}
+[43.173948] (sjtu_drone_description) StdoutLine: {'line': b'-- Installing: /home/sachin/ros2_drone/install/sjtu_drone_description/share/sjtu_drone_description/models/sjtu_drone/quadrotor_4.dae\n'}
+[43.174325] (sjtu_drone_description) StdoutLine: {'line': b'-- Installing: /home/sachin/ros2_drone/install/sjtu_drone_description/share/sjtu_drone_description/urdf\n'}
+[43.174385] (sjtu_drone_description) StdoutLine: {'line': b'-- Installing: /home/sachin/ros2_drone/install/sjtu_drone_description/share/sjtu_drone_description/urdf/sjtu_drone.urdf\n'}
+[43.174458] (sjtu_drone_description) StdoutLine: {'line': b'-- Installing: /home/sachin/ros2_drone/install/sjtu_drone_description/share/sjtu_drone_description/urdf/sjtu_drone.urdf.xacro\n'}
+[43.174577] (sjtu_drone_description) StdoutLine: {'line': b'-- Installing: /home/sachin/ros2_drone/install/sjtu_drone_description/share/sjtu_drone_description/worlds\n'}
+[43.174657] (sjtu_drone_description) StdoutLine: {'line': b'-- Installing: /home/sachin/ros2_drone/install/sjtu_drone_description/share/sjtu_drone_description/worlds/home.sdf\n'}
+[43.175023] (sjtu_drone_description) StdoutLine: {'line': b'-- Installing: /home/sachin/ros2_drone/install/sjtu_drone_description/share/ament_index/resource_index/package_run_dependencies/sjtu_drone_description\n'}
+[43.175079] (sjtu_drone_description) StdoutLine: {'line': b'-- Installing: /home/sachin/ros2_drone/install/sjtu_drone_description/share/ament_index/resource_index/parent_prefix_path/sjtu_drone_description\n'}
+[43.176307] (sjtu_drone_description) StdoutLine: {'line': b'-- Installing: /home/sachin/ros2_drone/install/sjtu_drone_description/share/sjtu_drone_description/environment/ament_prefix_path.sh\n'}
+[43.176379] (sjtu_drone_description) StdoutLine: {'line': b'-- Installing: /home/sachin/ros2_drone/install/sjtu_drone_description/share/sjtu_drone_description/environment/ament_prefix_path.dsv\n'}
+[43.176486] (sjtu_drone_description) StdoutLine: {'line': b'-- Installing: /home/sachin/ros2_drone/install/sjtu_drone_description/share/sjtu_drone_description/environment/path.sh\n'}
+[43.176622] (sjtu_drone_description) StdoutLine: {'line': b'-- Installing: /home/sachin/ros2_drone/install/sjtu_drone_description/share/sjtu_drone_description/environment/path.dsv\n'}
+[43.176701] (sjtu_drone_description) StdoutLine: {'line': b'-- Installing: /home/sachin/ros2_drone/install/sjtu_drone_description/share/sjtu_drone_description/local_setup.bash\n'}
+[43.176805] (sjtu_drone_description) StdoutLine: {'line': b'-- Installing: /home/sachin/ros2_drone/install/sjtu_drone_description/share/sjtu_drone_description/local_setup.sh\n'}
+[43.176912] (sjtu_drone_description) StdoutLine: {'line': b'-- Installing: /home/sachin/ros2_drone/install/sjtu_drone_description/share/sjtu_drone_description/local_setup.zsh\n'}
+[43.177035] (sjtu_drone_description) StdoutLine: {'line': b'-- Installing: /home/sachin/ros2_drone/install/sjtu_drone_description/share/sjtu_drone_description/local_setup.dsv\n'}
+[43.177143] (sjtu_drone_description) StdoutLine: {'line': b'-- Installing: /home/sachin/ros2_drone/install/sjtu_drone_description/share/sjtu_drone_description/package.dsv\n'}
+[43.177275] (sjtu_drone_description) StdoutLine: {'line': b'-- Installing: /home/sachin/ros2_drone/install/sjtu_drone_description/share/ament_index/resource_index/packages/sjtu_drone_description\n'}
+[43.177340] (sjtu_drone_description) StdoutLine: {'line': b'-- Installing: /home/sachin/ros2_drone/install/sjtu_drone_description/share/sjtu_drone_description/cmake/sjtu_drone_descriptionConfig.cmake\n'}
+[43.177436] (sjtu_drone_description) StdoutLine: {'line': b'-- Installing: /home/sachin/ros2_drone/install/sjtu_drone_description/share/sjtu_drone_description/cmake/sjtu_drone_descriptionConfig-version.cmake\n'}
+[43.177540] (sjtu_drone_description) StdoutLine: {'line': b'-- Installing: /home/sachin/ros2_drone/install/sjtu_drone_description/share/sjtu_drone_description/package.xml\n'}
+[43.185295] (sjtu_drone_description) CommandEnded: {'returncode': 0}
+[43.210915] (-) TimerEvent: {}
+[43.218402] (sjtu_drone_description) JobEnded: {'identifier': 'sjtu_drone_description', 'rc': 0}
+[43.224769] (-) EventReactorShutdown: {}

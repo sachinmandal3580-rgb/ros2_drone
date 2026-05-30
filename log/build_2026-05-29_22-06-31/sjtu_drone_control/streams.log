@@ -1,0 +1,24 @@
+[1.003s] Invoking command in '/home/sachin/ros2_drone/src/sjtu_drone_control': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PS1=(.ros2_venv) \[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ PYTHONPATH=/home/sachin/ros2_drone/build/sjtu_drone_control/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/sachin/ros2_drone/install/sjtu_drone_control/lib/python3.12/site-packages:${PYTHONPATH} VIRTUAL_ENV_PROMPT=(.ros2_venv) /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/sjtu_drone_control build --build-base /home/sachin/ros2_drone/build/sjtu_drone_control/build install --record /home/sachin/ros2_drone/build/sjtu_drone_control/install.log --single-version-externally-managed install_data
+[1.199s] running egg_info
+[1.214s] writing ../../build/sjtu_drone_control/sjtu_drone_control.egg-info/PKG-INFO
+[1.214s] writing dependency_links to ../../build/sjtu_drone_control/sjtu_drone_control.egg-info/dependency_links.txt
+[1.214s] writing entry points to ../../build/sjtu_drone_control/sjtu_drone_control.egg-info/entry_points.txt
+[1.214s] writing requirements to ../../build/sjtu_drone_control/sjtu_drone_control.egg-info/requires.txt
+[1.214s] writing top-level names to ../../build/sjtu_drone_control/sjtu_drone_control.egg-info/top_level.txt
+[1.245s] reading manifest file '../../build/sjtu_drone_control/sjtu_drone_control.egg-info/SOURCES.txt'
+[1.245s] writing manifest file '../../build/sjtu_drone_control/sjtu_drone_control.egg-info/SOURCES.txt'
+[1.245s] running build
+[1.245s] running build_py
+[1.246s] running install
+[1.250s] running install_lib
+[1.265s] running install_data
+[1.266s] running install_egg_info
+[1.281s] removing '/home/sachin/ros2_drone/install/sjtu_drone_control/lib/python3.12/site-packages/sjtu_drone_control-0.0.0-py3.12.egg-info' (and everything under it)
+[1.281s] Copying ../../build/sjtu_drone_control/sjtu_drone_control.egg-info to /home/sachin/ros2_drone/install/sjtu_drone_control/lib/python3.12/site-packages/sjtu_drone_control-0.0.0-py3.12.egg-info
+[1.281s] running install_scripts
+[1.376s] Installing drone_position_control script to /home/sachin/ros2_drone/install/sjtu_drone_control/lib/sjtu_drone_control
+[1.377s] Installing open_loop_control script to /home/sachin/ros2_drone/install/sjtu_drone_control/lib/sjtu_drone_control
+[1.377s] Installing teleop script to /home/sachin/ros2_drone/install/sjtu_drone_control/lib/sjtu_drone_control
+[1.377s] Installing teleop_joystick script to /home/sachin/ros2_drone/install/sjtu_drone_control/lib/sjtu_drone_control
+[1.377s] writing list of installed files to '/home/sachin/ros2_drone/build/sjtu_drone_control/install.log'
+[1.414s] Invoked command in '/home/sachin/ros2_drone/src/sjtu_drone_control' returned '0': DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PS1=(.ros2_venv) \[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ PYTHONPATH=/home/sachin/ros2_drone/build/sjtu_drone_control/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/sachin/ros2_drone/install/sjtu_drone_control/lib/python3.12/site-packages:${PYTHONPATH} VIRTUAL_ENV_PROMPT=(.ros2_venv) /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/sjtu_drone_control build --build-base /home/sachin/ros2_drone/build/sjtu_drone_control/build install --record /home/sachin/ros2_drone/build/sjtu_drone_control/install.log --single-version-externally-managed install_data
