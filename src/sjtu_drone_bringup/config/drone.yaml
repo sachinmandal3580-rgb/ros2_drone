@@ -23,11 +23,13 @@ velocityXYDifferentialGain: 2.3
 velocityXYLimit: 2
 
 # Proportional gain for vertical velocity PID controller. Influences response to altitude changes.
-velocityZProportionalGain: 5.0
+# CHANGED: 5.0 → 6.0  (more responsive with 0.1 kg payload attached)
+velocityZProportionalGain: 6.0
 # Integral gain for vertical velocity PID controller. Set to zero, indicating no error integration over time.
 velocityZIntegralGain: 0.0
 # Differential gain for vertical velocity PID controller. Helps control vertical acceleration and deceleration.
-velocityZDifferentialGain: 1.0
+# CHANGED: 1.0 → 1.2  (smoother altitude hold with extra payload mass)
+velocityZDifferentialGain: 1.2
 # Maximum limit for vertical velocity control output. Negative value may indicate special control scenario or error.
 velocityZLimit: -1
 
@@ -50,7 +52,9 @@ positionZIntegralGain: 0.0
 positionZLimit: -1
 
 # Maximum force that the drone can exert, limiting maximum thrust to prevent aggressive maneuvers.
-maxForce: 30
+# CHANGED: 30 → 34  (+4 N headroom for 0.1 kg red-cube payload, ~10% margin above hover thrust)
+maxForce: 34
+
 # Parameter for adding small random noise to drone's motion. Set to zero, indicating no small noise addition.
 motionSmallNoise: 0.00
 # Parameter for drift noise. Set to zero, meaning no drift noise is being applied.

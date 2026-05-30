@@ -1,3 +1,5 @@
+# ── existing nodes (unchanged) ───────────────────────────────────────
+
 delivery_controller:
   ros__parameters:
     drone_namespace: "simple_drone"
@@ -18,3 +20,13 @@ payload_manager:
   ros__parameters:
     odom_topic:   "/simple_drone/odom"
     world_name:   "empty"
+
+# ── NEW: coordinate / GAZIPIN mission controller ─────────────────────
+coordinate_mission_controller:
+  ros__parameters:
+    drone_namespace: "simple_drone"
+    cruise_alt:  3.0      # fly at this altitude en-route (metres)
+    stop_radius: 0.25     # stop this far from XY target (metres)
+    land_sonar:  0.5      # descend until sonar reads below this (metres)
+    sonar_topic: "/simple_drone/sonar"
+    odom_topic:  "/simple_drone/odom"

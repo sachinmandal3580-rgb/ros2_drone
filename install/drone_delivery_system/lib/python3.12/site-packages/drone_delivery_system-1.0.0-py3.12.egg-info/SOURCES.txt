@@ -11,10 +11,11 @@ setup.py
 ../../build/drone_delivery_system/drone_delivery_system.egg-info/zip-safe
 config/delivery_params.yaml
 drone_delivery_system/__init__.py
+drone_delivery_system/coordinate_mission_controller.py
 drone_delivery_system/dual_camera_yolo_detector.py
 drone_delivery_system/enhanced_delivery_controller.py
+drone_delivery_system/gazipin.py
 drone_delivery_system/mission_planner.py
-drone_delivery_system/obstacle_avoider.py
 drone_delivery_system/payload_manager.py
 launch/delivery_system.launch.py
 models/delivery_box.sdf
