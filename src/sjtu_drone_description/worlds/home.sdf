@@ -1402,7 +1402,7 @@
           <geometry>
             <mesh>
               <uri>model://fire_hydrant/meshes/fire_hydrant.dae</uri>
-              <scale> 0.2 0.2 0.2 </scale> 
+              <scale> 0.8 0.8 0.8 </scale> 
             </mesh>
           </geometry>
           <max_contacts>10</max_contacts>
@@ -1423,7 +1423,7 @@
           <geometry>
             <mesh>
               <uri>model://fire_hydrant/meshes/fire_hydrant.dae</uri>
-              <scale> 0.2 0.2 0.2 </scale> 
+              <scale> 0.8 0.8 0.8 </scale> 
             </mesh>
           </geometry>
         </visual>

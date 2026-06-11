@@ -114,7 +114,7 @@
   <joint name="red_cube_joint" type="fixed">
     <parent link="base_link"/>
     <child  link="red_cube_link"/>
-    <origin xyz="0 0 -0.15" rpy="0 0 0"/>
+    <origin xyz="0 0 -0.05" rpy="0 0 0"/>
   </joint>
 
   <!-- Ignition material (makes it red in Gazebo, not just RViz) -->

@@ -20,8 +20,8 @@ from std_srvs.srv import Empty as EmptySrv
 _HERE = os.path.dirname(os.path.abspath(__file__))
 if _HERE not in sys.path:
     sys.path.insert(0, _HERE)
-from gazipin import decode as gazipin_decode, validate as gazipin_validate
-from gazipin import CELL_SIZE_M
+from aeropin import decode as aeropin_decode, validate as aeropin_validate
+from aeropin import CELL_SIZE_M
 
 # ── drone plugin navi_state constants (matches plugin_drone_private.h) ──
 LANDED_MODEL    = 0
@@ -56,7 +56,7 @@ KNOWN = {
 def _prompt() -> tuple:
     print()
     print('╔══════════════════════════════════════════════════════════════╗')
-    print('║         ROS2 Drone — GAZIPIN Mission Controller             ║')
+    print('║         ROS2 Drone — AEROPIN Mission Controller             ║')
     print('╠══════════════════════════════════════════════════════════════╣')
     print(f'║  Cell size : {CELL_SIZE_M*100:.4f} cm  │  World : X/Y ∈ [-50, 50] m    ║')
     print('╠══════════════════════════════════════════════════════════════╣')
@@ -69,14 +69,14 @@ def _prompt() -> tuple:
     print()
     while True:
         try:
-            raw = input('  Enter GAZIPIN > ').strip()
+            raw = input('  Enter AEROPIN > ').strip()
             if not raw:
                 continue
-            ok, err = gazipin_validate(raw)
+            ok, err = aeropin_validate(raw)
             if not ok:
                 print(f'  ✗  {err}')
                 continue
-            x, y = gazipin_decode(raw)
+            x, y = aeropin_decode(raw)
             hint = KNOWN.get(raw.upper().replace('-', ''), '')
             note = f'  ({hint.split("(")[0].strip()})' if hint else ''
             print(f'  ✓  ({x:.4f}, {y:.4f}) m{note}')
@@ -324,16 +324,14 @@ class CoordinateMissionController(Node):
             self._go(IDLE)
 
     def _auto_drop(self):
-        if not self.carrying:
-            return
         self.get_logger().info('📦 Auto-dropping payload …')
         if self.drop_cli.service_is_ready():
             self.drop_cli.call_async(EmptySrv.Request())
+            self.carrying = False
         else:
             self.get_logger().warn(
-                'payload_manager not running — start it and call '
-                'ros2 service call /payload/drop std_srvs/srv/Empty manually')
-        self.carrying = False
+                'payload_manager not running — '
+                'ros2 run drone_delivery_system payload_manager')
 
     # ── helpers ───────────────────────────────────────────────────────
 

@@ -52,7 +52,7 @@ def generate_launch_description():
 
     world_file_default = os.path.join(
         get_package_share_directory('sjtu_drone_description'),
-        'worlds', 'home.sdf'
+        'worlds', 'rubicon.sdf'
     )
 
     world = DeclareLaunchArgument(
@@ -111,7 +111,7 @@ def generate_launch_description():
             '-string', robot_desc,
             '-name', model_name,
             '-allow_renaming', 'true',
-            '-x', '0.5', '-y', '1.0', '-z', '0.3',
+            '-x', '1.0', '-y', '2.0', '-z', '5.0',
         ],
     )
 
