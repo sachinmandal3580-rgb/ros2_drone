@@ -1,0 +1,369 @@
+[0.434s] Invoking command in '/home/sachin/ros2_drone/build/sjtu_drone_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PS1=(.ros2_venv) \[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ VIRTUAL_ENV_PROMPT=(.ros2_venv) /usr/bin/cmake /home/sachin/ros2_drone/src/sjtu_drone_description -DCMAKE_INSTALL_PREFIX=/home/sachin/ros2_drone/install/sjtu_drone_description
+[0.589s] -- The C compiler identification is GNU 13.3.0
+[0.687s] -- The CXX compiler identification is GNU 13.3.0
+[0.703s] -- Detecting C compiler ABI info
+[0.786s] -- Detecting C compiler ABI info - done
+[0.794s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.795s] -- Detecting C compile features
+[0.795s] -- Detecting C compile features - done
+[0.804s] -- Detecting CXX compiler ABI info
+[0.888s] -- Detecting CXX compiler ABI info - done
+[0.897s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.898s] -- Detecting CXX compile features
+[0.898s] -- Detecting CXX compile features - done
+[0.906s] -- Found ament_cmake: 2.5.6 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[1.016s] -- Found Python3: /home/sachin/.ros2_venv/bin/python3 (found version "3.12.3") found components: Interpreter 
+[1.130s] -- Found rclcpp: 28.1.18 (/opt/ros/jazzy/share/rclcpp/cmake)
+[1.176s] -- Found rosidl_generator_c: 4.6.7 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[1.197s] -- Found rosidl_generator_cpp: 4.6.7 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[1.221s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.240s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.320s] -- Found rmw_implementation_cmake: 7.3.3 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+[1.324s] -- Found rmw_fastrtps_cpp: 8.4.3 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+[1.421s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.13")  
+[1.438s] -- Found FastRTPS: /opt/ros/jazzy/include (Required is at least version "2.13") 
+[1.455s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[1.524s] -- Found std_msgs: 5.3.7 (/opt/ros/jazzy/share/std_msgs/cmake)
+[1.537s] -- Found geometry_msgs: 5.3.7 (/opt/ros/jazzy/share/geometry_msgs/cmake)
+[1.551s] -- Found sensor_msgs: 5.3.7 (/opt/ros/jazzy/share/sensor_msgs/cmake)
+[1.571s] -- Found nav_msgs: 5.3.7 (/opt/ros/jazzy/share/nav_msgs/cmake)
+[1.595s] -- Found tf2_ros: 0.36.20 (/opt/ros/jazzy/share/tf2_ros/cmake)
+[1.714s] -- Found tf2_geometry_msgs: 0.36.20 (/opt/ros/jazzy/share/tf2_geometry_msgs/cmake)
+[1.730s] -- Found eigen3_cmake_module: 0.3.0 (/opt/ros/jazzy/share/eigen3_cmake_module/cmake)
+[1.732s] -- Found Eigen3: TRUE (found version "3.4.0") 
+[1.732s] -- Ensuring Eigen3 include directory is part of orocos-kdl CMake target
+[1.794s] -- Looking for gz-sim8 -- found version 8.11.0
+[1.803s] -- Searching for dependencies of gz-sim8
+[1.804s] -- Looking for sdformat14 -- found version 14.9.0
+[1.804s] -- Searching for dependencies of sdformat14
+[1.809s] -- Checking for module 'tinyxml2'
+[1.822s] --   Found tinyxml2, version 10.0.0
+[1.864s] -- Looking for gz-math7 -- found version 7.5.2
+[1.864s] -- Searching for dependencies of gz-math7
+[1.867s] -- Looking for gz-utils2 -- found version 2.2.1
+[1.867s] -- Searching for dependencies of gz-utils2
+[1.869s] -- Looking for gz-utils2 -- found version 2.2.1
+[1.869s] -- Searching for dependencies of gz-utils2
+[1.869s] -- Searching for <gz-utils2> component [cli]
+[1.872s] -- Looking for gz-utils2-cli -- found version 2.2.1
+[1.872s] -- Searching for dependencies of gz-utils2-cli
+[1.875s] -- Looking for gz-plugin2 -- found version 2.0.4
+[1.875s] -- Searching for dependencies of gz-plugin2
+[1.875s] -- Looking for gz-utils2 -- found version 2.2.1
+[1.876s] -- Searching for <gz-plugin2> component [loader]
+[1.878s] -- Looking for gz-plugin2-loader -- found version 2.0.4
+[1.878s] -- Searching for dependencies of gz-plugin2-loader
+[1.879s] -- Searching for <gz-plugin2> component [register]
+[1.880s] -- Looking for gz-plugin2-register -- found version 2.0.4
+[1.880s] -- Searching for dependencies of gz-plugin2-register
+[1.882s] -- Looking for gz-transport13 -- found version 13.5.0
+[1.882s] -- Searching for dependencies of gz-transport13
+[2.002s] -- Found Protobuf: /usr/lib/x86_64-linux-gnu/libprotobuf.so (found version "3.21.12") 
+[2.014s] -- Config-file not installed for ZeroMQ -- checking for pkg-config
+[2.019s] -- Checking for module 'libzmq >= 4'
+[2.037s] --   Found libzmq, version 4.3.5
+[2.102s] -- Found ZeroMQ: TRUE (Required is at least version "4") 
+[2.112s] -- Checking for module 'uuid'
+[2.126s] --   Found uuid, version 2.39.3
+[2.175s] -- Found UUID: TRUE  
+[2.175s] -- Looking for gz-utils2 -- found version 2.2.1
+[2.179s] -- Looking for gz-msgs10 -- found version 10.3.2
+[2.179s] -- Searching for dependencies of gz-msgs10
+[2.197s] -- Looking for gz-utils2 -- found version 2.2.1
+[2.197s] -- Looking for gz-math7 -- found version 7.5.2
+[2.205s] -- Searching for <gz-transport13> component [log]
+[2.207s] -- Looking for gz-transport13-log -- found version 13.5.0
+[2.207s] -- Searching for dependencies of gz-transport13-log
+[2.208s] -- Searching for <gz-transport13> component [parameters]
+[2.209s] -- Looking for gz-transport13-parameters -- found version 13.5.0
+[2.209s] -- Searching for dependencies of gz-transport13-parameters
+[2.210s] -- Looking for gz-msgs10 -- found version 10.3.2
+[2.212s] -- Looking for gz-common5 -- found version 5.8.0
+[2.212s] -- Searching for dependencies of gz-common5
+[2.213s] -- Looking for gz-utils2 -- found version 2.2.1
+[2.213s] -- Looking for dlfcn.h - found
+[2.214s] -- Looking for libdl - found
+[2.215s] -- Found DL: TRUE  
+[2.220s] -- Searching for <gz-common5> component [av]
+[2.222s] -- Looking for gz-common5-av -- found version 5.8.0
+[2.222s] -- Searching for dependencies of gz-common5-av
+[2.226s] -- Checking for module 'libswscale'
+[2.242s] --   Found libswscale, version 7.5.100
+[2.293s] -- Found SWSCALE: TRUE  
+[2.302s] -- Checking for module 'libavdevice >= 56.4.100'
+[2.324s] --   Found libavdevice, version 60.3.100
+[2.382s] -- Found AVDEVICE: TRUE (Required is at least version "56.4.100") 
+[2.387s] -- Checking for module 'libavformat'
+[2.401s] --   Found libavformat, version 60.16.100
+[2.450s] -- Found AVFORMAT: TRUE  
+[2.458s] -- Checking for module 'libavcodec'
+[2.478s] --   Found libavcodec, version 60.31.102
+[2.535s] -- Found AVCODEC: TRUE  
+[2.544s] -- Checking for module 'libavutil'
+[2.562s] --   Found libavutil, version 58.29.100
+[2.611s] -- Found AVUTIL: TRUE  
+[2.614s] -- Searching for <gz-common5> component [events]
+[2.618s] -- Looking for gz-common5-events -- found version 5.8.0
+[2.618s] -- Searching for dependencies of gz-common5-events
+[2.618s] -- Looking for gz-math7 -- found version 7.5.2
+[2.619s] -- Searching for <gz-common5> component [graphics]
+[2.621s] -- Looking for gz-common5-graphics -- found version 5.8.0
+[2.621s] -- Searching for dependencies of gz-common5-graphics
+[2.621s] -- Looking for gz-math7 -- found version 7.5.2
+[2.626s] -- Found GzAssimp: TRUE (found version "5.3.0") 
+[2.627s] -- Searching for <gz-common5> component [io]
+[2.629s] -- Looking for gz-common5-io -- found version 5.8.0
+[2.629s] -- Searching for dependencies of gz-common5-io
+[2.629s] -- Searching for <gz-common5> component [profiler]
+[2.631s] -- Looking for gz-common5-profiler -- found version 5.8.0
+[2.631s] -- Searching for dependencies of gz-common5-profiler
+[2.633s] -- Looking for gz-fuel_tools9 -- found version 9.1.1
+[2.633s] -- Searching for dependencies of gz-fuel_tools9
+[2.707s] -- Found CURL: /usr/lib/x86_64-linux-gnu/libcurl.so (found version "8.5.0")  
+[2.716s] -- Checking for module 'jsoncpp'
+[2.734s] --   Found jsoncpp, version 1.9.5
+[2.784s] -- Found JSONCPP: TRUE  
+[2.801s] -- Checking for module 'yaml-0.1'
+[2.815s] --   Found yaml-0.1, version 0.2.5
+[2.865s] -- Found YAML: TRUE  
+[2.871s] -- Checking for module 'libzip'
+[2.896s] --   Found libzip, version 1.7.3
+[2.947s] -- Found ZIP: TRUE  
+[2.947s] -- Looking for gz-utils2 -- found version 2.2.1
+[2.948s] -- Looking for gz-common5 -- found version 5.8.0
+[2.948s] -- Searching for dependencies of gz-common5
+[2.948s] -- Looking for gz-utils2 -- found version 2.2.1
+[2.949s] -- Looking for dlfcn.h - found
+[2.949s] -- Looking for libdl - found
+[2.955s] -- Searching for <gz-common5> component [testing]
+[2.958s] -- Looking for gz-common5-testing -- found version 5.8.0
+[2.959s] -- Searching for dependencies of gz-common5-testing
+[2.960s] -- Looking for gz-math7 -- found version 7.5.2
+[2.960s] -- Looking for gz-msgs10 -- found version 10.3.2
+[2.963s] -- Looking for gz-gui8 -- found version 8.4.0
+[2.963s] -- Searching for dependencies of gz-gui8
+[2.981s] -- Looking for gz-utils2 -- found version 2.2.1
+[2.981s] -- Looking for gz-math7 -- found version 7.5.2
+[2.981s] -- Looking for gz-common5 -- found version 5.8.0
+[2.981s] -- Looking for gz-plugin2 -- found version 2.0.4
+[2.982s] -- Looking for gz-transport13 -- found version 13.5.0
+[2.984s] -- Looking for gz-rendering8 -- found version 8.2.3
+[2.984s] -- Searching for dependencies of gz-rendering8
+[2.984s] -- Looking for gz-math7 -- found version 7.5.2
+[2.984s] -- Searching for dependencies of gz-math7
+[2.984s] -- Looking for gz-utils2 -- found version 2.2.1
+[2.984s] -- Searching for <gz-math7> component [eigen3]
+[2.986s] -- Looking for gz-math7-eigen3 -- found version 7.5.2
+[2.986s] -- Searching for dependencies of gz-math7-eigen3
+[2.987s] -- Looking for gz-common5 -- found version 5.8.0
+[2.987s] -- Searching for dependencies of gz-common5
+[2.987s] -- Looking for gz-utils2 -- found version 2.2.1
+[2.987s] -- Looking for dlfcn.h - found
+[2.988s] -- Looking for libdl - found
+[2.993s] -- Searching for <gz-common5> component [graphics]
+[2.993s] -- Searching for <gz-common5> component [events]
+[2.993s] -- Searching for <gz-common5> component [geospatial]
+[2.995s] -- Looking for gz-common5-geospatial -- found version 5.8.0
+[2.995s] -- Searching for dependencies of gz-common5-geospatial
+[2.995s] -- Looking for gz-math7 -- found version 7.5.2
+[2.995s] -- Looking for gz-common5 -- found version 5.8.0
+[2.996s] -- Looking for gz-plugin2 -- found version 2.0.4
+[2.996s] -- Searching for dependencies of gz-plugin2
+[2.996s] -- Looking for gz-utils2 -- found version 2.2.1
+[2.997s] -- Searching for <gz-plugin2> component [all]
+[2.998s] -- Looking for all libraries of gz-plugin2 -- found version 2.0.4
+[2.998s] -- Looking for gz-plugin2 -- found version 2.0.4
+[2.999s] -- Looking for gz-utils2 -- found version 2.2.1
+[3.009s] -- Found OpenGL: /usr/lib/x86_64-linux-gnu/libOpenGL.so  found components: OpenGL 
+[3.011s] -- Looking for gz-msgs10 -- found version 10.3.2
+[3.036s] -- Looking for gz-physics7 -- found version 7.6.0
+[3.036s] -- Searching for dependencies of gz-physics7
+[3.036s] -- Looking for gz-common5 -- found version 5.8.0
+[3.037s] -- Looking for gz-math7 -- found version 7.5.2
+[3.037s] -- Looking for gz-plugin2 -- found version 2.0.4
+[3.037s] -- Looking for gz-utils2 -- found version 2.2.1
+[3.038s] -- Searching for <gz-physics7> component [heightmap]
+[3.039s] -- Looking for gz-physics7-heightmap -- found version 7.6.0
+[3.039s] -- Searching for dependencies of gz-physics7-heightmap
+[3.039s] -- Looking for gz-common5 -- found version 5.8.0
+[3.040s] -- Searching for <gz-physics7> component [mesh]
+[3.041s] -- Looking for gz-physics7-mesh -- found version 7.6.0
+[3.041s] -- Searching for dependencies of gz-physics7-mesh
+[3.041s] -- Looking for gz-common5 -- found version 5.8.0
+[3.042s] -- Searching for <gz-physics7> component [sdf]
+[3.044s] -- Looking for gz-physics7-sdf -- found version 7.6.0
+[3.044s] -- Searching for dependencies of gz-physics7-sdf
+[3.044s] -- Looking for sdformat14 -- found version 14.9.0
+[3.047s] -- Looking for gz-sensors8 -- found version 8.2.2
+[3.047s] -- Searching for dependencies of gz-sensors8
+[3.062s] -- Looking for gz-math7 -- found version 7.5.2
+[3.062s] -- Looking for gz-common5 -- found version 5.8.0
+[3.063s] -- Looking for gz-transport13 -- found version 13.5.0
+[3.063s] -- Looking for gz-rendering8 -- found version 8.2.3
+[3.063s] -- Looking for gz-msgs10 -- found version 10.3.2
+[3.063s] -- Looking for sdformat14 -- found version 14.9.0
+[3.064s] -- Searching for <gz-sensors8> component [air_pressure]
+[3.066s] -- Looking for gz-sensors8-air_pressure -- found version 8.2.2
+[3.066s] -- Searching for dependencies of gz-sensors8-air_pressure
+[3.067s] -- Searching for <gz-sensors8> component [air_speed]
+[3.068s] -- Looking for gz-sensors8-air_speed -- found version 8.2.2
+[3.068s] -- Searching for dependencies of gz-sensors8-air_speed
+[3.068s] -- Searching for <gz-sensors8> component [altimeter]
+[3.069s] -- Looking for gz-sensors8-altimeter -- found version 8.2.2
+[3.069s] -- Searching for dependencies of gz-sensors8-altimeter
+[3.070s] -- Searching for <gz-sensors8> component [imu]
+[3.071s] -- Looking for gz-sensors8-imu -- found version 8.2.2
+[3.071s] -- Searching for dependencies of gz-sensors8-imu
+[3.072s] -- Searching for <gz-sensors8> component [force_torque]
+[3.073s] -- Looking for gz-sensors8-force_torque -- found version 8.2.2
+[3.073s] -- Searching for dependencies of gz-sensors8-force_torque
+[3.074s] -- Searching for <gz-sensors8> component [logical_camera]
+[3.075s] -- Looking for gz-sensors8-logical_camera -- found version 8.2.2
+[3.075s] -- Searching for dependencies of gz-sensors8-logical_camera
+[3.075s] -- Searching for <gz-sensors8> component [magnetometer]
+[3.076s] -- Looking for gz-sensors8-magnetometer -- found version 8.2.2
+[3.076s] -- Searching for dependencies of gz-sensors8-magnetometer
+[3.077s] -- Searching for <gz-sensors8> component [navsat]
+[3.078s] -- Looking for gz-sensors8-navsat -- found version 8.2.2
+[3.078s] -- Searching for dependencies of gz-sensors8-navsat
+[3.079s] -- Searching for <gz-sensors8> component [dvl]
+[3.080s] -- Looking for gz-sensors8-dvl -- found version 8.2.2
+[3.080s] -- Searching for dependencies of gz-sensors8-dvl
+[3.080s] -- Looking for gz-sensors8 -- found version 8.2.2
+[3.080s] -- Searching for dependencies of gz-sensors8
+[3.094s] -- Looking for gz-math7 -- found version 7.5.2
+[3.094s] -- Looking for gz-common5 -- found version 5.8.0
+[3.095s] -- Looking for gz-transport13 -- found version 13.5.0
+[3.095s] -- Looking for gz-rendering8 -- found version 8.2.3
+[3.095s] -- Looking for gz-msgs10 -- found version 10.3.2
+[3.095s] -- Looking for sdformat14 -- found version 14.9.0
+[3.096s] -- Searching for <gz-sensors8> component [rendering]
+[3.097s] -- Looking for gz-sensors8-rendering -- found version 8.2.2
+[3.097s] -- Searching for dependencies of gz-sensors8-rendering
+[3.098s] -- Searching for <gz-sensors8> component [rendering]
+[3.098s] -- Searching for <gz-sensors8> component [lidar]
+[3.099s] -- Looking for gz-sensors8-lidar -- found version 8.2.2
+[3.099s] -- Searching for dependencies of gz-sensors8-lidar
+[3.100s] -- Looking for gz-sensors8 -- found version 8.2.2
+[3.100s] -- Searching for <gz-sensors8> component [gpu_lidar]
+[3.101s] -- Looking for gz-sensors8-gpu_lidar -- found version 8.2.2
+[3.101s] -- Searching for dependencies of gz-sensors8-gpu_lidar
+[3.101s] -- Looking for gz-sensors8 -- found version 8.2.2
+[3.102s] -- Searching for <gz-sensors8> component [camera]
+[3.103s] -- Looking for gz-sensors8-camera -- found version 8.2.2
+[3.103s] -- Searching for dependencies of gz-sensors8-camera
+[3.103s] -- Looking for gz-sensors8 -- found version 8.2.2
+[3.104s] -- Searching for <gz-sensors8> component [boundingbox_camera]
+[3.105s] -- Looking for gz-sensors8-boundingbox_camera -- found version 8.2.2
+[3.105s] -- Searching for dependencies of gz-sensors8-boundingbox_camera
+[3.106s] -- Searching for <gz-sensors8> component [segmentation_camera]
+[3.107s] -- Looking for gz-sensors8-segmentation_camera -- found version 8.2.2
+[3.107s] -- Searching for dependencies of gz-sensors8-segmentation_camera
+[3.108s] -- Searching for <gz-sensors8> component [depth_camera]
+[3.109s] -- Looking for gz-sensors8-depth_camera -- found version 8.2.2
+[3.109s] -- Searching for dependencies of gz-sensors8-depth_camera
+[3.109s] -- Looking for gz-sensors8 -- found version 8.2.2
+[3.109s] -- Searching for <gz-sensors8> component [rgbd_camera]
+[3.111s] -- Looking for gz-sensors8-rgbd_camera -- found version 8.2.2
+[3.111s] -- Searching for dependencies of gz-sensors8-rgbd_camera
+[3.111s] -- Looking for gz-sensors8 -- found version 8.2.2
+[3.111s] -- Searching for <gz-sensors8> component [thermal_camera]
+[3.113s] -- Looking for gz-sensors8-thermal_camera -- found version 8.2.2
+[3.113s] -- Searching for dependencies of gz-sensors8-thermal_camera
+[3.113s] -- Looking for gz-sensors8 -- found version 8.2.2
+[3.113s] -- Searching for <gz-sensors8> component [wide_angle_camera]
+[3.115s] -- Looking for gz-sensors8-wide_angle_camera -- found version 8.2.2
+[3.115s] -- Searching for dependencies of gz-sensors8-wide_angle_camera
+[3.116s] -- Looking for gz-rendering8 -- found version 8.2.3
+[3.116s] -- Looking for gz-math7 -- found version 7.5.2
+[3.116s] -- Looking for gz-utils2 -- found version 2.2.1
+[3.131s] -- Looking for gz-plugin2 -- found version 2.0.4
+[3.136s] -- Found ament_lint_auto: 0.17.5 (/opt/ros/jazzy/share/ament_lint_auto/cmake)
+[3.233s] -- Found gtest sources under '/opt/ros/jazzy/src/gtest_vendor': C++ tests using 'Google Test' will be built
+[3.237s] -- Found Threads: TRUE  
+[3.252s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[3.252s] -- Configured cppcheck include dirs: /home/sachin/ros2_drone/src/sjtu_drone_description/include
+[3.252s] -- Configured cppcheck exclude dirs and/or files: 
+[3.253s] -- Added test 'lint_cmake' to check CMake code style
+[3.255s] -- Added test 'uncrustify' to check C / C++ code style
+[3.255s] -- Configured uncrustify additional arguments: 
+[3.255s] -- Added test 'xmllint' to check XML markup files
+[3.257s] -- Configuring done (2.8s)
+[3.301s] -- Generating done (0.0s)
+[3.312s] -- Build files have been written to: /home/sachin/ros2_drone/build/sjtu_drone_description
+[3.324s] Invoked command in '/home/sachin/ros2_drone/build/sjtu_drone_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PS1=(.ros2_venv) \[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ VIRTUAL_ENV_PROMPT=(.ros2_venv) /usr/bin/cmake /home/sachin/ros2_drone/src/sjtu_drone_description -DCMAKE_INSTALL_PREFIX=/home/sachin/ros2_drone/install/sjtu_drone_description
+[3.324s] Invoking command in '/home/sachin/ros2_drone/build/sjtu_drone_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PS1=(.ros2_venv) \[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ VIRTUAL_ENV_PROMPT=(.ros2_venv) /usr/bin/cmake --build /home/sachin/ros2_drone/build/sjtu_drone_description -- -j12 -l12
+[3.366s] [  3%] [32mBuilding CXX object gtest/CMakeFiles/gtest.dir/src/gtest-all.cc.o[0m
+[3.369s] [  7%] [32mBuilding CXX object CMakeFiles/plugin_drone.dir/src/plugin_drone_private.cpp.o[0m
+[3.372s] [ 14%] [32mBuilding CXX object CMakeFiles/plugin_drone.dir/src/pid_controller.cpp.o[0m
+[3.372s] [ 18%] [32mBuilding CXX object CMakeFiles/plugin_drone.dir/src/plugin_drone_gz.cpp.o[0m
+[3.372s] [ 18%] [32mBuilding CXX object gtest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o[0m
+[3.983s] [ 22%] [32m[1mLinking CXX static library libgtest_main.a[0m
+[4.022s] [ 22%] Built target gtest_main
+[6.007s] [ 25%] [32m[1mLinking CXX static library libgtest.a[0m
+[6.057s] [ 25%] Built target gtest
+[6.075s] [ 29%] [32mBuilding CXX object CMakeFiles/test_plugin_drone_dynamics.dir/src/pid_controller.cpp.o[0m
+[6.076s] [ 44%] [32mBuilding CXX object CMakeFiles/test_plugin_drone_dynamics.dir/test/test_plugin_drone_dynamics.cpp.o[0m
+[6.076s] [ 44%] [32mBuilding CXX object CMakeFiles/test_plugin_drone_dynamics.dir/src/plugin_drone_private.cpp.o[0m
+[6.076s] [ 44%] [32mBuilding CXX object CMakeFiles/test_plugin_drone_dynamics.dir/src/plugin_drone_gz.cpp.o[0m
+[6.076s] [ 44%] [32mBuilding CXX object CMakeFiles/test_world_loads.dir/test/test_world_loads.cpp.o[0m
+[6.079s] [ 48%] [32mBuilding CXX object CMakeFiles/test_plugin_drone_configure.dir/test/test_plugin_drone_configure.cpp.o[0m
+[6.079s] [ 51%] [32mBuilding CXX object CMakeFiles/test_pid_controller.dir/src/pid_controller.cpp.o[0m
+[6.081s] [ 55%] [32mBuilding CXX object CMakeFiles/test_model_sdf.dir/test/test_model_sdf.cpp.o[0m
+[6.086s] [ 59%] [32mBuilding CXX object CMakeFiles/test_integration.dir/test/test_integration.cpp.o[0m
+[6.089s] [ 62%] [32mBuilding CXX object CMakeFiles/test_pid_controller.dir/test/test_pid_controller.cpp.o[0m
+[7.914s] [ 66%] [32m[1mLinking CXX executable test_integration[0m
+[8.174s] [ 66%] Built target test_integration
+[8.186s] [ 70%] [32mBuilding CXX object CMakeFiles/test_plugin_drone_configure.dir/src/pid_controller.cpp.o[0m
+[8.250s] [ 74%] [32mBuilding CXX object CMakeFiles/test_plugin_drone_configure.dir/src/plugin_drone_private.cpp.o[0m
+[8.255s] [ 77%] [32mBuilding CXX object CMakeFiles/test_plugin_drone_configure.dir/src/plugin_drone_gz.cpp.o[0m
+[8.896s] [ 81%] [32m[1mLinking CXX executable test_pid_controller[0m
+[9.471s] [ 81%] Built target test_pid_controller
+[9.889s] [ 85%] [32m[1mLinking CXX executable test_model_sdf[0m
+[9.896s] [ 88%] [32m[1mLinking CXX executable test_world_loads[0m
+[10.283s] [ 88%] Built target test_model_sdf
+[10.439s] [ 88%] Built target test_world_loads
+[25.337s] [ 92%] [32m[1mLinking CXX shared library libplugin_drone.so[0m
+[26.599s] [ 92%] Built target plugin_drone
+[26.692s] [ 96%] [32m[1mLinking CXX executable test_plugin_drone_dynamics[0m
+[27.054s] [100%] [32m[1mLinking CXX executable test_plugin_drone_configure[0m
+[28.629s] [100%] Built target test_plugin_drone_dynamics
+[28.764s] [100%] Built target test_plugin_drone_configure
+[28.844s] Invoked command in '/home/sachin/ros2_drone/build/sjtu_drone_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PS1=(.ros2_venv) \[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ VIRTUAL_ENV_PROMPT=(.ros2_venv) /usr/bin/cmake --build /home/sachin/ros2_drone/build/sjtu_drone_description -- -j12 -l12
+[28.897s] Invoking command in '/home/sachin/ros2_drone/build/sjtu_drone_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PS1=(.ros2_venv) \[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ VIRTUAL_ENV_PROMPT=(.ros2_venv) /usr/bin/cmake --install /home/sachin/ros2_drone/build/sjtu_drone_description
+[28.909s] -- Install configuration: ""
+[28.909s] -- Installing: /home/sachin/ros2_drone/install/sjtu_drone_description/lib/sjtu_drone_description/libplugin_drone.so
+[28.919s] -- Set non-toolchain portion of runtime path of "/home/sachin/ros2_drone/install/sjtu_drone_description/lib/sjtu_drone_description/libplugin_drone.so" to ""
+[28.919s] -- Installing: /home/sachin/ros2_drone/install/sjtu_drone_description/include
+[28.919s] -- Installing: /home/sachin/ros2_drone/install/sjtu_drone_description/include/sjtu_drone_description
+[28.919s] -- Installing: /home/sachin/ros2_drone/install/sjtu_drone_description/include/sjtu_drone_description/plugin_drone_private.h
+[28.919s] -- Installing: /home/sachin/ros2_drone/install/sjtu_drone_description/include/sjtu_drone_description/pid_controller.h
+[28.919s] -- Installing: /home/sachin/ros2_drone/install/sjtu_drone_description/include/sjtu_drone_description/plugin_drone.h
+[28.919s] -- Installing: /home/sachin/ros2_drone/install/sjtu_drone_description/share/sjtu_drone_description/models
+[28.919s] -- Installing: /home/sachin/ros2_drone/install/sjtu_drone_description/share/sjtu_drone_description/models/database.config
+[28.919s] -- Installing: /home/sachin/ros2_drone/install/sjtu_drone_description/share/sjtu_drone_description/models/sjtu_drone
+[28.919s] -- Installing: /home/sachin/ros2_drone/install/sjtu_drone_description/share/sjtu_drone_description/models/sjtu_drone/model.config
+[28.920s] -- Installing: /home/sachin/ros2_drone/install/sjtu_drone_description/share/sjtu_drone_description/models/sjtu_drone/sjtu_drone.sdf
+[28.920s] -- Installing: /home/sachin/ros2_drone/install/sjtu_drone_description/share/sjtu_drone_description/models/sjtu_drone/quadrotor_4.stl
+[28.920s] -- Installing: /home/sachin/ros2_drone/install/sjtu_drone_description/share/sjtu_drone_description/models/sjtu_drone/quadrotor_4.dae
+[28.921s] -- Installing: /home/sachin/ros2_drone/install/sjtu_drone_description/share/sjtu_drone_description/urdf
+[28.921s] -- Installing: /home/sachin/ros2_drone/install/sjtu_drone_description/share/sjtu_drone_description/urdf/sjtu_drone.urdf.xacro
+[28.921s] -- Installing: /home/sachin/ros2_drone/install/sjtu_drone_description/share/sjtu_drone_description/worlds
+[28.921s] -- Installing: /home/sachin/ros2_drone/install/sjtu_drone_description/share/sjtu_drone_description/worlds/home.sdf
+[28.922s] -- Installing: /home/sachin/ros2_drone/install/sjtu_drone_description/share/sjtu_drone_description/worlds/rubicon.sdf
+[28.922s] -- Installing: /home/sachin/ros2_drone/install/sjtu_drone_description/share/ament_index/resource_index/package_run_dependencies/sjtu_drone_description
+[28.922s] -- Installing: /home/sachin/ros2_drone/install/sjtu_drone_description/share/ament_index/resource_index/parent_prefix_path/sjtu_drone_description
+[28.922s] -- Installing: /home/sachin/ros2_drone/install/sjtu_drone_description/share/sjtu_drone_description/environment/ament_prefix_path.sh
+[28.922s] -- Installing: /home/sachin/ros2_drone/install/sjtu_drone_description/share/sjtu_drone_description/environment/ament_prefix_path.dsv
+[28.922s] -- Installing: /home/sachin/ros2_drone/install/sjtu_drone_description/share/sjtu_drone_description/environment/path.sh
+[28.922s] -- Installing: /home/sachin/ros2_drone/install/sjtu_drone_description/share/sjtu_drone_description/environment/path.dsv
+[28.923s] -- Installing: /home/sachin/ros2_drone/install/sjtu_drone_description/share/sjtu_drone_description/local_setup.bash
+[28.923s] -- Installing: /home/sachin/ros2_drone/install/sjtu_drone_description/share/sjtu_drone_description/local_setup.sh
+[28.923s] -- Installing: /home/sachin/ros2_drone/install/sjtu_drone_description/share/sjtu_drone_description/local_setup.zsh
+[28.923s] -- Installing: /home/sachin/ros2_drone/install/sjtu_drone_description/share/sjtu_drone_description/local_setup.dsv
+[28.923s] -- Installing: /home/sachin/ros2_drone/install/sjtu_drone_description/share/sjtu_drone_description/package.dsv
+[28.923s] -- Installing: /home/sachin/ros2_drone/install/sjtu_drone_description/share/ament_index/resource_index/packages/sjtu_drone_description
+[28.923s] -- Installing: /home/sachin/ros2_drone/install/sjtu_drone_description/share/sjtu_drone_description/cmake/sjtu_drone_descriptionConfig.cmake
+[28.923s] -- Installing: /home/sachin/ros2_drone/install/sjtu_drone_description/share/sjtu_drone_description/cmake/sjtu_drone_descriptionConfig-version.cmake
+[28.923s] -- Installing: /home/sachin/ros2_drone/install/sjtu_drone_description/share/sjtu_drone_description/package.xml
+[28.934s] Invoked command in '/home/sachin/ros2_drone/build/sjtu_drone_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com PS1=(.ros2_venv) \[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ VIRTUAL_ENV_PROMPT=(.ros2_venv) /usr/bin/cmake --install /home/sachin/ros2_drone/build/sjtu_drone_description
