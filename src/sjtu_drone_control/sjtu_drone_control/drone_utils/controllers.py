@@ -16,13 +16,27 @@ class PI:
         self.integral = 0
 
     def compute(self, error, dt):
-        self.integral += error * dt
-        output = self.kp * error + self.ki * self.integral
-        if output > self.max_out:
-            output = self.max_out
-        elif output < self.min_out:
-            output = self.min_out
-        return output
+        # ==========================================================
+        # TODO 1
+        #
+        # Compute the PI control output for this update step.
+        #
+        # Requirements:
+        # - Accumulate the integral term using the current error
+        #   and timestep (dt).
+        # - Compute output as the weighted sum of the proportional
+        #   and integral terms, using kp and ki.
+        # - Clamp the output between min_out and max_out before
+        #   returning it.
+        #
+        # Hint:
+        # Use:
+        #   • self.integral
+        #   • self.kp, self.ki
+        #   • self.min_out, self.max_out
+        # ==========================================================
+
+        # YOUR CODE HERE
 
 
 class PID:
@@ -43,12 +57,26 @@ class PID:
         self.last_error = 0
 
     def compute(self, error, dt):
-        self.integral += error * dt
-        derivative = (error - self.last_error) / dt
-        self.last_error = error
-        output = self.kp * error + self.ki * self.integral + self.kd * derivative
-        if output > self.max_out:
-            output = self.max_out
-        elif output < self.min_out:
-            output = self.min_out
-        return output
+        # ==========================================================
+        # TODO 2
+        #
+        # Compute the PID control output for this update step.
+        #
+        # Requirements:
+        # - Accumulate the integral term using the current error
+        #   and timestep (dt).
+        # - Compute the derivative term from the change in error
+        #   over dt, then update self.last_error for next call.
+        # - Compute output as the weighted sum of the proportional,
+        #   integral, and derivative terms, using kp, ki, and kd.
+        # - Clamp the output between min_out and max_out before
+        #   returning it.
+        #
+        # Hint:
+        # Use:
+        #   • self.integral, self.last_error
+        #   • self.kp, self.ki, self.kd
+        #   • self.min_out, self.max_out
+        # ==========================================================
+
+        # YOUR CODE HERE

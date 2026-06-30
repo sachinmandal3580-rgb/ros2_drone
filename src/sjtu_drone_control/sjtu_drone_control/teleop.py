@@ -75,68 +75,42 @@ class TeleopNode(Node):
             print(MSG+self.get_velocity_msg())
             # Implement a non-blocking keyboard read
             key = self.get_key()
-            # Handle velocity changes
-            if key.lower() == 'q':
-                self.linear_velocity = min(self.linear_velocity + self.linear_increment,
-                                           self.max_linear_velocity)
-                self.angular_velocity = min(self.angular_velocity + self.angular_increment,
-                                            self.max_angular_velocity)
-            elif key.lower() == 'e':
-                self.linear_velocity = max(self.linear_velocity - self.linear_increment,
-                                           -self.max_linear_velocity)
-                self.angular_velocity = max(self.angular_velocity - self.angular_increment,
-                                            -self.max_angular_velocity)
-            elif key.lower() == 'w':
-                # Move forward
-                linear_vec = Vector3()
-                linear_vec.x = self.linear_velocity
-                self.publish_cmd_vel(linear_vec)
-            elif key.lower() == 's':
-                # Hover
-                self.publish_cmd_vel()
-            elif key.lower() == 'x':
-                # Move backward
-                linear_vec = Vector3()
-                linear_vec.x = -self.linear_velocity
-                self.publish_cmd_vel(linear_vec)
-            elif key == 'a':
-                # Move Left
-                linear_vec = Vector3()
-                linear_vec.y = self.linear_velocity
-                self.publish_cmd_vel(linear_vec)
-            elif key == 'd':
-                # Move right
-                linear_vec = Vector3()
-                linear_vec.y = -self.linear_velocity
-                self.publish_cmd_vel(linear_vec)
-            elif key == 'A':
-                # Move Left
-                angular_vec = Vector3()
-                angular_vec.z = self.angular_velocity
-                self.publish_cmd_vel(angular_vec=angular_vec)
-            elif key == 'D':
-                # Move right
-                angular_vec = Vector3()
-                angular_vec.z = -self.angular_velocity
-                self.publish_cmd_vel(angular_vec=angular_vec)
-            elif key.lower() == 'r':
-                # Rise
-                linear_vec = Vector3()
-                linear_vec.z = self.linear_velocity
-                self.publish_cmd_vel(linear_vec)
-            elif key.lower() == 'f':
-                # Fall
-                linear_vec = Vector3()
-                linear_vec.z = -self.angular_velocity
-                self.publish_cmd_vel(linear_vec)
-            # Handle other keys for different movements
-            elif key.lower() == 't':
-                # Takeoff
-                self.takeoff_publisher.publish(Empty())
-            elif key.lower() == 'l':
-                # Land
-                self.publish_cmd_vel()
-                self.land_publisher.publish(Empty())
+
+            # ==========================================================
+            # TODO 1
+            #
+            # Handle keyboard input and publish the corresponding
+            # drone command.
+            #
+            # Requirements:
+            # - q/e (case-insensitive): increase/decrease both
+            #   linear_velocity and angular_velocity by their
+            #   respective increments, clamped to
+            #   [-max_*_velocity, +max_*_velocity].
+            # - w/x (case-insensitive): publish forward/backward
+            #   motion using linear_velocity on the X axis.
+            # - s (case-insensitive): publish a zero-velocity
+            #   Twist (hover).
+            # - a/d: publish left/right motion using
+            #   linear_velocity on the Y axis.
+            # - A/D (uppercase): publish left/right yaw rotation
+            #   using angular_velocity on the Z axis.
+            # - r/f (case-insensitive): publish rise/fall motion
+            #   using velocity on the Z axis.
+            # - t (case-insensitive): publish a takeoff command.
+            # - l (case-insensitive): publish a zero-velocity
+            #   Twist, then publish a land command.
+            #
+            # Hint:
+            # Use:
+            #   • self.linear_velocity, self.angular_velocity
+            #   • self.linear_increment, self.angular_increment
+            #   • self.max_linear_velocity, self.max_angular_velocity
+            #   • Vector3(), self.publish_cmd_vel()
+            #   • self.takeoff_publisher, self.land_publisher
+            # ==========================================================
+
+            # YOUR CODE HERE
 
     def get_key(self) -> str:
         """

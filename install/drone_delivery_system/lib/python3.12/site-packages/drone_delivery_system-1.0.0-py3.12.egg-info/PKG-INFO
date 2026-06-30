@@ -1,7 +1,0 @@
-Metadata-Version: 2.1
-Name: drone-delivery-system
-Version: 1.0.0
-Summary: Autonomous drone delivery with YOLOv8 person detection
-Maintainer: Your Name
-Maintainer-email: you@example.com
-License: GPL-3.0

@@ -120,45 +120,42 @@ class DroneController(DroneObject):
                 self.start_time = current_time
                 self.change_state(TaskState.MOVE_FORWARD)
 
-        # Task-specific actions
-        if self.task in [Task.SQUARE, Task.TRIANGLE]:
-            if self.task_state == TaskState.MOVE_FORWARD:
-                if current_time - self.start_time > self.straight_duration:
-                    self.current_side += 1
-                    turn_state = TaskState.TURN_LEFT if self.task == Task.SQUARE else \
-                        TaskState.TURN_RIGHT
-                    self.change_state(turn_state)
-                    self.start_time = current_time
-                else:
-                    self.go_straight()
+        # ==========================================================
+        # TODO 1 — Implement task-specific state transitions
+        #
+        # Drive the drone through the rest of its shape/direction
+        # task once it's airborne and in MOVE_FORWARD.
+        #
+        # Requirements:
+        # - For Task.SQUARE / Task.TRIANGLE:
+        #     • While in MOVE_FORWARD: keep calling go_straight()
+        #       until straight_duration has elapsed since
+        #       start_time, then increment current_side, switch to
+        #       TURN_LEFT (square) or TURN_RIGHT (triangle), and
+        #       reset start_time to current_time.
+        #     • While in TURN_LEFT/TURN_RIGHT: keep calling
+        #       go_turn(left=...) until the turn duration has
+        #       elapsed — use turn_duration (90°) for SQUARE, or a
+        #       120° turn for TRIANGLE. Once elapsed: if there are
+        #       more sides to go (4 for square, 3 for triangle),
+        #       switch back to MOVE_FORWARD and reset start_time;
+        #       otherwise switch to LAND.
+        # - For all other tasks (FORWARD/BACKWARD/LEFT/RIGHT/UP/DOWN):
+        #     • While in MOVE_FORWARD: if straight_duration has
+        #       elapsed, switch to LAND. Otherwise call
+        #       go_in_direction(...) with the correct direction
+        #       flag set based on self.task.
+        #
+        # Hint:
+        # Use:
+        #   • current_time, self.start_time, self.straight_duration
+        #   • self.turn_duration, self.current_side
+        #   • self.task, self.task_state, self.change_state(...)
+        #   • self.go_straight(), self.go_turn(left=...),
+        #     self.go_in_direction(...)
+        # ==========================================================
 
-            elif self.task_state in [TaskState.TURN_LEFT, TaskState.TURN_RIGHT]:
-                turn_duration = self.turn_duration if self.task == Task.SQUARE else \
-                    (2 * pi / 3 / self.max_yaw) * 1e9
-                if current_time - self.start_time > turn_duration:
-                    if self.current_side < 4 if self.task == Task.SQUARE else \
-                            self.current_side < 3:
-                        self.change_state(TaskState.MOVE_FORWARD)
-                        self.start_time = current_time
-                    else:
-                        self.change_state(TaskState.LAND)
-                else:
-                    self.go_turn(left=self.task_state == TaskState.TURN_LEFT)
-
-        else:  # For FORWARD, BACKWARD, LEFT, RIGHT, UP, DOWN
-            if self.task_state == TaskState.MOVE_FORWARD:
-                if current_time - self.start_time > self.straight_duration:
-                    self.change_state(TaskState.LAND)
-                else:
-                    direction = {
-                        Task.FORWARD: (True, False, False, False, False, False),
-                        Task.BACKWARD: (False, True, False, False, False, False),
-                        Task.LEFT: (False, False, True, False, False, False),
-                        Task.RIGHT: (False, False, False, True, False, False),
-                        Task.UP: (False, False, False, False, True, False),
-                        Task.DOWN: (False, False, False, False, False, True)
-                    }
-                    self.go_in_direction(*direction[self.task])
+        # YOUR CODE HERE
 
         if self.task_state == TaskState.LAND:
             self.land()

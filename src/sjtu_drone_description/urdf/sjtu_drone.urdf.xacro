@@ -88,8 +88,7 @@
   </gazebo>
 
   <!-- Red cube: rigidly attached 0.15m below base_link.
-       Drop is handled by payload_manager spawning a free-falling
-       cube via Gazebo EntityFactory at the moment of release. -->
+       -->
   <link name="red_cube_link">
     <inertial>
       <mass value="0.1"/>

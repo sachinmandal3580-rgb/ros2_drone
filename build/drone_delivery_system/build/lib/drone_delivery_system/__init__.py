@@ -1,1 +1,0 @@
-# Drone Delivery System Package

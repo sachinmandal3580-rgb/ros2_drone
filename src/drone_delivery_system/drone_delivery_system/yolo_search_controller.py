@@ -1,8 +1,6 @@
 #!/usr/bin/env python3
 """
-person_search_controller.py  (actually: universal object search)
-================================================================
-Place at: src/drone_delivery_system/drone_delivery_system/person_search_controller.py
+yolo_search_controller.py 
 
 Terminal prompts for:
   1. What to search for (any YOLO class: person, car, dog, chair, etc.)
@@ -17,8 +15,6 @@ Drone then:
 
 No payload. No separate detector node needed — YOLO runs inside this node.
 
-Run:
-    ros2 run drone_delivery_system person_search_controller
 """
 
 import math
@@ -123,7 +119,7 @@ def _ensure_yolo():
 class ObjectSearchController(Node):
 
     def __init__(self, target_class: str):
-        super().__init__('person_search_controller')
+        super().__init__('yolo_search_controller')
 
         self.set_parameters([rclpy.parameter.Parameter(
             'use_sim_time', rclpy.Parameter.Type.BOOL, True)])
@@ -198,22 +194,38 @@ class ObjectSearchController(Node):
     # ── Spiral pattern ───────────────────────────────────────────────
 
     def _gen_spiral(self):
-        pts = []
-        x, y = 0.0, 0.0
-        step = 2.0
-        d = 0; leg = 1; moves = 0; legs = 0
-        while True:
-            dx = [step, 0, -step, 0][d]
-            dy = [0, step, 0, -step][d]
-            x += dx; y += dy
-            if abs(x) > self.search_r or abs(y) > self.search_r:
-                break
-            pts.append((x, y))
-            moves += 1
-            if moves >= leg:
-                moves = 0; d = (d + 1) % 4; legs += 1
-                if legs >= 2: legs = 0; leg += 1
-        return pts
+        # ==========================================================
+        # TODO 1 — Generate an expanding square-spiral search pattern
+        #
+        # Build a list of (x, y) waypoints, relative to the takeoff
+        # point, that spiral outward in expanding square "rings"
+        # until they leave the search radius.
+        #
+        # Requirements:
+        # - Start at (0, 0) and move in steps of size `step`.
+        # - The direction cycles through: +x, +y, -x, -y (right,
+        #   up, left, down) — a standard square spiral.
+        # - The number of steps taken in a given direction before
+        #   turning increases every two direction changes (1 step,
+        #   1 step, 2 steps, 2 steps, 3 steps, 3 steps, ...) — this
+        #   is what makes the square expand outward instead of
+        #   looping in place.
+        # - Stop adding waypoints once a point falls outside
+        #   [-search_r, search_r] in either x or y, and return the
+        #   list collected so far.
+        #
+        # Hint:
+        # Use:
+        #   • self.search_r
+        #   • A direction index 0..3 mapped to (dx, dy) pairs:
+        #       0 → (step, 0)   1 → (0, step)
+        #       2 → (-step, 0)  3 → (0, -step)
+        #   • Two counters: one for steps taken in the current leg,
+        #     one for how many legs completed at the current length
+        #     (increase leg length every 2 completed legs)
+        # ==========================================================
+
+        # YOUR CODE HERE
 
     # ── Sensor callbacks ─────────────────────────────────────────────
 
@@ -301,38 +313,80 @@ class ObjectSearchController(Node):
         sin_y = math.sin(self.yaw)
 
         if cam == 'bottom':
-            # Bottom camera: straight down projection
-            if self.pz < 0.5:
-                return None, None
-            nx = (cx - BOTTOM_IMG_W / 2) / BOTTOM_IMG_W
-            ny = (cy - BOTTOM_IMG_H / 2) / BOTTOM_IMG_H
-            fov_v = BOTTOM_FOV_H * (BOTTOM_IMG_H / BOTTOM_IMG_W)
-            ox = self.pz * math.tan(nx * BOTTOM_FOV_H)
-            oy = self.pz * math.tan(ny * fov_v)
-            wx = self.px + cos_y * ox - sin_y * oy
-            wy = self.py + sin_y * ox + cos_y * oy
-            return wx, wy
+            # ==========================================================
+            # TODO 2a — Estimate target world position from the
+            # bottom (downward-facing) camera
+            #
+            # The bottom camera looks straight down, so a detection
+            # offset from the image centre corresponds to a real
+            # ground offset, scaled by altitude.
+            #
+            # Requirements:
+            # - If altitude (self.pz) is below 0.5 m, return
+            #   (None, None) — too close to the ground to trust this
+            #   projection.
+            # - Normalize the detection centre (cx, cy) to [-0.5, 0.5]
+            #   relative to image width/height (BOTTOM_IMG_W/H).
+            # - Compute the vertical FOV from the horizontal FOV and
+            #   image aspect ratio.
+            # - Convert each normalized offset to a body-frame ground
+            #   offset using altitude and tan(half-angle):
+            #     offset = altitude * tan(normalized_offset * FOV)
+            # - Rotate that body-frame offset into world coordinates
+            #   using the drone's yaw (cos_y, sin_y), and add the
+            #   drone's current world position (self.px, self.py).
+            # - Return (world_x, world_y).
+            #
+            # Hint:
+            # Use:
+            #   • BOTTOM_IMG_W, BOTTOM_IMG_H, BOTTOM_FOV_H
+            #   • self.pz, cos_y, sin_y, self.px, self.py
+            #   • math.tan
+            # ==========================================================
+
+            # YOUR CODE HERE
+            pass
 
         elif cam == 'front':
-            # Front camera: estimate distance from object size
-            if bh < 15:
-                return None, None
-            # Use a generic 1.0m assumed object height
-            # (works reasonably for most objects at 3m altitude)
-            assumed_h = 1.0
-            fov_v = FRONT_FOV_H * (FRONT_IMG_H / FRONT_IMG_W)
-            focal = (FRONT_IMG_H / 2.0) / math.tan(fov_v / 2.0)
-            dist  = (assumed_h * focal) / bh
-            # clamp distance to reasonable range
-            dist = min(dist, 15.0)
+            # ==========================================================
+            # TODO 2b — Estimate target world position from the
+            # front (forward-facing) camera
+            #
+            # The front camera looks horizontally, so distance can't
+            # be read directly from pixel offset — it has to be
+            # estimated from how large the detected object appears
+            # (smaller box height ⇒ farther away).
+            #
+            # Requirements:
+            # - If the detected box height (bh) is below 15 px,
+            #   return (None, None) — too small/unreliable to
+            #   estimate distance from.
+            # - Assume a generic real-world object height
+            #   (assumed_h = 1.0 m) and compute the camera's focal
+            #   length in pixels from FRONT_IMG_H and the vertical
+            #   FOV.
+            # - Estimate distance using the pinhole projection
+            #   relationship: dist = (assumed_h * focal) / bh.
+            #   Clamp the result to a reasonable max (e.g. 15 m).
+            # - Normalize the horizontal detection centre (cx) to
+            #   get the bearing angle within FRONT_FOV_H.
+            # - Convert distance + bearing angle into a body-frame
+            #   (x, y) offset (forward/sideways), accounting for the
+            #   camera's forward offset from base_link (FRONT_CAM_X).
+            # - Rotate that body-frame offset into world coordinates
+            #   using the drone's yaw, and add the drone's current
+            #   world position.
+            # - Return (world_x, world_y).
+            #
+            # Hint:
+            # Use:
+            #   • FRONT_IMG_W, FRONT_IMG_H, FRONT_FOV_H, FRONT_CAM_X
+            #   • bh, cx, cos_y, sin_y, self.px, self.py
+            #   • math.tan, math.cos, math.sin
+            # ==========================================================
 
-            nx = (cx - FRONT_IMG_W / 2) / FRONT_IMG_W
-            angle_h = nx * FRONT_FOV_H
-            bx = dist * math.cos(angle_h) + FRONT_CAM_X
-            by = dist * math.sin(angle_h)
-            wx = self.px + cos_y * bx - sin_y * by
-            wy = self.py + sin_y * bx + cos_y * by
-            return wx, wy
+            # YOUR CODE HERE
+            pass
 
         return None, None
 

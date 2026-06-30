@@ -1,17 +1,3 @@
-// Copyright 2023 Georg Novotny
-//
-// Licensed under the GNU GENERAL PUBLIC LICENSE, Version 3.0 (the "License");
-// you may not use this file except in compliance with the License.
-// You may obtain a copy of the License at
-//
-//     https://www.gnu.org/licenses/gpl-3.0.en.html
-//
-// Unless required by applicable law or agreed to in writing, software
-// distributed under the License is distributed on an "AS IS" BASIS,
-// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-// See the License for the specific language governing permissions and
-// limitations under the License.
-
 #include "sjtu_drone_description/pid_controller.h"
 
 PIDController::PIDController()
@@ -62,13 +48,34 @@ double PIDController::update(double new_input, double x, double dx, double dt)
     dinput = (new_input - input) / (dt + time_constant);
   }
 
-  // update proportional, differential and integral errors
-  p = input - x;
-  d = dinput - dx;
-  i = i + dt * p;
+  // ==========================================================
+  // TODO 1
+  //
+  // Compute the PID control output for this update step.
+  //
+  // Requirements:
+  // - p : error between the filtered setpoint (input) and the
+  //       current measured state (x).
+  // - d : error between the filtered setpoint rate (dinput)
+  //       and the current measured rate (dx). Note this is
+  //       NOT the derivative of p — it compares rates directly.
+  // - i : running integral of p, accumulated over time using
+  //       the timestep (dt). Must accumulate onto the existing
+  //       value of i, not overwrite it.
+  // - output : weighted sum of p, d, and i using their
+  //       respective gains.
+  //
+  // Hint:
+  // Use:
+  //   • input, dinput        (filtered setpoint + setpoint rate)
+  //   • x, dx                (current state + current rate)
+  //   • dt                   (timestep)
+  //   • gain_p, gain_d, gain_i
+  //   • p, d, i, output      (member variables to assign/update)
+  // ==========================================================
 
-  // update control output
-  output = gain_p * p + gain_d * d + gain_i * i;
+  // YOUR CODE HERE
+
   return output;
 }
 

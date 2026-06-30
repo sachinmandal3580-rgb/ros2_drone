@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 """
 coordinate_mission_controller.py
-Place at: src/drone_delivery_system/drone_delivery_system/coordinate_mission_controller.py
 """
 
 import math
@@ -223,55 +222,75 @@ class CoordinateMissionController(Node):
     # ── CLIMB: rise to cruise altitude ───────────────────────────────
 
     def _do_climb(self):
-        err = self.cruise_alt - self.pz
-        self.get_logger().info(
-            f'CLIMB  z={self.pz:.2f}/{self.cruise_alt:.1f} m  (payload on)',
-            throttle_duration_sec=1.0)
+        # ==========================================================
+        # TODO 1 — Climb to cruise altitude
+        #
+        # Drive the drone upward until it reaches cruise_alt, then
+        # transition to GOTO.
+        #
+        # Requirements:
+        # - Compute the altitude error: cruise_alt - pz.
+        # - If that error is small enough (drone is close to
+        #   cruise altitude):
+        #     • stop the drone
+        #     • if the error is small enough to be considered
+        #       "stable" (not just barely under the looser
+        #       threshold), switch state to GOTO
+        #     • return early either way
+        # - Otherwise, publish a Twist with linear.z proportional
+        #   to the altitude error, capped at a reasonable max
+        #   climb speed and a small minimum (so it doesn't stall
+        #   out right under the cruise altitude).
+        #
+        # Hint:
+        # Use:
+        #   • self.cruise_alt, self.pz
+        #   • Twist(), self.cmd_pub
+        #   • self._stop(), self._go(GOTO)
+        # ==========================================================
 
-        if err < 0.10:
-            # stop all motion before transitioning — kills upward momentum
-            self._stop()
-            # brief hover: keep sending zero until altitude stabilises
-            if abs(err) < 0.15:
-                self._go(GOTO)
-            return
-
-        t = Twist()
-        # slow down as we approach — prevents overshoot
-        t.linear.z = min(0.4, max(0.05, err * 0.4))
-        self.cmd_pub.publish(t)
+        # YOUR CODE HERE
 
     # ── GOTO: fly at cruise altitude, stop 0.25 m short ──────────────
 
     def _do_goto(self):
-        dx   = self.target_x - self.px
-        dy   = self.target_y - self.py
-        dist = math.sqrt(dx * dx + dy * dy)
+        # ==========================================================
+        # TODO 2 — Steer toward the AeroPin target
+        #
+        # Drive the drone horizontally toward (target_x, target_y)
+        # at cruise altitude, and transition to DESCEND once close
+        # enough.
+        #
+        # Requirements:
+        # - Compute dx, dy and the straight-line distance from the
+        #   drone's current position (px, py) to the target.
+        # - If that distance is within stop_radius: stop the
+        #   drone, reset descent_dropping to False, and switch
+        #   state to DESCEND.
+        # - Otherwise:
+        #     • Compute the heading to the target with
+        #       atan2(dy, dx), then the yaw error against the
+        #       drone's current yaw, wrapped into [-pi, pi] so it
+        #       always turns the shorter way.
+        #     • Build a Twist:
+        #         - linear.x : forward speed, scaled by remaining
+        #           distance past stop_radius, capped at a
+        #           reasonable max.
+        #         - angular.z : turn rate from the yaw error.
+        #         - linear.z : altitude hold using
+        #           (cruise_alt - pz), clamped to a safe range.
+        #     • Publish the Twist.
+        #
+        # Hint:
+        # Use:
+        #   • self.target_x, self.target_y, self.px, self.py
+        #   • math.atan2, math.pi, self.yaw
+        #   • self.stop_radius, self.cruise_alt, self.pz
+        #   • Twist(), self.cmd_pub
+        #   • self._stop(), self._go(DESCEND)
+        # ==========================================================
 
-        if dist <= self.stop_radius:
-            self.get_logger().info(
-                f'GOTO  reached ({dist:.3f} m from target) → DESCEND')
-            self._stop()
-            self.descent_dropping = False   # reset for fresh descent
-            self._go(DESCEND); return
-
-        target_yaw = math.atan2(dy, dx)
-        yaw_err    = target_yaw - self.yaw
-        if yaw_err >  math.pi: yaw_err -= 2 * math.pi
-        if yaw_err < -math.pi: yaw_err += 2 * math.pi
-
-        self.get_logger().info(
-            f'GOTO  dist={dist:.3f} m  Δyaw={math.degrees(yaw_err):+.1f}°  '
-            f'z={self.pz:.2f} m',
-            throttle_duration_sec=1.0)
-
-        t = Twist()
-        t.linear.x  = min(0.6, (dist - self.stop_radius) * 0.4)
-        t.angular.z = yaw_err * 1.5
-        # strong symmetric hold — prevents upward drift during horizontal flight
-        alt_err     = self.cruise_alt - self.pz
-        t.linear.z  = max(-0.5, min(0.5, alt_err * 1.5))
-        self.cmd_pub.publish(t)
+        # YOUR CODE HERE
 
     # ── DESCEND: hover to kill momentum, then land command + monitor pz ──
     #
@@ -324,14 +343,28 @@ class CoordinateMissionController(Node):
             self._go(IDLE)
 
     def _auto_drop(self):
-        self.get_logger().info('📦 Auto-dropping payload …')
-        if self.drop_cli.service_is_ready():
-            self.drop_cli.call_async(EmptySrv.Request())
-            self.carrying = False
-        else:
-            self.get_logger().warn(
-                'payload_manager not running — '
-                'ros2 run drone_delivery_system payload_manager')
+        # ==========================================================
+        # TODO 3 — Trigger the payload drop
+        #
+        # Call the /payload/drop service on PayloadManager so the
+        # delivery is actually completed once the drone has landed.
+        #
+        # Requirements:
+        # - If the service client (drop_cli) reports the service
+        #   is ready: call it asynchronously with an empty
+        #   request, and mark self.carrying = False.
+        # - If the service isn't ready: log a warning telling the
+        #   user payload_manager isn't running, instead of
+        #   silently doing nothing.
+        #
+        # Hint:
+        # Use:
+        #   • self.drop_cli.service_is_ready()
+        #   • self.drop_cli.call_async(EmptySrv.Request())
+        #   • self.carrying
+        # ==========================================================
+
+        # YOUR CODE HERE
 
     # ── helpers ───────────────────────────────────────────────────────
 

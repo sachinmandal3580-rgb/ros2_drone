@@ -22,14 +22,35 @@ velocityXYDifferentialGain: 2.3
 # Maximum limit for horizontal velocity control output, restricting maximum horizontal speed.
 velocityXYLimit: 2
 
-# Proportional gain for vertical velocity PID controller. Influences response to altitude changes.
-# CHANGED: 5.0 → 6.0  (more responsive with 0.1 kg payload attached)
-velocityZProportionalGain: 6.0
+# ==========================================================
+# TODO 1 — Tune vertical velocity gains for payload mass
+#
+# The drone now carries a 0.1 kg payload cube (see
+# payload_manager.py). The default vertical velocity gains
+# below were tuned for an unloaded drone and may cause
+# sluggish altitude response or slow descent during DESCEND.
+#
+# Requirements:
+# - Adjust velocityZProportionalGain and
+#   velocityZDifferentialGain so the drone:
+#     • climbs to cruise_alt without excessive overshoot
+#     • holds altitude steady (no slow oscillation/drift)
+#     • descends smoothly during the DESCEND state without
+#       free-falling or stalling
+# - Leave velocityZIntegralGain and velocityZLimit as is.
+#
+# Hint:
+# Start from the unloaded defaults (5.0 / 1.0) and increase
+# gradually — more proportional gain for responsiveness, more
+# differential gain to damp the extra inertia from the payload.
+# Test by running a full AeroPin delivery and watching
+# /simple_drone/gt_pose for z-axis overshoot or drift.
+# ==========================================================
+
+velocityZProportionalGain: # TODO - YOUR VALUE HERE
 # Integral gain for vertical velocity PID controller. Set to zero, indicating no error integration over time.
 velocityZIntegralGain: 0.0
-# Differential gain for vertical velocity PID controller. Helps control vertical acceleration and deceleration.
-# CHANGED: 1.0 → 1.2  (smoother altitude hold with extra payload mass)
-velocityZDifferentialGain: 1.2
+velocityZDifferentialGain: 1.0 # TODO - YOUR VALUE HERE
 # Maximum limit for vertical velocity control output. Negative value may indicate special control scenario or error.
 velocityZLimit: -1
 
@@ -51,9 +72,31 @@ positionZIntegralGain: 0.0
 # Maximum limit for vertical position control output. Negative value could indicate special requirement or error.
 positionZLimit: -1
 
-# Maximum force that the drone can exert, limiting maximum thrust to prevent aggressive maneuvers.
-# CHANGED: 30 → 34  (+4 N headroom for 0.1 kg red-cube payload, ~10% margin above hover thrust)
-maxForce: 34
+# ==========================================================
+# TODO 2 — Tune maxForce headroom for payload thrust margin
+#
+# The default maxForce (30 N) was calibrated for an unloaded
+# drone. With the 0.1 kg payload attached, hover thrust
+# increases and the drone may struggle to climb or hold
+# altitude if thrust saturates at the limit.
+#
+# Requirements:
+# - Increase maxForce just enough to give the loaded drone
+#   reliable climb/hover/descend authority, without setting
+#   it so high that small velocityZ errors cause aggressive,
+#   jerky thrust changes.
+# - Verify by running a full delivery: takeoff → climb →
+#   cruise → descend → drop should all look controlled, not
+#   jumpy or sluggish.
+#
+# Hint:
+# Think in terms of margin above hover thrust rather than a
+# large jump — a small percentage increase over the unloaded
+# default is usually enough to compensate for 0.1 kg of
+# payload mass.
+# ==========================================================
+
+maxForce: #TODO 2 — YOUR VALUE HERE
 
 # Parameter for adding small random noise to drone's motion. Set to zero, indicating no small noise addition.
 motionSmallNoise: 0.00

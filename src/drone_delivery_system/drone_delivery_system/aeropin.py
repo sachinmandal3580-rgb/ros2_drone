@@ -1,8 +1,5 @@
 """
 aeropin.py  —  Gazebo-local DIGIPIN codec
-==========================================
-Place this file at:
-  src/drone_delivery_system/drone_delivery_system/aeropin.py
 
 Re-implements the official DIGIPIN algorithm (India Post / IIT-H) with
 a custom bounding box that covers YOUR Gazebo world (home.sdf) instead
@@ -27,10 +24,6 @@ Quick reference — home.sdf objects:
   8CT-PP5-CM  →  Table                   (-6.33,  5.25) m
   K22-772-7T  →  Test point (0.50, 0.50)
   K22-222-7K  →  Test point (0.01, 0.01)
-
-CLI usage:
-  python aeropin.py 0.5 0.5         # encode  → K22-772-7T
-  python aeropin.py K22-772-7T      # decode  → (0.4997, 0.4997)
 """
 
 __all__ = ['encode', 'decode', 'validate',
@@ -66,14 +59,59 @@ def encode(x: float, y: float) -> str:
     ymin, ymax = WORLD_YMIN, WORLD_YMAX
     code = []
 
-    for _ in range(LEVELS):
-        xstep = (xmax - xmin) / 4.0
-        ystep = (ymax - ymin) / 4.0
-        col   = min(int((x - xmin) / xstep), 3)
-        row   = min(int((y - ymin) / ystep), 3)
-        xmin += col * xstep;  xmax = xmin + xstep
-        ymin += row * ystep;  ymax = ymin + ystep
-        code.append(CHARS[col * 4 + row])
+    # ==========================================================
+    # TODO 1
+    #
+    # Implement the hierarchical 4-way subdivision that turns
+    # (x, y) into an 8-character AEROPIN code.
+    #
+    # Requirements:
+    # - Repeat LEVELS times. On each iteration:
+    #     • Split the current [xmin, xmax] x [ymin, ymax] box
+    #       into a 4x4 grid (xstep, ystep).
+    #     • Find which column/row (x, y) falls into — clamp to
+    #       index 3 so a point exactly on the upper boundary
+    #       doesn't fall outside the grid.
+    #     • Narrow xmin/xmax and ymin/ymax to that sub-cell, so
+    #       the next iteration subdivides further.
+    #     • Append the character for that (col, row) to `code`,
+    #       using CHARS[col * 4 + row].
+    # - This is THE core operation of the whole AeroPin system —
+    #   get this right and decode() becomes the mirror image of it.
+    #
+    # Walkthrough, one iteration at a time:
+    #   1. xstep = (xmax - xmin) / 4.0          ystep similarly
+    #      → width of ONE column/row in the current box.
+    #   2. col = int((x - xmin) / xstep)
+    #      → "how many step-widths past the left edge is x",
+    #        truncated to an int 0..3 (number of cell-widths,
+    #        i.e. integer division of the offset by the step).
+    #      → clamp with min(col, 3): if x sits exactly on xmax,
+    #        the raw division gives 4 (out of range) — clamping
+    #        forces it into the last valid cell instead of
+    #        crashing or producing a bad index later.
+    #   3. row = min(int((y - ymin) / ystep), 3)   (same idea, Y axis)
+    #   4. Narrow the box to that one sub-cell so next loop
+    #      iteration zooms in further:
+    #        xmin += col * xstep;  xmax = xmin + xstep
+    #        ymin += row * ystep;  ymax = ymin + ystep
+    #   5. code.append(CHARS[col * 4 + row])
+    #      → there are 16 cells (4 cols x 4 rows) and 16 chars
+    #        in CHARS, so col*4 + row flattens the 2D grid
+    #        position into a single 0..15 index — same trick as
+    #        flattening a 2D array into 1D.
+    #
+    # After LEVELS=8 loops you'll have 8 characters in `code`;
+    # they get joined and hyphenated below.
+    #
+    # Hint:
+    # Use:
+    #   • LEVELS, CHARS
+    #   • xmin, xmax, ymin, ymax (already initialized above)
+    #   • code (list to append characters to)
+    # ==========================================================
+
+    # YOUR CODE HERE
 
     s = ''.join(code)
     return f"{s[0:3]}-{s[3:6]}-{s[6:8]}"
@@ -101,14 +139,59 @@ def decode(code: str) -> tuple:
     xmin, xmax = WORLD_XMIN, WORLD_XMAX
     ymin, ymax = WORLD_YMIN, WORLD_YMAX
 
-    for ch in clean:
-        idx   = CHARS.index(ch)
-        col   = idx // 4
-        row   = idx  % 4
-        xstep = (xmax - xmin) / 4.0
-        ystep = (ymax - ymin) / 4.0
-        xmin += col * xstep;  xmax = xmin + xstep
-        ymin += row * ystep;  ymax = ymin + ystep
+    # ==========================================================
+    # TODO 2
+    #
+    # Implement the inverse of TODO 1: walk through each
+    # character of the cleaned code and narrow the bounding box
+    # down to the final cell it represents.
+    #
+    # Requirements:
+    # - For each character in `clean`:
+    #     • Find its index in CHARS, then recover (col, row)
+    #       from that index — the inverse of
+    #       CHARS[col * 4 + row] used in encode().
+    #     • Split the current box into a 4x4 grid (xstep, ystep),
+    #       same as in encode().
+    #     • Narrow xmin/xmax and ymin/ymax to the sub-cell given
+    #       by (col, row).
+    # - After the loop, xmin/xmax/ymin/ymax describe the final
+    #   ~1.5mm cell — the function then returns its centre point.
+    #
+    # Walkthrough, one character at a time:
+    #   1. idx = CHARS.index(ch)
+    #      → recovers the SAME number encode() used:
+    #        col*4 + row.
+    #   2. col = idx // 4
+    #      row = idx % 4
+    #      → unflattening a 1D index back into 2D: integer
+    #        division tells you which group-of-4 you're in
+    #        (the column), the remainder tells you your
+    #        position within that group (the row). This is the
+    #        precise inverse of "col*4 + row" from encode().
+    #   3. xstep = (xmax - xmin) / 4.0   ystep similarly
+    #      → identical to encode(); must use the SAME box-
+    #        splitting math or the two functions won't agree.
+    #   4. Narrow the box using the recovered col/row, exactly
+    #      like encode() did with its freshly computed col/row:
+    #        xmin += col * xstep;  xmax = xmin + xstep
+    #        ymin += row * ystep;  ymax = ymin + ystep
+    #
+    # Do this once per character (8 total) and the box shrinks
+    # down to the same tiny cell the original point landed in.
+    # That's why decode(encode(x,y)) won't give back the exact
+    # x,y — only the centre of that final ~1.5mm cell (see the
+    # `err` value printed by the CLI block below).
+    #
+    # Hint:
+    # Use:
+    #   • clean, CHARS
+    #   • xmin, xmax, ymin, ymax (already initialized above)
+    #   • Integer division/modulo to split an index back into
+    #     (col, row) — the reverse of col * 4 + row.
+    # ==========================================================
+
+    # YOUR CODE HERE
 
     return (xmin + xmax) / 2.0, (ymin + ymax) / 2.0
 
