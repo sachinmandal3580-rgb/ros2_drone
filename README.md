@@ -201,10 +201,8 @@ sudo apt install -y \
   ros-jazzy-ros2-controllers \
   ros-jazzy-robot-state-publisher \
   ros-jazzy-joint-state-publisher \
-  ros-jazzy-xacro \
   ros-jazzy-rviz2 \
   ros-jazzy-teleop-twist-keyboard \
-  python3-opencv \
   xterm
 ```
 
@@ -213,6 +211,10 @@ sudo apt install -y \
 cd ~/ros2_drone
 colcon build
 ```
+> If you encounter gazebo crash while building description package
+> ```bash
+> colcon build --packages-select sjtu_drone_description --cmake-args -DBUILD_TESTING=OFF
+> ``` 
 
 **For every new terminal, source the workspace:**
 ```bash
@@ -305,6 +307,21 @@ Create or extend a node that:
 - Returns to the launch pad after the final delivery.
 - Reports a summary (succeeded/failed per waypoint) at the end of the run.
 
+## Bonus Challenge 2 — Collision Detection & Orientation Control
+
+### Objective
+
+Currently, the drone flies directly to each AeroPin coordinate without considering nearby obstacles or maintaining a desired heading.
+Modify the project so the drone detects obstacles in real time, performs collision avoidance when necessary, and continuously maintains the correct orientation throughout the mission.
+
+### What to implement
+
+Create or extend a node that:
+
+- Detect obstacles within a configurable safety radius and classify collision risk.
+- Triggers an avoidance maneuver (hover, stop, or reroute) when an obstacle enters the critical zone, then resumes the original mission once the path is clear.
+- Computes and maintains the drone's yaw toward its next waypoint while rejecting unsafe attitude commands before sending them to the flight controller.
+  
 ---
 
 ## Deliverables
