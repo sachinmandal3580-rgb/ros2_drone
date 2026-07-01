@@ -158,6 +158,7 @@ Implement the hierarchical 4-way subdivision that turns a Gazebo (x, y) coordina
 
 Implement the inverse subdivision that turns an 8-character AeroPin string back into the (x, y) center of the cell it represents.
 
+> You may take reference from Digipin by Indian Post - [Click here](https://www.indiapost.gov.in/documents/offerings/intiatives/DIGIPIN_Technical_document.pdf)
 ---
 
 ### 7. AeroPin Mission Controller — `drone_delivery_system/drone_delivery_system/coordinate_mission_controller.py`
