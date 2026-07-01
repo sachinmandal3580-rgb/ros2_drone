@@ -1,4 +1,4 @@
-# AeroDrop — DIGIPIN-Based Precision Delivery Drone
+# AERODrop — DIGIPIN-Based Precision Delivery Drone
 
 ## Problem Statement
 
