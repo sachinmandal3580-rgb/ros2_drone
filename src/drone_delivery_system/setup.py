@@ -25,10 +25,7 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            'dual_camera_yolo_detector = drone_delivery_system.dual_camera_yolo_detector:main',
-            'enhanced_delivery_controller = drone_delivery_system.enhanced_delivery_controller:main',
             'payload_manager = drone_delivery_system.payload_manager:main',
-            'mission_planner = drone_delivery_system.mission_planner:main',
             'coordinate_mission_controller = drone_delivery_system.coordinate_mission_controller:main',
             'yolo_search_controller = drone_delivery_system.yolo_search_controller:main',
         ],
